@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://iipet6x5y07a"]
+
+[ext_resource type="Script" path="res://Camera3D.gd" id="1_ok1q1"]
+[ext_resource type="Script" path="res://CameraBase.gd" id="1_v8y05"]
+[ext_resource type="Script" path="res://cameraYaw.gd" id="2_kb0xw"]
+[ext_resource type="Script" path="res://ZoomBase.gd" id="2_mwcqi"]
+[ext_resource type="Script" path="res://cameraTilt.gd" id="3_m8rgn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
+sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
+sky_horizon_color = Color(0.843137, 0.898039, 0.992157, 1)
+ground_bottom_color = Color(0.560784, 0.372549, 0.27451, 1)
+ground_horizon_color = Color(0.913725, 0.788235, 0.72549, 1)
+
+[sub_resource type="Sky" id="Sky_081ih"]
+sky_material = SubResource("ProceduralSkyMaterial_w46fu")
+
+[sub_resource type="Environment" id="Environment_bk136"]
+background_mode = 2
+background_color = Color(0.52549, 0.658824, 1, 1)
+sky = SubResource("Sky_081ih")
+ambient_light_color = Color(0.964706, 0.933333, 0.898039, 1)
+ambient_light_energy = 1.79
+
+[node name="Root3D" type="Node3D"]
+
+[node name="Tile3D" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bk136")
+
+[node name="CameraBase" type="Node3D" parent="."]
+script = ExtResource("1_v8y05")
+
+[node name="CameraYaw" type="Node3D" parent="CameraBase"]
+script = ExtResource("2_kb0xw")
+
+[node name="CameraTilt" type="Node3D" parent="CameraBase/CameraYaw"]
+script = ExtResource("3_m8rgn")
+
+[node name="ZoomBase" type="Node3D" parent="CameraBase/CameraYaw/CameraTilt"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("2_mwcqi")
+
+[node name="Camera3D" type="Camera3D" parent="CameraBase/CameraYaw/CameraTilt/ZoomBase"]
+fov = 90.0
+script = ExtResource("1_ok1q1")
+
+[node name="sphereTestPointer" type="CSGSphere3D" parent="CameraBase/CameraYaw/CameraTilt"]
+
+[node name="sample map" type="Node3D" parent="."]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="sample map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51926, 0.368743, -2.64952)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="sample map/RigidBody3D"]
+size = Vector3(1, 2.81474, 1)
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="sample map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99987, 2.76574, 0.850334)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="sample map/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.134942, -2.59499, -5.19567)
+size = Vector3(6.08303, 1, 5.72294)
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="sample map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59509, 2.91849, 0.0612326)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="sample map/RigidBody3D3"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.413712, -2.91243, -2.7203)
+size = Vector3(2.15237, 0.199317, 3.11511)
