@@ -1,10 +1,10 @@
 extends Node3D
 
-var planeMoveFactor = 8
-var rotationSpeed = 0.005
-var planeMouseDragSpeed = 0.015
+var planeMoveFactor = 4
+var planeMouseDragSpeed = 0.004
 
-#@onready var cameraYaw = get_node("/root/Root3D/CameraBase/CameraYaw")
+@onready var cameraYaw = get_node("/root/Root3D/World3D/CameraBase/CameraYaw")
+@onready var zoomBase = get_node("/root/Root3D/World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase")
 
 #var allInputs = {
 #	"up": Input.is_action_pressed("move_up"),
@@ -18,18 +18,13 @@ var planeMouseDragSpeed = 0.015
 #	"wheel_click": Input.is_action_pressed("mousescroll_click")
 #}
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass
-#	self.customallControls = allInputs
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	_planeMovement(delta)
 	
 func _input(event):
-	_rotateBase(event)
 	_mouseMovement(event)
 			
 func _planeMovement(delta):
@@ -53,10 +48,11 @@ func _planeMovement(delta):
 	if input["right"]:
 		movement.x = 1
 		
-#	var angleY = self.cameraYaw.cameraPlaneAngleY
-	movement = movement.rotated(Vector3(0,1,0),self.rotation.y).normalized()	
-#	movement = movement.rotated(Vector3(0,1,0),angleY).normalized()
-	self.position += movement * delta * planeMoveFactor
+#	movement = movement.rotated(Vector3(0,1,0),self.rotation.y).normalized()	
+	var yawAngle = cameraYaw.cameraPlaneAngleY
+	movement = movement.rotated(Vector3(0,1,0),yawAngle).normalized()
+	
+	self.position += movement * delta * planeMoveFactor * zoomBase.zoomParameter["currentZoom"]
 	
 func _mouseMovement(event):
 	var input = {
@@ -71,19 +67,6 @@ func _mouseMovement(event):
 			movement.x = -event.relative.x		
 			movement.z = -event.relative.y	
 			movement = movement.rotated(Vector3(0,1,0),self.rotation.y)
-			self.position += movement * planeMouseDragSpeed
+			self.position += movement * planeMouseDragSpeed * zoomBase.zoomParameter["currentZoom"]
 
 
-func _rotateBase(event):
-	var input = {
-		"mouse_left": Input.is_action_pressed("mouseclick_left"),
-		"mouse_right": Input.is_action_pressed("mouseclick_right"),
-		"wheel_click": Input.is_action_pressed("mousescroll_click")
-	}
-
-	if event is InputEventMouseMotion and input["mouse_right"]:
-		if input["wheel_click"] or input["mouse_left"]:
-			return
-		self.rotation.y += event.relative.x * rotationSpeed
-		pass
- 

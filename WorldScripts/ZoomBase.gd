@@ -1,34 +1,17 @@
 extends Node3D
 
 var zoomParameter = {
-	"min": 0.5,
-	"max": 2,
+	"min": 0.75,
+	"max": 2.25,
 	"default": 1.25,
-	"speed": 1,
-	"position": 4
+	"speed": 0.8,
+	"position": 8,
+	"zoomFactor": 1 
 }
-#var currentZoomState = ""
-#var zoomStates = {
-#	"close": {
-#		"angle": -30,
-#		"distance": 1		
-#	},
-#	"middle": {
-#		"angle": -40,
-#		"distance": 2		
-#	},
-#	"far": {
-#		"angle": -50,
-#		"distance": 3		
-#	},		
-#}
-#var zoomStatesOrder = ["close","middle","far"]
 
 func _ready():
 	self.position.z = zoomParameter["position"] * zoomParameter["default"]
-#	self.rotation.x = deg_to_rad(zoomParameter["angle"])
-#	self.rotation.x = deg_to_rad(zoomStates["middle"]["angle"])
-#	self.currentZoomState = zoomStates["middle"]
+	zoomParameter["currentZoom"] = zoomParameter["default"]
 
 func _process(delta):
 	pass
@@ -46,9 +29,10 @@ func _unhandled_input(event):
 		zoom = 1	
 		
 	self.position.z += zoom * zoomParameter["speed"]
+	zoomParameter["currentZoom"] = self.position.z / zoomParameter["position"]
 	
-	if self.position.z <= zoomParameter["position"] * zoomParameter["min"]:
+	if zoomParameter["currentZoom"] <= zoomParameter["min"]:
 		self.position.z = zoomParameter["position"] * zoomParameter["min"]
-	if self.position.z >= zoomParameter["position"] * zoomParameter["max"]:
+	if zoomParameter["currentZoom"] >= zoomParameter["max"]:
 		self.position.z = zoomParameter["position"] * zoomParameter["max"]
 
