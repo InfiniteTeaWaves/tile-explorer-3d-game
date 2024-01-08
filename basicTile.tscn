@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6fwt1mqc8rxa"]
+[gd_scene load_steps=10 format=3 uid="uid://b6fwt1mqc8rxa"]
 
 [ext_resource type="Script" path="res://TileScripts/BasicTile.gd" id="1_lk02w"]
 
@@ -43,6 +43,9 @@ _data = {
 "HoverFade": SubResource("Animation_l0hru")
 }
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_vt8yx"]
+size = Vector2(10.5, 10.5)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_jgixa"]
 size = Vector3(10, 1.5, 10)
 
@@ -67,13 +70,18 @@ libraries = {
 "": SubResource("AnimationLibrary_xeq6y")
 }
 
+[node name="MeshClickedEffectTest" type="MeshInstance3D" parent="MeshTile"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+visible = false
+mesh = SubResource("PlaneMesh_vt8yx")
+skeleton = NodePath("../MeshOutline")
+
 [node name="HoverAreaBasicTile" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HoverAreaBasicTile"]
 shape = SubResource("BoxShape3D_jgixa")
 
 [node name="PlaceholderTest" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 visible = false
 mesh = SubResource("BoxMesh_hxgo8")
 

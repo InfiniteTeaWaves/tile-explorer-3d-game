@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://iipet6x5y07a"]
+[gd_scene load_steps=17 format=3 uid="uid://iipet6x5y07a"]
 
 [ext_resource type="Script" path="res://WorldScripts/World3D.gd" id="1_da02h"]
 [ext_resource type="Script" path="res://WorldScripts/CameraBase.gd" id="2_xj1o4"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://1a4nn1iyeo7" path="res://customResourcesTest/splineDesert2.glb" id="8_xm3dm"]
 [ext_resource type="PackedScene" uid="uid://d16ov1t45w12v" path="res://customResourcesTest/splineDesert1.glb" id="9_t0cnv"]
 [ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://customResourcesTest/flag.glb" id="10_uknn2"]
+[ext_resource type="Script" path="res://Player.gd" id="13_qhq4k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
 sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
@@ -19,13 +20,13 @@ sky_horizon_color = Color(0.843137, 0.898039, 0.992157, 1)
 ground_bottom_color = Color(0.466667, 0.301961, 0.219608, 1)
 ground_horizon_color = Color(0.913725, 0.788235, 0.72549, 1)
 
-[sub_resource type="Sky" id="Sky_081ih"]
+[sub_resource type="Sky" id="Sky_wrj4h"]
 sky_material = SubResource("ProceduralSkyMaterial_w46fu")
 
 [sub_resource type="Environment" id="Environment_bk136"]
 background_mode = 2
 background_color = Color(0.52549, 0.658824, 1, 1)
-sky = SubResource("Sky_081ih")
+sky = SubResource("Sky_wrj4h")
 ambient_light_color = Color(0.901961, 0.894118, 0.466667, 1)
 ambient_light_energy = 2.0
 
@@ -133,4 +134,67 @@ freeze = true
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.413712, -2.91243, -2.7203)
 size = Vector3(2.15237, 0.199317, 3.11511)
 
+[node name="Player" type="Node3D" parent="World3D"]
+script = ExtResource("13_qhq4k")
+
+[node name="TileInfo" type="Node" parent="World3D"]
+
+[node name="TileInfoPanel" type="Panel" parent="World3D/TileInfo"]
+visible = false
+offset_left = 883.0
+offset_top = 512.0
+offset_right = 1063.0
+offset_bottom = 577.0
+
+[node name="TileInfoLabel" type="Label" parent="World3D/TileInfo/TileInfoPanel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 21.0
+offset_right = 136.0
+offset_bottom = 47.0
+text = "Info of Tile"
+
+[node name="TileText" type="Node" parent="World3D"]
+
+[node name="TileTextPanel" type="Panel" parent="World3D/TileText"]
+visible = false
+offset_left = 838.0
+offset_top = 129.0
+offset_right = 1098.0
+offset_bottom = 493.0
+
+[node name="TileTextLabel" type="Label" parent="World3D/TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 21.0
+offset_right = 187.0
+offset_bottom = 47.0
+text = "Tile Description"
+
+[node name="Button" type="Button" parent="World3D/TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 6.0
+offset_right = 253.0
+offset_bottom = 37.0
+text = "X"
+
+[node name="HudTop" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="HudTop"]
+visible = false
+offset_left = 61.0
+offset_top = 14.0
+offset_right = 1098.0
+offset_bottom = 39.0
+
+[node name="Label" type="Label" parent="HudTop/Panel"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 1.0
+offset_right = 531.0
+offset_bottom = 27.0
+text = "Tiles"
+
 [connection signal="on_click" from="World3D/GameMap/basicTile" to="World3D" method="_on_basic_tile_on_click"]
+[connection signal="pressed" from="World3D/TileText/TileTextPanel/Button" to="World3D" method="_on_button_close_tiletext_pressed"]

@@ -1,3 +1,4 @@
+#extends BasicTileClass
 extends Node3D
 
 var color: Color

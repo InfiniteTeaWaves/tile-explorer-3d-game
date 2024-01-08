@@ -21,7 +21,6 @@ size = Vector3(10, 0.7, 10)
 albedo_color = Color(0.290196, 0.156863, 0.0666667, 1)
 
 [node name="GroundTile" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("1_c3y7y")
 
 [node name="TopLayer" type="MeshInstance3D" parent="."]

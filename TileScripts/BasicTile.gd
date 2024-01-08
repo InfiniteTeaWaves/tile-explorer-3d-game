@@ -1,7 +1,10 @@
-extends Node3D
+#extends Node3D
+class_name BasicTileClass extends Node3D
 
 signal on_click(BasicTile)
 signal on_double_click(BasicTile)
+signal on_hover_entry(BasicTile)
+signal on_hover_exit(BasicTile)
 
 var entered_state = false
 var clicked_state = false
@@ -32,14 +35,17 @@ func _process(delta):
 		AnimationOutline.stop()
 
 func _input(event):
+	#careful, input triggered for ALL, i need to check weith entereed state
+	#state from which arena it comes
 	var input = {
 		"mouse_left": Input.is_action_pressed("mouseclick_left"),
 	}	
-	if input["mouse_left"] and entered_state:
-		_click_on_tile()	
-	if event is InputEventMouseButton:
-		if event.is_double_click() and event.get_button_index() == 1: #left
-			emit_signal("on_double_click", self)
+	if entered_state: #this way, the specific tile is selected since input triggeres for all
+		if input["mouse_left"]:
+			_click_on_tile()	
+		if event is InputEventMouseButton:
+			if event.is_double_click() and event.get_button_index() == 1: #left
+				emit_signal("on_double_click", self)
 		
 func _click_on_tile():
 	emit_signal("on_click", self)
@@ -49,16 +55,20 @@ func _click_on_tile():
 func _on_hover_area_basic_tile_mouse_entered():
 	if !clicked_state:
 		self.position.y = base_position_y_up
+	MeshOutline.show()
+	emit_signal("on_hover_entry",self)
 	#print("Entered")
 	entered_state = true
-	MeshOutline.show()
+	
 
 func _on_hover_area_basic_tile_mouse_exited():
 	if !clicked_state:
 		self.position.y = base_position_y
+	MeshOutline.hide()
+	emit_signal("on_hover_exit",self)
 	#print("Exit")
 	entered_state = false
-	MeshOutline.hide()
+	
 
 func reset_position_y():
 	self.position.y = base_position_y
