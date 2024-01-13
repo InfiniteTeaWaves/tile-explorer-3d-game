@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://cdmc431nvi64b"]
+
+[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_yegu0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dffh"]
+albedo_color = Color(0.886275, 0.611765, 0.411765, 1)
+
+[resource]
+script = ExtResource("1_yegu0")
+biome_name = "desert_drylands_0"
+game_name = "Drysteps of Tune"
+type = "Forest"
+subtype = "Pine"
+tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_6dffh")
+lore = ""
+guild = Array[String]([])
+time = "noon"

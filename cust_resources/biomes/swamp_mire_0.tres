@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://cwx76k1voa2ns"]
+
+[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_magp7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6ikv"]
+albedo_color = Color(0.215686, 0.215686, 0.0117647, 1)
+
+[resource]
+script = ExtResource("1_magp7")
+biome_name = "Swamps of Gur"
+game_name = "Misty Pine Forest"
+type = "swamp"
+subtype = "mire"
+tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_j6ikv")
+lore = ""
+guild = Array[String]([])
+time = "noon"

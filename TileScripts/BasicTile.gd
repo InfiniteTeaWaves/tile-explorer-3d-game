@@ -1,10 +1,12 @@
 #extends Node3D
-class_name BasicTileClass extends Node3D
+class_name BasicTile extends Node3D
 
 signal on_click(BasicTile)
 signal on_double_click(BasicTile)
 signal on_hover_entry(BasicTile)
 signal on_hover_exit(BasicTile)
+
+var biome_data: BiomeData
 
 var entered_state = false
 var clicked_state = false
@@ -14,18 +16,10 @@ var base_position_y_clicked = self.position.y + 0.5
 
 @onready var MeshOutline = $MeshTile/MeshOutline
 @onready var AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
-@onready var groundTileScene = load("res://groundTile.tscn")
-
-#@export (PackedScene) var testScene
+@onready var ground_tile_scene = load("res://groundTile.tscn")
 
 func _ready():
 	pass
-	
-func create_ground_tile(tile_properties: TileProperties):
-	var ground_tile_scene = preload("res://GroundTile.tscn")
-	var ground_tile = ground_tile_scene.instantiate()
-	ground_tile.set_properties(tile_properties)
-	self.add_child(ground_tile)
 
 func _process(delta):
 	pass
@@ -46,7 +40,16 @@ func _input(event):
 		if event is InputEventMouseButton:
 			if event.is_double_click() and event.get_button_index() == 1: #left
 				emit_signal("on_double_click", self)
-		
+
+func set_biome_data(data):
+	biome_data = data
+
+func create_ground_tile(tile_properties: TileProperties):
+	var ground_tile_scene2 = preload("res://GroundTile.tscn")
+	var ground_tile = ground_tile_scene2.instantiate()
+	ground_tile.set_properties(tile_properties)
+	self.add_child(ground_tile)
+	
 func _click_on_tile():
 	emit_signal("on_click", self)
 	self.position.y = base_position_y_clicked
@@ -60,7 +63,6 @@ func _on_hover_area_basic_tile_mouse_entered():
 	#print("Entered")
 	entered_state = true
 	
-
 func _on_hover_area_basic_tile_mouse_exited():
 	if !clicked_state:
 		self.position.y = base_position_y
@@ -69,7 +71,6 @@ func _on_hover_area_basic_tile_mouse_exited():
 	#print("Exit")
 	entered_state = false
 	
-
 func reset_position_y():
 	self.position.y = base_position_y
 	clicked_state = false

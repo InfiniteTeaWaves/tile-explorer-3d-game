@@ -1,6 +1,8 @@
 extends Node3D
 
 var tiltSpeed = 0.00125
+var max_tilt = -75
+var min_tilt = -25
 
 func _ready():
 	self.rotation.x = deg_to_rad(-45)
@@ -25,9 +27,9 @@ func _tiltBase(event):
 			return
 		self.rotation.x += -event.relative.y * tiltSpeed
 		
-		if self.rotation.x <= deg_to_rad(-75):
-			self.rotation.x = deg_to_rad(-75)
+		if self.rotation.x <= deg_to_rad(max_tilt):
+			self.rotation.x = deg_to_rad(max_tilt)
 			return
-		if self.rotation.x >= deg_to_rad(-15): 
-			self.rotation.x = deg_to_rad(-15)
+		if self.rotation.x >= deg_to_rad(min_tilt): 
+			self.rotation.x = deg_to_rad(min_tilt)
 			return

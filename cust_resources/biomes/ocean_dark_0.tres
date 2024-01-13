@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://du4yxvkel0uyd"]
+
+[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_ul3j5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6ikv"]
+albedo_color = Color(0.117647, 0.352941, 0.580392, 1)
+
+[resource]
+script = ExtResource("1_ul3j5")
+biome_name = "ocean_dark_0"
+game_name = "Misty Pine Forest"
+type = "ocean"
+subtype = "dark"
+tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_j6ikv")
+lore = ""
+guild = Array[String]([])
+time = "noon"

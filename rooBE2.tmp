@@ -1,0 +1,200 @@
+[gd_scene load_steps=17 format=3 uid="uid://iipet6x5y07a"]
+
+[ext_resource type="Script" path="res://WorldScripts/World3D.gd" id="1_da02h"]
+[ext_resource type="Script" path="res://WorldScripts/CameraBase.gd" id="2_xj1o4"]
+[ext_resource type="Script" path="res://WorldScripts/CameraYaw.gd" id="3_qnaim"]
+[ext_resource type="Script" path="res://WorldScripts/CameraTilt.gd" id="4_welle"]
+[ext_resource type="Script" path="res://WorldScripts/ZoomBase.gd" id="5_m23vb"]
+[ext_resource type="Script" path="res://WorldScripts/Camera3D.gd" id="6_fc2wq"]
+[ext_resource type="PackedScene" uid="uid://cwhd2ljv7lpll" path="res://customResourcesTest/splineForest2.glb" id="6_nlf3f"]
+[ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://basicTile.tscn" id="6_onr1f"]
+[ext_resource type="PackedScene" uid="uid://cm6jutyxu6y3k" path="res://customResourcesTest/splineForest1.glb" id="7_uwpqv"]
+[ext_resource type="PackedScene" uid="uid://1a4nn1iyeo7" path="res://customResourcesTest/splineDesert2.glb" id="8_xm3dm"]
+[ext_resource type="PackedScene" uid="uid://d16ov1t45w12v" path="res://customResourcesTest/splineDesert1.glb" id="9_t0cnv"]
+[ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://customResourcesTest/flag.glb" id="10_uknn2"]
+[ext_resource type="Script" path="res://Player.gd" id="13_qhq4k"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
+sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
+sky_horizon_color = Color(0.843137, 0.898039, 0.992157, 1)
+ground_bottom_color = Color(0.466667, 0.301961, 0.219608, 1)
+ground_horizon_color = Color(0.913725, 0.788235, 0.72549, 1)
+
+[sub_resource type="Sky" id="Sky_wrj4h"]
+sky_material = SubResource("ProceduralSkyMaterial_w46fu")
+
+[sub_resource type="Environment" id="Environment_bk136"]
+background_mode = 2
+background_color = Color(0.52549, 0.658824, 1, 1)
+sky = SubResource("Sky_wrj4h")
+ambient_light_color = Color(0.901961, 0.894118, 0.466667, 1)
+ambient_light_energy = 2.0
+
+[node name="Root3D" type="Node3D"]
+
+[node name="World3D" type="Node3D" parent="."]
+script = ExtResource("1_da02h")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World3D"]
+environment = SubResource("Environment_bk136")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World3D"]
+transform = Transform3D(0.997932, 0.0233085, 0.0598988, -0.0610939, 0.0544793, 0.996644, 0.019967, -0.998243, 0.0557907, 5.85299, 13.5821, 0)
+light_color = Color(0.94902, 0.929412, 0, 1)
+
+[node name="CameraBase" type="Node3D" parent="World3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26363, 0, 3.92567)
+script = ExtResource("2_xj1o4")
+
+[node name="CameraYaw" type="Node3D" parent="World3D/CameraBase"]
+script = ExtResource("3_qnaim")
+
+[node name="CameraTilt" type="Node3D" parent="World3D/CameraBase/CameraYaw"]
+script = ExtResource("4_welle")
+
+[node name="ZoomBase" type="Node3D" parent="World3D/CameraBase/CameraYaw/CameraTilt"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("5_m23vb")
+
+[node name="Camera3D" type="Camera3D" parent="World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase"]
+fov = 90.0
+script = ExtResource("6_fc2wq")
+
+[node name="sphereTestPointer" type="CSGSphere3D" parent="World3D/CameraBase/CameraYaw/CameraTilt"]
+radius = 0.2
+radial_segments = 6
+
+[node name="GameMap" type="Node3D" parent="World3D"]
+
+[node name="basicTile" parent="World3D/GameMap" instance=ExtResource("6_onr1f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5944, 0, 2.65965)
+visible = false
+
+[node name="flag" parent="World3D/GameMap" instance=ExtResource("10_uknn2")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 3.15589, 1.70051, 2.56069)
+visible = false
+
+[node name="SplineTests" type="Node3D" parent="World3D/GameMap"]
+visible = false
+
+[node name="splineForest2" parent="World3D/GameMap/SplineTests" instance=ExtResource("6_nlf3f")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 2.6, 0, -2.6)
+
+[node name="splineForest3" parent="World3D/GameMap/SplineTests" instance=ExtResource("7_uwpqv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.6, 0, -2.6)
+
+[node name="splineForest4" parent="World3D/GameMap/SplineTests" instance=ExtResource("6_nlf3f")]
+transform = Transform3D(-2.18557e-07, 0, 5, 0, 5, 0, -5, 0, -2.18557e-07, -2.6, 0, 2.6)
+
+[node name="splineDesert2" parent="World3D/GameMap/SplineTests" instance=ExtResource("8_xm3dm")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.8, 0, 2.6)
+
+[node name="splineDesert1" parent="World3D/GameMap/SplineTests" instance=ExtResource("9_t0cnv")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 7.8, 0, -2.6)
+
+[node name="SampleObjects" type="Node3D" parent="World3D/GameMap"]
+visible = false
+
+[node name="RigidBody3D" type="RigidBody3D" parent="World3D/GameMap/SampleObjects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51926, 0.368743, -2.64952)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World3D/GameMap/SampleObjects/RigidBody3D"]
+size = Vector3(1, 2.81474, 1)
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="World3D/GameMap/SampleObjects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99987, 2.76574, 4.82305)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World3D/GameMap/SampleObjects/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.83184, -2.59499, -7.23745)
+size = Vector3(6.08303, 1, 5.72294)
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="World3D/GameMap/SampleObjects/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99987, 2.76574, 4.82305)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World3D/GameMap/SampleObjects/RigidBody3D2/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22041, -4.79015, -5.19567)
+size = Vector3(6.08303, 1, 5.72294)
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="World3D/GameMap/SampleObjects/RigidBody3D2/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.78094, -2.47215, 2.59511)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World3D/GameMap/SampleObjects/RigidBody3D2/RigidBody3D2/RigidBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.99632, -1.79283, -5.7052)
+size = Vector3(6.08303, 1, 5.72294)
+
+[node name="RigidBody3D3" type="RigidBody3D" parent="World3D/GameMap/SampleObjects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59509, 2.91849, 0.0612326)
+freeze = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World3D/GameMap/SampleObjects/RigidBody3D3"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.413712, -2.91243, -2.7203)
+size = Vector3(2.15237, 0.199317, 3.11511)
+
+[node name="Player" type="Node3D" parent="World3D"]
+script = ExtResource("13_qhq4k")
+
+[node name="TileInfo" type="Node" parent="World3D"]
+
+[node name="TileInfoPanel" type="Panel" parent="World3D/TileInfo"]
+visible = false
+offset_left = 883.0
+offset_top = 512.0
+offset_right = 1063.0
+offset_bottom = 577.0
+
+[node name="TileInfoLabel" type="Label" parent="World3D/TileInfo/TileInfoPanel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 21.0
+offset_right = 136.0
+offset_bottom = 47.0
+text = "Info of Tile"
+
+[node name="TileText" type="Node" parent="World3D"]
+
+[node name="TileTextPanel" type="Panel" parent="World3D/TileText"]
+visible = false
+offset_left = 838.0
+offset_top = 129.0
+offset_right = 1098.0
+offset_bottom = 493.0
+
+[node name="TileTextLabel" type="Label" parent="World3D/TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 21.0
+offset_right = 187.0
+offset_bottom = 47.0
+text = "Tile Description"
+
+[node name="Button" type="Button" parent="World3D/TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 6.0
+offset_right = 253.0
+offset_bottom = 37.0
+text = "X"
+
+[node name="HudTop" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="HudTop"]
+visible = false
+offset_left = 61.0
+offset_top = 14.0
+offset_right = 1098.0
+offset_bottom = 39.0
+
+[node name="Label" type="Label" parent="HudTop/Panel"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 1.0
+offset_right = 531.0
+offset_bottom = 27.0
+text = "Tiles"
+
+[connection signal="on_click" from="World3D/GameMap/basicTile" to="World3D" method="_on_basic_tile_on_click"]
+[connection signal="pressed" from="World3D/TileText/TileTextPanel/Button" to="World3D" method="_on_button_close_tiletext_pressed"]

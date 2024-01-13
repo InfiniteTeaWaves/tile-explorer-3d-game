@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://d06cxe1klcsue"]
+
+[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_s4kuo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6ikv"]
+
+[resource]
+script = ExtResource("1_s4kuo")
+biome_name = "forest_snow_0"
+game_name = "Snowy green hills"
+type = "forest"
+subtype = "snow"
+tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_j6ikv")
+lore = ""
+guild = Array[String]([])
+time = "noon"
