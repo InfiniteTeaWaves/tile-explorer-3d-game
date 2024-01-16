@@ -1,18 +1,18 @@
-[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://di70k8313i5vh"]
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://wv6b1uekxxbt"]
 
-[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_7lgnc"]
+[ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_sv3xg"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6ikv"]
-albedo_color = Color(0, 0.658824, 0.403922, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfneu"]
+albedo_color = Color(0, 0.823529, 0.160784, 1)
 
 [resource]
-script = ExtResource("1_7lgnc")
-biome_name = "forest_pine_0"
-game_name = "Pine forest"
-type = "Forest"
-subtype = "Pine"
-tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
-ground_material_top = SubResource("StandardMaterial3D_j6ikv")
+script = ExtResource("1_sv3xg")
+biome_name = "forest_snow_0"
+game_name = "Pine Forest"
+type = "forest"
+subtype = "pine"
+tile_properties = Array[Resource("res://cust_resources_script/tile_properties.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_lfneu")
 lore = ""
 guild = Array[String]([])
 time = "noon"

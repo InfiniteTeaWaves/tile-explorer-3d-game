@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://iipet6x5y07a"]
+
+[ext_resource type="Script" path="res://world/World3D.gd" id="1_h1vqe"]
+[ext_resource type="PackedScene" uid="uid://cq70shh7c8yl0" path="res://world/CameraBase.tscn" id="2_icfy6"]
+[ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://tiles/basicTile.tscn" id="7_ck8hb"]
+[ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://customResourcesTest/flag.glb" id="8_q6yvh"]
+[ext_resource type="Script" path="res://player/Player.gd" id="9_8wgje"]
+[ext_resource type="PackedScene" uid="uid://bep2ry8kpkusw" path="res://UI/hud.tscn" id="10_i16hi"]
+[ext_resource type="PackedScene" uid="uid://cx5h7b504hdwq" path="res://world/2d_tilemap_for_world.tscn" id="11_mpyui"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
+sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
+sky_horizon_color = Color(0.843137, 0.898039, 0.992157, 1)
+ground_bottom_color = Color(0.466667, 0.301961, 0.219608, 1)
+ground_horizon_color = Color(0.913725, 0.788235, 0.72549, 1)
+
+[sub_resource type="Sky" id="Sky_wrj4h"]
+sky_material = SubResource("ProceduralSkyMaterial_w46fu")
+
+[sub_resource type="Environment" id="Environment_bk136"]
+background_mode = 2
+background_color = Color(0.52549, 0.658824, 1, 1)
+sky = SubResource("Sky_wrj4h")
+ambient_light_color = Color(0.901961, 0.894118, 0.466667, 1)
+ambient_light_energy = 2.0
+
+[node name="World3D" type="Node3D"]
+script = ExtResource("1_h1vqe")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bk136")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.997932, 0.0233085, 0.0598988, -0.0610939, 0.0544793, 0.996644, 0.019967, -0.998243, 0.0557907, 5.85299, 13.5821, 0)
+light_color = Color(0.94902, 0.929412, 0, 1)
+
+[node name="CameraBase" parent="." instance=ExtResource("2_icfy6")]
+
+[node name="GameMapTest" type="Node3D" parent="."]
+
+[node name="basicTile" parent="GameMapTest" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5944, 0, 2.65965)
+visible = false
+
+[node name="flag" parent="GameMapTest" instance=ExtResource("8_q6yvh")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 3.15589, 1.70051, 2.56069)
+visible = false
+
+[node name="Player" type="Node3D" parent="."]
+script = ExtResource("9_8wgje")
+
+[node name="HUD" parent="." instance=ExtResource("10_i16hi")]
+
+[node name="TileMap2D" parent="." instance=ExtResource("11_mpyui")]
+visible = false
+
+[node name="Root3D" type="Node3D" parent="."]
+
+[connection signal="on_click" from="GameMapTest/basicTile" to="." method="_on_basic_tile_on_click"]

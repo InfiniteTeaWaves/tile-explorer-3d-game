@@ -1,18 +1,18 @@
 [gd_scene load_steps=42 format=3 uid="uid://iipet6x5y07a"]
 
-[ext_resource type="Script" path="res://WorldScripts/World3D.gd" id="1_da02h"]
-[ext_resource type="Script" path="res://WorldScripts/CameraBase.gd" id="2_xj1o4"]
-[ext_resource type="Script" path="res://WorldScripts/CameraYaw.gd" id="3_qnaim"]
-[ext_resource type="Script" path="res://WorldScripts/CameraTilt.gd" id="4_welle"]
-[ext_resource type="Script" path="res://WorldScripts/ZoomBase.gd" id="5_m23vb"]
-[ext_resource type="Script" path="res://WorldScripts/Camera3D.gd" id="6_fc2wq"]
+[ext_resource type="Script" path="res://world/World3D.gd" id="1_da02h"]
+[ext_resource type="Script" path="res://world/CameraBase.gd" id="2_xj1o4"]
+[ext_resource type="Script" path="res://world/CameraYaw.gd" id="3_qnaim"]
+[ext_resource type="Script" path="res://world/CameraTilt.gd" id="4_welle"]
+[ext_resource type="Script" path="res://world/ZoomBase.gd" id="5_m23vb"]
+[ext_resource type="Script" path="res://world/Camera3D.gd" id="6_fc2wq"]
 [ext_resource type="PackedScene" uid="uid://cwhd2ljv7lpll" path="res://customResourcesTest/splineForest2.glb" id="6_nlf3f"]
-[ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://basicTile.tscn" id="6_onr1f"]
+[ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://tiles/basicTile.tscn" id="6_onr1f"]
 [ext_resource type="PackedScene" uid="uid://cm6jutyxu6y3k" path="res://customResourcesTest/splineForest1.glb" id="7_uwpqv"]
 [ext_resource type="PackedScene" uid="uid://1a4nn1iyeo7" path="res://customResourcesTest/splineDesert2.glb" id="8_xm3dm"]
 [ext_resource type="PackedScene" uid="uid://d16ov1t45w12v" path="res://customResourcesTest/splineDesert1.glb" id="9_t0cnv"]
 [ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://customResourcesTest/flag.glb" id="10_uknn2"]
-[ext_resource type="Script" path="res://Player.gd" id="13_qhq4k"]
+[ext_resource type="Script" path="res://player/Player.gd" id="13_qhq4k"]
 [ext_resource type="Texture2D" uid="uid://60qpyuxv8qmq" path="res://custom_images/single_biomes_0/city_medieval_0.png" id="15_rq2c7"]
 [ext_resource type="Texture2D" uid="uid://e0xrlf1gpgui" path="res://custom_images/single_biomes_0/ocean_dark_0.png" id="16_7567s"]
 [ext_resource type="Texture2D" uid="uid://donwgpxhxco4k" path="res://custom_images/single_biomes_0/steppe_ice_0.png" id="17_0o0iq"]
@@ -152,16 +152,16 @@ script = ExtResource("3_qnaim")
 script = ExtResource("4_welle")
 
 [node name="ZoomBase" type="Node3D" parent="World3D/CameraBase/CameraYaw/CameraTilt"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
 script = ExtResource("5_m23vb")
 
 [node name="Camera3D" type="Camera3D" parent="World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
 projection = 1
 current = true
 fov = 90.0
-size = 78.005
+size = 11.394
 near = 0.037
-far = 200.0
 script = ExtResource("6_fc2wq")
 
 [node name="sphereTestPointer" type="CSGSphere3D" parent="World3D/CameraBase/CameraYaw/CameraTilt"]
@@ -295,7 +295,6 @@ layer_0/tile_data = PackedInt32Array(65534, 10, 0, 65535, 10, 0, 131071, 10, 0, 
 [node name="HudTop" type="Node" parent="."]
 
 [node name="Panel" type="Panel" parent="HudTop"]
-visible = false
 offset_left = 61.0
 offset_top = 14.0
 offset_right = 1098.0

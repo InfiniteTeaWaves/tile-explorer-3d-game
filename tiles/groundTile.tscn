@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bpgabupewtxl1"]
 
-[ext_resource type="Script" path="res://TileScripts/GroundTile.gd" id="1_c3y7y"]
+[ext_resource type="Script" path="res://tiles/GroundTile.gd" id="1_e1unp"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_p4xm0"]
 size = Vector3(10, 0.1, 10)
@@ -21,7 +21,7 @@ size = Vector3(10, 0.7, 10)
 albedo_color = Color(0.290196, 0.156863, 0.0666667, 1)
 
 [node name="GroundTile" type="Node3D"]
-script = ExtResource("1_c3y7y")
+script = ExtResource("1_e1unp")
 
 [node name="TopLayer" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, -2.85695e-09, 2.32831e-10, -6.84622e-10, 1, -2.56114e-09, -1.16415e-10, 1.16415e-09, 1, 0, 0.7, 0)

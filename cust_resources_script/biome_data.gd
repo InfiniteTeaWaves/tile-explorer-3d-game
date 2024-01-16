@@ -6,7 +6,8 @@ class_name BiomeData
 @export var type: String
 @export var subtype: String
 
-@export var tile_data: Array[Tile]
+@export var tile_properties: Array[TileProperties]
+
 @export_subgroup("ground properties")
 @export var ground_material_top: StandardMaterial3D
 

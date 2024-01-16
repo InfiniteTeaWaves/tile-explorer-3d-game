@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://bep2ry8kpkusw"]
+
+[ext_resource type="Script" path="res://UI/hud.gd" id="1_tckqe"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_tckqe")
+
+[node name="TileInfo" type="Node" parent="."]
+
+[node name="TileInfoPanel" type="Panel" parent="TileInfo"]
+offset_left = 883.0
+offset_top = 512.0
+offset_right = 1063.0
+offset_bottom = 577.0
+
+[node name="TileInfoLabel" type="Label" parent="TileInfo/TileInfoPanel"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 21.0
+offset_right = 136.0
+offset_bottom = 47.0
+text = "Info of Tile"
+
+[node name="TileText" type="Node" parent="."]
+
+[node name="TileTextPanel" type="Panel" parent="TileText"]
+offset_left = 838.0
+offset_top = 129.0
+offset_right = 1098.0
+offset_bottom = 493.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TileTextLabel" type="Label" parent="TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 21.0
+offset_right = 187.0
+offset_bottom = 47.0
+text = "Tile Description"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="TileText/TileTextPanel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 6.0
+offset_right = 253.0
+offset_bottom = 37.0
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[node name="HudTop" type="Node" parent="."]
+
+[node name="Panel" type="Panel" parent="HudTop"]
+offset_left = 61.0
+offset_top = 14.0
+offset_right = 1098.0
+offset_bottom = 39.0
+
+[node name="Label" type="Label" parent="HudTop/Panel"]
+layout_mode = 0
+offset_left = 463.0
+offset_top = 1.0
+offset_right = 531.0
+offset_bottom = 27.0
+text = "Tiles"

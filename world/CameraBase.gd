@@ -1,22 +1,10 @@
 extends Node3D
 
-var planeMoveFactor = 4
-var planeMouseDragSpeed = 0.004
+@export var planeMoveFactor = 0.5
+@export var planeMouseDragSpeed = 0.001
 
-@onready var cameraYaw = get_node("/root/Root3D/World3D/CameraBase/CameraYaw")
-@onready var zoomBase = get_node("/root/Root3D/World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase")
-
-#var allInputs = {
-#	"up": Input.is_action_pressed("move_up"),
-#	"down": Input.is_action_pressed("move_down"),
-#	"left": Input.is_action_pressed("move_left"),
-#	"right": Input.is_action_pressed("move_right"),	
-#	"mouse_left": Input.is_action_pressed("mouseclick_left"),
-#	"mouse_right": Input.is_action_pressed("mouseclick_right"),
-#	"wheel_up": Input.is_action_pressed("mousescroll_up"),
-#	"wheel_down": Input.is_action_pressed("mousescroll_down"),
-#	"wheel_click": Input.is_action_pressed("mousescroll_click")
-#}
+@onready var cameraYaw = get_node("/root/World3D/CameraBase/CameraYaw")
+@onready var zoomBase = get_node("/root/World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase")
 
 func _ready():
 	pass
@@ -52,7 +40,7 @@ func _planeMovement(delta):
 	var yawAngle = cameraYaw.cameraPlaneAngleY
 	movement = movement.rotated(Vector3(0,1,0),yawAngle).normalized()
 	
-	self.position += movement * delta * planeMoveFactor * zoomBase.zoomParameter["currentZoom"]
+	self.position += movement * delta * planeMoveFactor * zoomBase.zoomParameter["current_size"]
 	
 func _mouseMovement(event):
 	var input = {
@@ -67,6 +55,8 @@ func _mouseMovement(event):
 			movement.x = -event.relative.x		
 			movement.z = -event.relative.y	
 			movement = movement.rotated(Vector3(0,1,0),self.rotation.y)
-			self.position += movement * planeMouseDragSpeed * zoomBase.zoomParameter["currentZoom"]
+			self.position += movement * planeMouseDragSpeed * zoomBase.zoomParameter["current_size"]
 
-
+func set_position_to_clicked_tile(clicked_tile):
+	self.position.x = clicked_tile.position.x
+	self.position.z = clicked_tile.position.z

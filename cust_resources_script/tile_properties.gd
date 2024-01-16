@@ -1,5 +1,5 @@
 extends Resource
-class_name Tile
+class_name TileProperties
 
 @export var name: String
 @export var tile_name: String
@@ -10,9 +10,6 @@ class_name Tile
 @export var socket_scene: PackedScene
 @export_enum("none","small","large") var Gem: String = "none"
 @export var gem_scene: PackedScene
-
-
-
 
 func get_ground_color() -> Color:
 	return biome.ground_color if biome else Color(0, 0, 0)

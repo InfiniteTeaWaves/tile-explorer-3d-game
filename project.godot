@@ -13,12 +13,12 @@ config_version=5
 config/name="Tile-Explorer-3D-Game-Jam"
 run/main_scene="res://startScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://custom_images/icon.svg"
 
 [autoload]
 
-GameSettings="*res://GameSettings.gd"
-BiomeResourceLoader="*res://cust_resources_script/biome_resource_loader.gd"
+GameSettings="*res://global_data/GameSettings.gd"
+BiomeResourceLoader="*res://utilities/biome_resource_loader.gd"
 
 [display]
 

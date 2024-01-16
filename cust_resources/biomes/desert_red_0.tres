@@ -1,18 +1,18 @@
-[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://1vd641eh1y2m"]
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://cihlyn0y3auvd"]
 
 [ext_resource type="Script" path="res://cust_resources_script/biome_data.gd" id="1_qf55j"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dffh"]
-albedo_color = Color(0.831373, 0.478431, 0.223529, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfneu"]
+albedo_color = Color(0.968627, 0.392157, 0.215686, 1)
 
 [resource]
 script = ExtResource("1_qf55j")
 biome_name = "desert_red_0"
-game_name = "Red desert"
+game_name = "Red sands"
 type = "desert"
 subtype = "red"
-tile_data = Array[Resource("res://cust_resources_script/tile_data.gd")]([])
-ground_material_top = SubResource("StandardMaterial3D_6dffh")
+tile_properties = Array[Resource("res://cust_resources_script/tile_properties.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_lfneu")
 lore = ""
 guild = Array[String]([])
 time = "noon"

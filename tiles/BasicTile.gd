@@ -16,7 +16,6 @@ var base_position_y_clicked = self.position.y + 0.5
 
 @onready var MeshOutline = $MeshTile/MeshOutline
 @onready var AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
-@onready var ground_tile_scene = load("res://groundTile.tscn")
 
 func _ready():
 	pass
@@ -30,10 +29,7 @@ func _process(delta):
 
 func _input(event):
 	#careful, input triggered for ALL, i need to check weith entereed state
-	#state from which arena it comes
-	var input = {
-		"mouse_left": Input.is_action_pressed("mouseclick_left"),
-	}	
+	var input = {"mouse_left": Input.is_action_just_pressed("mouseclick_left")}	
 	if entered_state: #this way, the specific tile is selected since input triggeres for all
 		if input["mouse_left"]:
 			_click_on_tile()	
@@ -43,12 +39,6 @@ func _input(event):
 
 func set_biome_data(data):
 	biome_data = data
-
-func create_ground_tile(tile_properties: TileProperties):
-	var ground_tile_scene2 = preload("res://GroundTile.tscn")
-	var ground_tile = ground_tile_scene2.instantiate()
-	ground_tile.set_properties(tile_properties)
-	self.add_child(ground_tile)
 	
 func _click_on_tile():
 	emit_signal("on_click", self)
@@ -60,7 +50,6 @@ func _on_hover_area_basic_tile_mouse_entered():
 		self.position.y = base_position_y_up
 	MeshOutline.show()
 	emit_signal("on_hover_entry",self)
-	#print("Entered")
 	entered_state = true
 	
 func _on_hover_area_basic_tile_mouse_exited():
@@ -68,7 +57,6 @@ func _on_hover_area_basic_tile_mouse_exited():
 		self.position.y = base_position_y
 	MeshOutline.hide()
 	emit_signal("on_hover_exit",self)
-	#print("Exit")
 	entered_state = false
 	
 func reset_position_y():

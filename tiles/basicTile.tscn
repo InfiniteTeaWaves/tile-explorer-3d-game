@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6fwt1mqc8rxa"]
 
-[ext_resource type="Script" path="res://TileScripts/BasicTile.gd" id="1_lk02w"]
+[ext_resource type="Script" path="res://tiles/BasicTile.gd" id="1_lk02w"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1jv40"]
 size = Vector3(10, 0.3, 10)

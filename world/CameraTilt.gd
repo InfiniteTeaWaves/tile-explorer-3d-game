@@ -2,7 +2,7 @@ extends Node3D
 
 var tiltSpeed = 0.00125
 var max_tilt = -75
-var min_tilt = -25
+var min_tilt = -15
 
 func _ready():
 	self.rotation.x = deg_to_rad(-45)

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcsl2qw4axkri"]
 
 [ext_resource type="PackedScene" uid="uid://cm6jutyxu6y3k" path="res://customResourcesTest/splineForest1.glb" id="1_fwskp"]
-[ext_resource type="Script" path="res://startScreen.gd" id="1_obecx"]
+[ext_resource type="Script" path="res://other_screens/startScreen.gd" id="1_obecx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jouou"]
 sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
