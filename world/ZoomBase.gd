@@ -8,7 +8,7 @@ var zoomParameter = {
 	"z_near": 10,
 	"z_far": 200,
 	"start_size": 30,
-	"speed": 20,
+	"speed": 5,
 	"min": 10,
 	"max": 100
 }
@@ -39,7 +39,7 @@ func _zoom():
 	if input["wheel_down"]:
 		zoom = 1	
 	
-	camera.size += zoom * zoomParameter["speed"] / camera.size
+	camera.size += zoom * zoomParameter["speed"]
 	zoomParameter["current_size"] = camera.size
 	
 	if camera.size <= zoomParameter["min"]:

@@ -19,6 +19,7 @@ config/icon="res://custom_images/icon.svg"
 
 GameSettings="*res://global_data/GameSettings.gd"
 BiomeResourceLoader="*res://utilities/biome_resource_loader.gd"
+TileResourceLoader="*res://utilities/tile_resource_loader.gd"
 
 [display]
 
