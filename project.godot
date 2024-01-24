@@ -11,19 +11,25 @@ config_version=5
 [application]
 
 config/name="Tile-Explorer-3D-Game-Jam"
-run/main_scene="res://startScreen.tscn"
+run/main_scene="res://start_screen/startScreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://custom_images/icon.svg"
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
 GameSettings="*res://global_data/GameSettings.gd"
-BiomeResourceLoader="*res://utilities/biome_resource_loader.gd"
-TileResourceLoader="*res://utilities/tile_resource_loader.gd"
+BiomeResourceLoader="*res://biomes/biome_resource_loader.gd"
+TileResourceLoader="*res://tiles/tile_resource_loader.gd"
 
 [display]
 
+window/size/viewport_width=1200
+window/size/viewport_height=900
 window/size/resizable=false
+
+[editor_plugins]
+
+enabled=PackedStringArray()
 
 [input]
 

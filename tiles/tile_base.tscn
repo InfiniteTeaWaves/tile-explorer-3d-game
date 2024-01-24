@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxgvil47j7rmo"]
+
+[ext_resource type="Script" path="res://tiles/tile_base.gd" id="1_7rvfu"]
+[ext_resource type="Resource" uid="uid://blsi3saycajjf" path="res://tiles/tiles_res/forest_pine_snow_campfire.tres" id="2_1fty6"]
+[ext_resource type="Resource" uid="uid://rce0mctrb6ye" path="res://biomes/biomes_res/forest_birch_0.tres" id="2_jj1y1"]
+[ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://tiles/base/basicTile.tscn" id="2_vfy5n"]
+[ext_resource type="PackedScene" uid="uid://bpgabupewtxl1" path="res://tiles/base/groundTile.tscn" id="4_kbn10"]
+[ext_resource type="Script" path="res://tiles/base/BasicTile.gd" id="6_nxo24"]
+
+[node name="TileBase" type="Node3D"]
+script = ExtResource("1_7rvfu")
+basic_tile_scene = ExtResource("2_vfy5n")
+ground_tile_scene = ExtResource("4_kbn10")
+biome_data = ExtResource("2_jj1y1")
+tile_properties = ExtResource("2_1fty6")
+
+[node name="BasicTile2" parent="." instance=ExtResource("2_vfy5n")]
+transform = Transform3D(0.99996, -0.000132666, 0.00895244, 0, 0.99989, 0.0148173, -0.00895342, -0.0148167, 0.99985, 0, 0, 0)
+
+[node name="GroundTile2" parent="BasicTile2" instance=ExtResource("4_kbn10")]
+
+[node name="forest_pine_snow_campfire2" parent="." instance=ExtResource("2_vfy5n")]
+
+[node name="forest_pine_snow_campfire3" type="Node3D" parent="." instance=ExtResource("2_vfy5n")]
+script = ExtResource("6_nxo24")

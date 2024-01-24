@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://ce6fijfybv0i"]
+
+[ext_resource type="Script" path="res://biomes/biome_data.gd" id="1_a0jxm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfneu"]
+albedo_color = Color(0, 0.4, 0.458824, 1)
+
+[resource]
+script = ExtResource("1_a0jxm")
+biome_name = "lake_shallow_0"
+game_name = "Lake shallow"
+type = "lake"
+subtype = "shallow"
+tile_properties = Array[Resource("res://cust_resources_script/tile_properties.gd")]([])
+ground_material_top = SubResource("StandardMaterial3D_lfneu")
+lore = ""
+guild = Array[String]([])
+time = "noon"

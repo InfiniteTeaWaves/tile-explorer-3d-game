@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="BiomeWeat" load_steps=2 format=3 uid="uid://bhnbpf0weggpn"]
+
+[ext_resource type="Script" path="res://biomes/weather.gd" id="1_r8pqu"]
+
+[resource]
+script = ExtResource("1_r8pqu")
+weather = "rain"

@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var cameraBase = $CameraBase # in eigene Scene machen
 @onready var hud = $HUD
+@onready var world_dynamic = $WorldDynamic #for created tiles
 
 var last_tile
 var tile_base_position_y = 0
@@ -46,7 +47,7 @@ func _on_button_close_tiletext_pressed():
 	hud.hide_panel_after_button_close()
 	
 func _create_world():
-	var world_creator = WorldCreator.new();
+	var world_creator = WorldCreator.new(); #creates the map
 	var world_array = world_creator.create_map_from_2d_tilemap($TileMap2D/TileMap);
 	
 	if world_array:
@@ -63,6 +64,6 @@ func _add_tile_to_world(x, z, basic_tile):
 	basic_tile.connect("on_double_click", _on_BasicTile_double_clicked)
 	basic_tile.connect("on_hover_entry", _on_BasicTile_hover_entry)
 	basic_tile.connect("on_hover_exit", _on_BasicTile_hover_exit)
-	self.add_child(basic_tile)
+	world_dynamic.add_child(basic_tile)
 	
 

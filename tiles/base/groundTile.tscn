@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://bpgabupewtxl1"]
+
+[ext_resource type="Script" path="res://tiles/base/GroundTile.gd" id="1_e1unp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_p4xm0"]
+size = Vector3(10, 0.1, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1be"]
+albedo_color = Color(0.329412, 0.509804, 0.0352941, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w1evn"]
+size = Vector3(10, 0.7, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_waaq7"]
+albedo_color = Color(0.6, 0.352941, 0.184314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5ejl7"]
+size = Vector3(10, 0.7, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4t056"]
+albedo_color = Color(0.290196, 0.156863, 0.0666667, 1)
+
+[node name="GroundTile" type="Node3D"]
+script = ExtResource("1_e1unp")
+
+[node name="TopLayer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -2.85695e-09, 2.32831e-10, -6.84622e-10, 1, -2.56114e-09, -1.16415e-10, 1.16415e-09, 1, 0, 0.7, 0)
+mesh = SubResource("BoxMesh_p4xm0")
+skeleton = NodePath("../MiddleLayer")
+surface_material_override/0 = SubResource("StandardMaterial3D_6c1be")
+
+[node name="MiddleLayer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -1.68916e-09, 3.49246e-10, -4.35875e-10, 1, -1.39698e-09, -1.16415e-10, 6.98492e-10, 1, 0, 0.3, 0)
+mesh = SubResource("BoxMesh_w1evn")
+skeleton = NodePath("../TopLayer")
+surface_material_override/0 = SubResource("StandardMaterial3D_waaq7")
+
+[node name="LowerLayer" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, -1.22373e-09, 3.49246e-10, -4.3633e-10, 1, -1.16415e-09, 0, 4.65661e-10, 1, -6.91216e-11, -0.4, 0)
+mesh = SubResource("BoxMesh_5ejl7")
+surface_material_override/0 = SubResource("StandardMaterial3D_4t056")
+
+[node name="PlaceholderTest" type="CSGBox3D" parent="."]
+transform = Transform3D(1, -9.92486e-10, 1.16415e-10, -2.16687e-10, 1, -6.98492e-10, 0, 2.32831e-10, 1, 0, 0, 0)
+visible = false
+size = Vector3(10, 1.5, 10)
