@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BiomeProperties" load_steps=3 format=3 uid="uid://b1spy3qqi0k00"]
+
+[ext_resource type="Script" path="res://biomes/biome_properties.gd" id="1_qaxqr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubjnh"]
+albedo_color = Color(0.219608, 0.396078, 0.176471, 1)
+
+[resource]
+script = ExtResource("1_qaxqr")
+biome_name = "forest_birch_0"
+game_name = "Birch forest"
+type = "forest"
+subtype = "birch"
+ground_material_top = SubResource("StandardMaterial3D_ubjnh")
+lore = ""
+guild = Array[String]([])
+time = "noon"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://dk5jyegl5357v"]
+
+[ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_g4515"]
+[ext_resource type="Script" path="res://tiles/tile_properties.gd" id="1_n6nvq"]
+[ext_resource type="PackedScene" uid="uid://b1kuvi4lfb0gm" path="res://tiles/tiles_art/tile_full/BasicTileFromGodot.glb" id="3_owfa5"]
+
+[resource]
+script = ExtResource("1_n6nvq")
+name = "forest_birch_0_full_trees"
+tile_name = "Dense birch forest"
+biome_properties = ExtResource("1_g4515")
+Socket = "full"
+socket_scene = ExtResource("3_owfa5")
+Gem = "none"

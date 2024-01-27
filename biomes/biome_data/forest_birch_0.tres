@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://cwb1gw4m2hwh4"]
+
+[ext_resource type="Script" path="res://biomes/biome_data.gd" id="1_1lrxt"]
+[ext_resource type="Resource" uid="uid://blsi3saycajjf" path="res://tiles/tiles_res/forest_pine_snow_campfire.tres" id="2_132pt"]
+
+[resource]
+script = ExtResource("1_1lrxt")
+biome_name = "forest_birch_0"
+tile_properties = Array[Resource("res://tiles/tile_properties.gd")]([ExtResource("2_132pt")])

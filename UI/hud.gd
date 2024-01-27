@@ -21,10 +21,10 @@ func _hide_tile_text():
 			pass 
 			#Exit Game	ggf. signal weiter geben (exit game transmitten)
 
-func set_clicked_tile_text(biome_data: BiomeData):
+func set_clicked_tile_text(biome_properties: BiomeProperties):
 	var panel = $TileText/TileTextPanel
 	var label = $TileText/TileTextPanel/TileTextLabel
-	label.text = str(biome_data.game_name)
+	label.text = str(biome_properties.game_name)
 	panel.show()
 	
 func set_tile_hovered_text_entry(hovered_tile):

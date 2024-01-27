@@ -1,5 +1,5 @@
 #extends Node3D
-class_name BasicTile extends Node3D
+class_name BasicTile extends BaseTile
 
 signal on_click(BasicTile)
 signal on_double_click(BasicTile)
@@ -14,8 +14,6 @@ var base_position_y_clicked = self.position.y + 0.5
 
 @onready var MeshOutline = $MeshTile/MeshOutline
 @onready var AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
-
-#@export var tile_properties: TileProperties
 
 func _ready():
 	pass

@@ -3,7 +3,7 @@ class_name TileProperties
 
 @export var name: String
 @export var tile_name: String
-#@export var biome: BiomeData
+@export var biome_properties: BiomeProperties
 
 @export_category("Tile Properties")
 @export_enum("small","large","full") var Socket: String = "full"

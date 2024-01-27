@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://iipet6x5y07a"]
+[gd_scene load_steps=14 format=3 uid="uid://iipet6x5y07a"]
 
 [ext_resource type="Script" path="res://world/World3D.gd" id="1_h1vqe"]
 [ext_resource type="PackedScene" uid="uid://cq70shh7c8yl0" path="res://world/camera/CameraBase.tscn" id="2_icfy6"]
@@ -7,9 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://assets/flag.glb" id="8_q6yvh"]
 [ext_resource type="Script" path="res://player/Player.gd" id="9_8wgje"]
 [ext_resource type="Resource" uid="uid://blsi3saycajjf" path="res://tiles/tiles_res/forest_pine_snow_campfire.tres" id="9_q6x7n"]
-[ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="10_aeis7"]
+[ext_resource type="Resource" uid="uid://u8i0hejrneu8" path="res://biomes/forest_birch_2.tres" id="10_2k084"]
 [ext_resource type="PackedScene" uid="uid://bep2ry8kpkusw" path="res://UI/hud.tscn" id="10_i16hi"]
-[ext_resource type="PackedScene" uid="uid://b1kuvi4lfb0gm" path="res://tiles/tiles_art/tile_full/BasicTileFromGodot.glb" id="11_c7tba"]
 [ext_resource type="PackedScene" uid="uid://cx5h7b504hdwq" path="res://world/2d_tile_map/2d_tilemap_for_world.tscn" id="11_mpyui"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
@@ -62,20 +61,39 @@ visible = false
 [node name="WorldEditor" type="Node3D" parent="."]
 visible = false
 
-[node name="forest_pine_snow_campfire" parent="WorldEditor" instance=ExtResource("8_ap32r")]
-tile_properties = ExtResource("9_q6x7n")
-biome_properties = ExtResource("10_aeis7")
-
-[node name="Socketfull" type="Node3D" parent="WorldEditor/forest_pine_snow_campfire" instance=ExtResource("11_c7tba")]
-
-[node name="BaseTile5" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+[node name="BaseTile" parent="WorldEditor" instance=ExtResource("8_ap32r")]
 visible = false
 tile_properties = ExtResource("9_q6x7n")
-biome_properties = ExtResource("10_aeis7")
+biome_data = ExtResource("10_2k084")
 
-[node name="BaseTile6" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+[node name="BaseTile19" parent="WorldEditor" instance=ExtResource("8_ap32r")]
 visible = false
 tile_properties = ExtResource("9_q6x7n")
-biome_properties = ExtResource("10_aeis7")
+biome_data = ExtResource("10_2k084")
+
+[node name="BaseTile20" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+visible = false
+tile_properties = ExtResource("9_q6x7n")
+biome_data = ExtResource("10_2k084")
+
+[node name="BaseTile21" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+visible = false
+tile_properties = ExtResource("9_q6x7n")
+biome_data = ExtResource("10_2k084")
+
+[node name="BaseTile22" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+visible = false
+tile_properties = ExtResource("9_q6x7n")
+biome_data = ExtResource("10_2k084")
+
+[node name="BaseTile23" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+visible = false
+tile_properties = ExtResource("9_q6x7n")
+biome_data = ExtResource("10_2k084")
+
+[node name="BaseTile24" parent="WorldEditor" instance=ExtResource("8_ap32r")]
+visible = false
+tile_properties = ExtResource("9_q6x7n")
+biome_data = ExtResource("10_2k084")
 
 [connection signal="on_click" from="GameMapTest/basicTile" to="." method="_on_basic_tile_on_click"]

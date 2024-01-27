@@ -1,6 +1,5 @@
-class_name GroundTile extends Node3D #Extend BasicTile and use biome_data
+class_name GroundTile extends BasicTile
 
-var biome_data: BiomeData
 var top_material: StandardMaterial3D
 
 func _ready():
@@ -9,18 +8,10 @@ func _ready():
 func _process(delta):
 	pass
 
-#func set_biome_data(data: BiomeData):
-	#biome_data = data
-
-#sollte von außen erzeugt werden? nicht hier in script
-func create_ground_tile(i_biome_data):
-	biome_data = i_biome_data
+func create_ground_tile():
 	self._set_top_layer_color()
-	
-#sollte von außen erzeugt werden? nicht hier in script
-func _set_top_layer_color():
+	 
+func _set_top_layer_color():  #ggf hier in tile Creator ziehen
 	var TopLayer = $TopLayer
-	var material_top = biome_data.ground_material_top
+	var material_top = biome_properties.ground_material_top
 	TopLayer.set_surface_override_material(0, material_top)
-	
-
