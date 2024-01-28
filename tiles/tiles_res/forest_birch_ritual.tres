@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://dh3h1udtkiwwe"]
+
+[ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_tiam5"]
+[ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_s3tcu"]
+
+[resource]
+script = ExtResource("2_s3tcu")
+name = "forest_birch_0_ritual"
+tile_name = "Old ritual site"
+biome_properties = ExtResource("1_tiam5")
+Socket = "full"
+Gem = "none"

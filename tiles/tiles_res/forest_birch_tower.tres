@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://dxkp4fynfx3f4"]
+
+[ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_fb4ps"]
+[ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_m0x2g"]
+
+[resource]
+script = ExtResource("2_m0x2g")
+name = "forest_birch_0_tower"
+tile_name = "Tower inside birch forest"
+biome_properties = ExtResource("1_fb4ps")
+Socket = "full"
+Gem = "none"

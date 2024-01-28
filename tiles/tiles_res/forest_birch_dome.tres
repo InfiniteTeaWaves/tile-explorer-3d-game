@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://chsna54yj5f0l"]
+
+[ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_jltex"]
+[ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_glap8"]
+
+[resource]
+script = ExtResource("2_glap8")
+name = "forest_birch_0_dome"
+tile_name = "City shielded by magical dome"
+biome_properties = ExtResource("1_jltex")
+Socket = "full"
+Gem = "none"

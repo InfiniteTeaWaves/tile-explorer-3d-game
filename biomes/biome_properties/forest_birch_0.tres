@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://biomes/biome_properties.gd" id="1_qaxqr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubjnh"]
-albedo_color = Color(0.219608, 0.396078, 0.176471, 1)
+albedo_color = Color(0.0509804, 0.686275, 0, 1)
 
 [resource]
 script = ExtResource("1_qaxqr")

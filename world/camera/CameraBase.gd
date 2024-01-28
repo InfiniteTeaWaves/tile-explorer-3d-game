@@ -54,7 +54,9 @@ func _mouseMovement(event):
 			
 			movement.x = -event.relative.x		
 			movement.z = -event.relative.y	
-			movement = movement.rotated(Vector3(0,1,0),self.rotation.y)
+			
+			var yawAngle = cameraYaw.cameraPlaneAngleY
+			movement = movement.rotated(Vector3(0,1,0),yawAngle)
 			self.position += movement * planeMouseDragSpeed * zoomBase.zoomParameter["current_size"]
 
 func set_position_to_clicked_tile(clicked_tile):

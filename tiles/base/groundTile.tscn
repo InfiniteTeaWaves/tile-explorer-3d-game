@@ -5,8 +5,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_p4xm0"]
 size = Vector3(10, 0.1, 10)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6c1be"]
-albedo_color = Color(0.666667, 0.313726, 0.439216, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i0dj3"]
+albedo_color = Color(0.862745, 0.231373, 0.666667, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w1evn"]
 size = Vector3(10, 0.7, 10)
@@ -24,13 +24,13 @@ albedo_color = Color(0.290196, 0.156863, 0.0666667, 1)
 script = ExtResource("1_e1unp")
 
 [node name="TopLayer" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -2.85695e-09, 2.32831e-10, -6.84622e-10, 1, -2.56114e-09, -1.16415e-10, 1.16415e-09, 1, 0, 0.7, 0)
+transform = Transform3D(1, -2.85695e-09, 2.32831e-10, -6.84622e-10, 1, -2.56114e-09, -1.16415e-10, 1.16415e-09, 1, 0, 0.6, 0)
 mesh = SubResource("BoxMesh_p4xm0")
 skeleton = NodePath("../MiddleLayer")
-surface_material_override/0 = SubResource("StandardMaterial3D_6c1be")
+surface_material_override/0 = SubResource("StandardMaterial3D_i0dj3")
 
 [node name="MiddleLayer" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, -1.68916e-09, 3.49246e-10, -4.35875e-10, 1, -1.39698e-09, -1.16415e-10, 6.98492e-10, 1, 0, 0.3, 0)
+transform = Transform3D(1, -1.68916e-09, 3.49246e-10, -4.35875e-10, 1, -1.39698e-09, -1.16415e-10, 6.98492e-10, 1, 0, 0.2, 0)
 mesh = SubResource("BoxMesh_w1evn")
 skeleton = NodePath("../TopLayer")
 surface_material_override/0 = SubResource("StandardMaterial3D_waaq7")
