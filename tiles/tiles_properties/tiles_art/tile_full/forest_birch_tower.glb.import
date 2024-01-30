@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://coob7lq34odte"
-path="res://.godot/imported/forest_birch_dome_city.glb-d5f9d17bab16d0c48d65e7a4e8ae11d2.scn"
+uid="uid://cqeb7pdwsi0vu"
+path="res://.godot/imported/forest_birch_tower.glb-59cd82b4a0534d4db92394709c52bc29.scn"
 
 [deps]
 
-source_file="res://tiles/tiles_art/tile_full/forest_birch_dome_city.glb"
-dest_files=["res://.godot/imported/forest_birch_dome_city.glb-d5f9d17bab16d0c48d65e7a4e8ae11d2.scn"]
+source_file="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_tower.glb"
+dest_files=["res://.godot/imported/forest_birch_tower.glb-59cd82b4a0534d4db92394709c52bc29.scn"]
 
 [params]
 

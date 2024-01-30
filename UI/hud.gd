@@ -1,11 +1,14 @@
 extends Control
 
-#connect events direclty to Hud?
+#connect events direclty to HUD?
+signal change_global_time(toggled_on: bool)
 
 func _ready():
 	pass 
 
 func _process(delta):
+	var label_fps = $PanelFPS/FPSLabel
+	label_fps.text =  str(Engine.get_frames_per_second()) + " FPS"
 	pass
 
 func _input(event):
@@ -43,3 +46,11 @@ func _on_button_pressed():
 func _hide_panel():
 	var panel = $TileText/TileTextPanel
 	panel.hide()		
+	
+func _on_check_button_global_time_toggled(toggled_on):
+	var time_label = $PanelFPS/TimeLabel
+	emit_signal("change_global_time", toggled_on)
+	if toggled_on:
+		time_label.text = "Night"
+	else:
+		time_label.text = "Day"

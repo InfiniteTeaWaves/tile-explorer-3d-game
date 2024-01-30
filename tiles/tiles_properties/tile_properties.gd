@@ -5,11 +5,27 @@ class_name TileProperties
 @export var tile_name: String
 @export var biome_properties: BiomeProperties
 
+#erstmal Gem und Socket verwerfen?
+
 @export_category("Tile Properties")
 @export_enum("small","large","full") var Socket: String = "full"
 @export var socket_scene: PackedScene
 @export_enum("none","small","large") var Gem: String = "none"
 @export var gem_scene: PackedScene
+
+#Lock scene und after lock hier pflegen (kuppel freischalten)
+#ggf angeben generell locked, oder welche Action die locked condition is, und welche dann
+#unlocked
+
+@export_group("Items and Actions")
+@export var action_1: TileAction
+@export var resource_1: TileItem
+@export var action_2: TileAction
+@export var resource_2: TileItem
+@export var action_3: TileAction
+@export var resource_3: TileItem
+@export var action_4: TileAction
+@export var resource_4: TileItem
 
 #func get_ground_color() -> Color:
 	#return biome.ground_color if biome else Color(0, 0, 0)

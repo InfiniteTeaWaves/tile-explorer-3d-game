@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TileAction" load_steps=2 format=3 uid="uid://dhklsjy1b5c2x"]
+
+[ext_resource type="Script" path="res://tiles/tile_actions/tile_actions_cres.gd" id="1_d2gux"]
+
+[resource]
+script = ExtResource("1_d2gux")
+name = "harvest_lumber"
+category = "harvest"
+item_type = "wood"
+is_subaction = false
+game_name = "lumber"

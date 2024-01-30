@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1kuvi4lfb0gm"
-path="res://.godot/imported/BasicTileFromGodot.glb-9d7f6f035cfc3af33eef1e2cbfaf38d4.scn"
+uid="uid://qu7ku5g74wen"
+path="res://.godot/imported/forest_birch_mountain.glb-87cf6bc86b5d5ec455b6824bb9f75265.scn"
 
 [deps]
 
-source_file="res://tiles/tiles_art/tile_full/BasicTileFromGodot.glb"
-dest_files=["res://.godot/imported/BasicTileFromGodot.glb-9d7f6f035cfc3af33eef1e2cbfaf38d4.scn"]
+source_file="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_mountain.glb"
+dest_files=["res://.godot/imported/forest_birch_mountain.glb-87cf6bc86b5d5ec455b6824bb9f75265.scn"]
 
 [params]
 

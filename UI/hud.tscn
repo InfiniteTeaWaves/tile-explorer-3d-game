@@ -66,4 +66,46 @@ offset_right = 751.0
 offset_bottom = 25.0
 text = "Tiles"
 
+[node name="PanelFPS" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1397.0
+offset_top = 63.0
+offset_right = 1577.0
+offset_bottom = 188.0
+
+[node name="FPSLabelDesc" type="Label" parent="PanelFPS"]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 11.0
+offset_right = 123.0
+offset_bottom = 34.0
+text = "Debugger
+"
+
+[node name="FPSLabel" type="Label" parent="PanelFPS"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 42.0
+offset_right = 88.0
+offset_bottom = 65.0
+text = "0 FPS
+"
+
+[node name="CheckButtonGlobalTime" type="CheckButton" parent="PanelFPS"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 64.0
+offset_right = 45.0
+offset_bottom = 88.0
+scale = Vector2(1.46917, 1.55461)
+
+[node name="TimeLabel" type="Label" parent="PanelFPS"]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 71.0
+offset_right = 108.0
+offset_bottom = 94.0
+text = "Day"
+
 [connection signal="pressed" from="TileText/TileTextPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="toggled" from="PanelFPS/CheckButtonGlobalTime" to="." method="_on_check_button_global_time_toggled"]

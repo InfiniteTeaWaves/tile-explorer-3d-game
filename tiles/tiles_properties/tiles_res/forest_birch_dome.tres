@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://chsna54yj5f0l"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_jltex"]
-[ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_glap8"]
-[ext_resource type="PackedScene" uid="uid://4tv1wjumuhxp" path="res://tiles/tiles_art/tile_full/forest_birch_dome.glb" id="3_m2nw7"]
+[ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties.gd" id="2_glap8"]
+[ext_resource type="PackedScene" uid="uid://4tv1wjumuhxp" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dome.glb" id="3_m2nw7"]
 
 [resource]
 script = ExtResource("2_glap8")
