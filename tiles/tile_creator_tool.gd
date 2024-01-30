@@ -22,7 +22,6 @@ func _run():
 		
 		basic_tile.add_child(ground_tile)
 		ground_tile.owner = self.get_scene()
-		
 		basic_tile.add_child(socket)
 		socket.owner = self.get_scene()
 		
@@ -32,7 +31,6 @@ func _run():
 		print("Basic tile not found")
 
 func _get_world_editor():
-	var world_editor = null
 	var all_nodes = self.get_scene().get_children()
 	for node in all_nodes:
 		if node.name == "WorldEditor":
@@ -62,3 +60,5 @@ func _create_socket():
 	socket_scene = tile_properties.socket_scene
 	socket = socket_scene.instantiate()
 	socket.name = "Socket" + tile_properties.Socket
+	print("socket found")
+	

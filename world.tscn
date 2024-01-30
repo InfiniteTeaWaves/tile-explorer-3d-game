@@ -1,17 +1,26 @@
-[gd_scene load_steps=16 format=3 uid="uid://iipet6x5y07a"]
+[gd_scene load_steps=25 format=3 uid="uid://iipet6x5y07a"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_h1vqe"]
 [ext_resource type="PackedScene" uid="uid://cq70shh7c8yl0" path="res://world/camera/CameraBase.tscn" id="2_icfy6"]
 [ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://tiles/base/basicTile.tscn" id="7_ck8hb"]
 [ext_resource type="PackedScene" uid="uid://bpgabupewtxl1" path="res://tiles/base/groundTile.tscn" id="8_c82qg"]
 [ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://assets/flag.glb" id="8_q6yvh"]
-[ext_resource type="Script" path="res://tiles/base/GroundTile.gd" id="9_3jslj"]
 [ext_resource type="Script" path="res://player/Player.gd" id="9_8wgje"]
 [ext_resource type="Resource" uid="uid://8gnmpkivw170" path="res://tiles/tiles_res/forest_birch_dig.tres" id="9_rofbj"]
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="10_aeis7"]
 [ext_resource type="PackedScene" uid="uid://bep2ry8kpkusw" path="res://UI/hud.tscn" id="10_i16hi"]
 [ext_resource type="PackedScene" uid="uid://dukubb7qu46x0" path="res://tiles/tiles_art/tile_full/forest_birch_dig.glb" id="11_2e75p"]
 [ext_resource type="PackedScene" uid="uid://cx5h7b504hdwq" path="res://world/2d_tile_map/2d_tilemap_for_world.tscn" id="11_mpyui"]
+[ext_resource type="Resource" uid="uid://chsna54yj5f0l" path="res://tiles/tiles_res/forest_birch_dome.tres" id="12_13ab8"]
+[ext_resource type="Resource" uid="uid://bwbae6r61dsd5" path="res://tiles/tiles_res/forest_birch_forest.tres" id="13_4g7h1"]
+[ext_resource type="PackedScene" uid="uid://iw0mlmo54ni3" path="res://tiles/tiles_art/tile_full/forest_birch_forest.glb" id="14_a0nro"]
+[ext_resource type="PackedScene" uid="uid://4tv1wjumuhxp" path="res://tiles/tiles_art/tile_full/forest_birch_dome.glb" id="14_s6oen"]
+[ext_resource type="Resource" uid="uid://c4ewvp7o8dkjl" path="res://tiles/tiles_res/forest_birch_mountain.tres" id="15_kh2p1"]
+[ext_resource type="PackedScene" uid="uid://qu7ku5g74wen" path="res://tiles/tiles_art/tile_full/forest_birch_mountain.glb" id="16_ge65f"]
+[ext_resource type="Resource" uid="uid://dh3h1udtkiwwe" path="res://tiles/tiles_res/forest_birch_ritual.tres" id="17_70by2"]
+[ext_resource type="PackedScene" uid="uid://b0jyk0oglpaag" path="res://tiles/tiles_art/tile_full/forest_birch_ritual.glb" id="18_b6y8j"]
+[ext_resource type="Resource" uid="uid://dxkp4fynfx3f4" path="res://tiles/tiles_res/forest_birch_tower.tres" id="19_biugo"]
+[ext_resource type="PackedScene" uid="uid://cqeb7pdwsi0vu" path="res://tiles/tiles_art/tile_full/forest_birch_tower.glb" id="20_a5pda"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w46fu"]
 sky_top_color = Color(0.372549, 0.592157, 0.960784, 1)
@@ -26,8 +35,10 @@ sky_material = SubResource("ProceduralSkyMaterial_w46fu")
 background_mode = 2
 background_color = Color(0.52549, 0.658824, 1, 1)
 sky = SubResource("Sky_wrj4h")
-ambient_light_color = Color(0.901961, 0.894118, 0.466667, 1)
-ambient_light_energy = 2.0
+ambient_light_source = 3
+ambient_light_color = Color(0.894118, 0.768627, 0.635294, 1)
+ambient_light_sky_contribution = 0.8
+ambient_light_energy = 0.0
 
 [node name="World3D" type="Node3D"]
 script = ExtResource("1_h1vqe")
@@ -35,11 +46,13 @@ script = ExtResource("1_h1vqe")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bk136")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.997932, 0.0233085, 0.0598988, -0.0610939, 0.0544793, 0.996644, 0.019967, -0.998243, 0.0557907, 5.85299, 13.5821, 0)
-light_color = Color(0.94902, 0.929412, 0, 1)
-
 [node name="CameraBase" parent="." instance=ExtResource("2_icfy6")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="CameraBase"]
+transform = Transform3D(0.712895, 0.303117, 0.632377, -0.201499, -0.775193, 0.598728, 0.671699, -0.554253, -0.491553, 30, 30, -30)
+light_color = Color(0.945098, 0.929412, 0, 1)
+light_energy = 0.4
+shadow_enabled = true
 
 [node name="GameMapTest" type="Node3D" parent="."]
 visible = false
@@ -63,27 +76,85 @@ visible = false
 
 [node name="WorldEditor" type="Node3D" parent="."]
 
+[node name="BasicTile" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+visible = false
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("9_rofbj")
+
+[node name="BasicTile2" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+visible = false
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("9_rofbj")
+
+[node name="BasicTile3" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+visible = false
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("9_rofbj")
+
+[node name="forest_birch_0_dome" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("12_13ab8")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_dome" instance=ExtResource("8_c82qg")]
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("12_13ab8")
+
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_dome" instance=ExtResource("14_s6oen")]
+
+[node name="forest_birch_0_forest" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -5)
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("13_4g7h1")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_forest" instance=ExtResource("8_c82qg")]
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("13_4g7h1")
+
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_forest" instance=ExtResource("14_a0nro")]
+
+[node name="forest_birch_0_mountain" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("15_kh2p1")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_mountain" instance=ExtResource("8_c82qg")]
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("15_kh2p1")
+
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_mountain" instance=ExtResource("16_ge65f")]
+
+[node name="forest_birch_0_ritual" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("17_70by2")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("8_c82qg")]
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("17_70by2")
+
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("18_b6y8j")]
+
+[node name="forest_birch_0_tower" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("19_biugo")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_tower" instance=ExtResource("8_c82qg")]
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("19_biugo")
+
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_tower" instance=ExtResource("20_a5pda")]
+
 [node name="forest_birch_0_dig" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 5)
 biome_properties = ExtResource("10_aeis7")
 tile_properties = ExtResource("9_rofbj")
 
-[node name="GroundTile" type="Node3D" parent="WorldEditor/forest_birch_0_dig" instance=ExtResource("8_c82qg")]
-script = ExtResource("9_3jslj")
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_dig" instance=ExtResource("8_c82qg")]
 biome_properties = ExtResource("10_aeis7")
 tile_properties = ExtResource("9_rofbj")
 
-[node name="Socketfull" type="Node3D" parent="WorldEditor/forest_birch_0_dig" instance=ExtResource("11_2e75p")]
-
-[node name="BasicTile6" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
-biome_properties = ExtResource("10_aeis7")
-tile_properties = ExtResource("9_rofbj")
-
-[node name="BasicTile7" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
-biome_properties = ExtResource("10_aeis7")
-tile_properties = ExtResource("9_rofbj")
-
-[node name="BasicTile8" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
-biome_properties = ExtResource("10_aeis7")
-tile_properties = ExtResource("9_rofbj")
+[node name="Socketfull" parent="WorldEditor/forest_birch_0_dig" instance=ExtResource("11_2e75p")]
 
 [connection signal="on_click" from="GameMapTest/basicTile" to="." method="_on_basic_tile_on_click"]

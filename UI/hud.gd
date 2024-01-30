@@ -16,7 +16,7 @@ func _hide_tile_text():
 	if input["esc"]:
 		var panel = $TileText/TileTextPanel
 		if panel.visible:
-			panel.hide()	
+			self._hide_panel()
 		else:
 			pass 
 			#Exit Game	ggf. signal weiter geben (exit game transmitten)
@@ -37,6 +37,9 @@ func set_tile_hovered_text_exit(hovered_tile):
 	var panel = $TileInfo/TileInfoPanel
 	panel.hide()
 	
-func hide_panel_after_button_close():
+func _on_button_pressed():
+	self._hide_panel()
+
+func _hide_panel():
 	var panel = $TileText/TileTextPanel
-	panel.hide()	
+	panel.hide()		

@@ -10,26 +10,26 @@ script = ExtResource("1_tckqe")
 [node name="TileInfo" type="Node" parent="."]
 
 [node name="TileInfoPanel" type="Panel" parent="TileInfo"]
-offset_left = 883.0
-offset_top = 512.0
-offset_right = 1063.0
-offset_bottom = 577.0
+offset_left = 1332.0
+offset_top = 1089.0
+offset_right = 1512.0
+offset_bottom = 1154.0
 
 [node name="TileInfoLabel" type="Label" parent="TileInfo/TileInfoPanel"]
 layout_mode = 0
-offset_left = 44.0
-offset_top = 21.0
-offset_right = 136.0
-offset_bottom = 47.0
+offset_left = 39.0
+offset_top = 18.0
+offset_right = 131.0
+offset_bottom = 44.0
 text = "Info of Tile"
 
 [node name="TileText" type="Node" parent="."]
 
 [node name="TileTextPanel" type="Panel" parent="TileText"]
-offset_left = 838.0
-offset_top = 129.0
-offset_right = 1098.0
-offset_bottom = 493.0
+offset_left = 1284.0
+offset_top = 680.0
+offset_right = 1544.0
+offset_bottom = 1044.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TileTextLabel" type="Label" parent="TileText/TileTextPanel"]
@@ -55,13 +55,15 @@ metadata/_edit_use_anchors_ = true
 [node name="Panel" type="Panel" parent="HudTop"]
 offset_left = 61.0
 offset_top = 14.0
-offset_right = 1098.0
+offset_right = 1565.0
 offset_bottom = 39.0
 
 [node name="Label" type="Label" parent="HudTop/Panel"]
 layout_mode = 0
-offset_left = 463.0
-offset_top = 1.0
-offset_right = 531.0
-offset_bottom = 27.0
+offset_left = 683.0
+offset_top = -1.0
+offset_right = 751.0
+offset_bottom = 25.0
 text = "Tiles"
+
+[connection signal="pressed" from="TileText/TileTextPanel/Button" to="." method="_on_button_pressed"]

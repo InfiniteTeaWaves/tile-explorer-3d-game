@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://dxkp4fynfx3f4"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://dxkp4fynfx3f4"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_fb4ps"]
 [ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_m0x2g"]
+[ext_resource type="PackedScene" uid="uid://cqeb7pdwsi0vu" path="res://tiles/tiles_art/tile_full/forest_birch_tower.glb" id="3_ktnea"]
 
 [resource]
 script = ExtResource("2_m0x2g")
@@ -9,4 +10,5 @@ name = "forest_birch_0_tower"
 tile_name = "Tower inside birch forest"
 biome_properties = ExtResource("1_fb4ps")
 Socket = "full"
+socket_scene = ExtResource("3_ktnea")
 Gem = "none"

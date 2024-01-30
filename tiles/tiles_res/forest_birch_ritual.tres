@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://dh3h1udtkiwwe"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://dh3h1udtkiwwe"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_tiam5"]
 [ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_s3tcu"]
+[ext_resource type="PackedScene" uid="uid://b0jyk0oglpaag" path="res://tiles/tiles_art/tile_full/forest_birch_ritual.glb" id="3_8ajdk"]
 
 [resource]
 script = ExtResource("2_s3tcu")
@@ -9,4 +10,5 @@ name = "forest_birch_0_ritual"
 tile_name = "Old ritual site"
 biome_properties = ExtResource("1_tiam5")
 Socket = "full"
+socket_scene = ExtResource("3_8ajdk")
 Gem = "none"

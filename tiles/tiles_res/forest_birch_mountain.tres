@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://c4ewvp7o8dkjl"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://c4ewvp7o8dkjl"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_7ovcc"]
 [ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_4x4tb"]
+[ext_resource type="PackedScene" uid="uid://qu7ku5g74wen" path="res://tiles/tiles_art/tile_full/forest_birch_mountain.glb" id="3_5uj3s"]
 
 [resource]
 script = ExtResource("2_4x4tb")
@@ -9,4 +10,5 @@ name = "forest_birch_0_mountain"
 tile_name = "Defensed mountain bastion"
 biome_properties = ExtResource("1_7ovcc")
 Socket = "full"
+socket_scene = ExtResource("3_5uj3s")
 Gem = "none"

@@ -9,7 +9,8 @@ var tile_base_position_y = 0
 var tile_offset_y = 0.5
 
 func _ready():
-	_create_world();
+	self._create_world();
+	self._add_editor_tiles_to_world()
 
 func _process(delta):
 	pass
@@ -36,7 +37,7 @@ func _reset_tile_position_y(clicked_tile):
 	print("Tile clicked in World.gd:", clicked_tile)
 	if last_tile != clicked_tile:
 		if last_tile:
-			last_tile.reset_position_y()
+			last_tile.reset_tile()
 			last_tile.AnimationOutline.stop()
 	last_tile = clicked_tile	
 	
@@ -67,5 +68,13 @@ func _add_tile_to_world(x, z, basic_tile): #gehört eigentlich in den tile creat
 	basic_tile.connect("on_hover_entry", _on_BasicTile_hover_entry)
 	basic_tile.connect("on_hover_exit", _on_BasicTile_hover_exit)
 	world_dynamic.add_child(basic_tile)
+
+func _add_editor_tiles_to_world():
+	var world_editor = $WorldEditor
+	for basic_tile in world_editor.get_children():
+		basic_tile.connect("on_click", self._on_BasicTile_clicked)
+		basic_tile.connect("on_double_click", self._on_BasicTile_double_clicked)
+		basic_tile.connect("on_hover_entry", self._on_BasicTile_hover_entry)
+		basic_tile.connect("on_hover_exit", self._on_BasicTile_hover_exit)
 	
 

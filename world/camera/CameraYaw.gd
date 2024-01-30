@@ -1,12 +1,15 @@
 extends Node3D
 
 var yawSpeed =  0.00125
-var cameraPlaneAngleY = self.rotation.y
+var cameraPlaneAngleY
 
 func _ready():
+	self.rotation.y = deg_to_rad(160) #Starting Position Y Rotation
+	cameraPlaneAngleY = self.rotation.y 
 	pass 
 
 func _process(delta):
+	#self.rotation.z = deg_to_rad(-45)
 	pass
 
 func _input(event):

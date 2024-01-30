@@ -64,5 +64,6 @@ func _on_hover_area_basic_tile_mouse_exited():
 	emit_signal("on_hover_exit",self)
 	entered_state = false
 	
-func reset_position_y():
+func reset_tile():
 	self.position.y = base_position_y
+	clicked_state = false

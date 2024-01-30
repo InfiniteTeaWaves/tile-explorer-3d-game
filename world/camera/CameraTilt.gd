@@ -5,7 +5,7 @@ var max_tilt = -75
 var min_tilt = -15
 
 func _ready():
-	self.rotation.x = deg_to_rad(-45)
+	self.rotation.x = deg_to_rad(-35) #Starting Angle
 	pass 
 
 func _process(delta):

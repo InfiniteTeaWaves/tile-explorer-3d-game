@@ -30,5 +30,6 @@ near = 0.037
 script = ExtResource("5_lndim")
 
 [node name="sphereTestPointer" type="CSGSphere3D" parent="CameraYaw/CameraTilt"]
+visible = false
 radius = 0.2
 radial_segments = 6

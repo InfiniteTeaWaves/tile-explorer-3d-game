@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://u0q3aonwfv6r"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=4 format=3 uid="uid://u0q3aonwfv6r"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_jltex"]
 [ext_resource type="Script" path="res://tiles/tile_properties.gd" id="2_glap8"]
+[ext_resource type="PackedScene" uid="uid://4tv1wjumuhxp" path="res://tiles/tiles_art/tile_full/forest_birch_dome.glb" id="3_rhryn"]
 
 [resource]
 script = ExtResource("2_glap8")
@@ -9,4 +10,5 @@ name = "forest_birch_0_dome_city"
 tile_name = "City without magical dome"
 biome_properties = ExtResource("1_jltex")
 Socket = "full"
+socket_scene = ExtResource("3_rhryn")
 Gem = "none"
