@@ -14,7 +14,6 @@ var zoomParameter = {
 }
 
 func _ready():
-	var camera = $Camera3D
 	self.position.z = zoomParameter["z_distance"]
 	camera.size = zoomParameter["start_size"]
 	zoomParameter["current_size"] = camera.size

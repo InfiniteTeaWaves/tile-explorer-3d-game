@@ -1,7 +1,11 @@
 extends Control
 
-#connect events direclty to HUD?
 signal change_global_time(toggled_on: bool)
+signal on_start_pressed()
+
+@onready var interaction_panel: Panel = $TileInteraction/InteractionPanel
+@onready var tile_info_panel: Panel = $TileInfoText/TileInfoPanel
+@onready var start_panel: Panel = $TileStart/StartPanel
 
 func _ready():
 	pass 
@@ -17,35 +21,36 @@ func _input(event):
 func _hide_tile_text():
 	var input = {"esc": Input.is_action_just_pressed("Exit")}
 	if input["esc"]:
-		var panel = $TileText/TileTextPanel
-		if panel.visible:
-			self._hide_panel()
+		if tile_info_panel.visible:
+			tile_info_panel.hide()
 		else:
 			pass 
 			#Exit Game	ggf. signal weiter geben (exit game transmitten)
 
-func set_clicked_tile_text(biome_properties: BiomeProperties):
-	var panel = $TileText/TileTextPanel
-	var label = $TileText/TileTextPanel/TileTextLabel
-	label.text = str(biome_properties.game_name)
-	panel.show()
+func set_clicked_tile_info_text(tile_properties: TileProperties):
+	var info_label = $TileInfoText/TileInfoPanel/TileInfoLabel
+	var text = "Tile Data:" + "\n"
+	text = text + str(tile_properties.tile_name) + "\n"
+	text = text + "\n"
+	text = text + "Biome Data:" + "\n"
+	text = text + "Name: " +  str(tile_properties.biome_properties.game_name) + "\n"
+	text = text + "Type: " +  str(tile_properties.biome_properties.type) + "\n"
+	text = text + "Subtype: " +  str(tile_properties.biome_properties.subtype) + "\n"
+	info_label.set_text(text)
+	tile_info_panel.show()
 	
-func set_tile_hovered_text_entry(hovered_tile):
-	var panel = $TileInfo/TileInfoPanel
-	var label = $TileInfo/TileInfoPanel/TileInfoLabel
-	label.text = "Tile (" + str( hovered_tile.position.x/10 ) + ", " + str( hovered_tile.position.z/10 ) + ")"
+func set_tile_hovered_location_entry(hovered_tile):
+	var panel = $TileLocation/TileLocationPanel
+	var label = $TileLocation/TileLocationPanel/TileLocationLabel
+	label.text = "Position (" + str( hovered_tile.position.x/10 ) + ", " + str( hovered_tile.position.z/10 ) + ")"
 	panel.show()	
 
-func set_tile_hovered_text_exit(hovered_tile):
-	var panel = $TileInfo/TileInfoPanel
+func set_tile_hovered_location_exit(hovered_tile):
+	var panel = $TileLocation/TileLocationPanel
 	panel.hide()
 	
 func _on_button_pressed():
-	self._hide_panel()
-
-func _hide_panel():
-	var panel = $TileText/TileTextPanel
-	panel.hide()		
+	tile_info_panel.hide()
 	
 func _on_check_button_global_time_toggled(toggled_on):
 	var time_label = $PanelFPS/TimeLabel
@@ -54,3 +59,21 @@ func _on_check_button_global_time_toggled(toggled_on):
 		time_label.text = "Night"
 	else:
 		time_label.text = "Day"
+
+func show_start_panel(tile):
+	var tile_name = start_panel.get_node("TileName")
+	tile_name.set_text(tile.tile_properties.tile_name)
+	
+func _on_start_button_pressed():
+	emit_signal("on_start_pressed")
+	
+func show_interaction_panel(i_biome_properties, i_tile_properties): #hier eigentlich die interaction data entgegenenhmen
+	var biome_properties = i_biome_properties
+	var tile_properties = i_tile_properties
+	
+	start_panel.hide()
+	interaction_panel.show()
+	#interaction ermitteln
+	print(tile_properties.action_1)
+
+

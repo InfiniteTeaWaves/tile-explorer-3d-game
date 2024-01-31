@@ -5197,120 +5197,48 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_rmoks")
 
-[sub_resource type="Animation" id="Animation_363r7"]
-resource_name = "LeafLargeAction_026"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_jmba3"]
-resource_name = "LeafLargeAction_027"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_wdhjx"]
-resource_name = "LeafLargeAction_006"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ata85"]
-resource_name = "LeafLargeAction_038"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_k0vbd"]
-resource_name = "LeafLargeAction_039"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_lbwpf"]
-resource_name = "LeafLargeAction_040"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_8mrjb"]
-resource_name = "SphereAction_007"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_e1wgo"]
-resource_name = "BaumStumpf_003Action_021"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_761pa"]
-resource_name = "SphereAction_010"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_raarc"]
-resource_name = "BaumStumpf_003Action_024"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_u4y7b"]
-resource_name = "SphereAction_012"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_wkgi3"]
-resource_name = "BaumStumpf_003Action_026"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ikxqn"]
-resource_name = "BaumStumpf_003Action_025"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_pqclu"]
-resource_name = "SphereAction_011"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_gn6c3"]
-resource_name = "BaumStumpf_003Action_023"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_4v6to"]
-resource_name = "SphereAction_009"
+[sub_resource type="Animation" id="Animation_jq6b8"]
+resource_name = "BaumStumpf_003Action_017"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_ai7ts"]
 resource_name = "BaumStumpf_003Action_018"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_jq6b8"]
-resource_name = "BaumStumpf_003Action_017"
+[sub_resource type="Animation" id="Animation_e1wgo"]
+resource_name = "BaumStumpf_003Action_021"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_m6tb8"]
-resource_name = "SphereAction_003"
+[sub_resource type="Animation" id="Animation_gn6c3"]
+resource_name = "BaumStumpf_003Action_023"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_s18tn"]
-resource_name = "SphereAction_004"
+[sub_resource type="Animation" id="Animation_raarc"]
+resource_name = "BaumStumpf_003Action_024"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ikxqn"]
+resource_name = "BaumStumpf_003Action_025"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_wkgi3"]
+resource_name = "BaumStumpf_003Action_026"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_x74km"]
 resource_name = "BaumStumpf_003Action_029"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_jj4yi"]
-resource_name = "SphereAction_015"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ljfe6"]
-resource_name = "SphereAction_022"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_awihb"]
-resource_name = "BaumStumpf_003Action_036"
+[sub_resource type="Animation" id="Animation_1gvdl"]
+resource_name = "BaumStumpf_003Action_034"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_04d1q"]
 resource_name = "BaumStumpf_003Action_035"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_ddgb2"]
-resource_name = "SphereAction_021"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_1gvdl"]
-resource_name = "BaumStumpf_003Action_034"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_2yx3j"]
-resource_name = "SphereAction_020"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_2oij6"]
-resource_name = "SphereAction_023"
+[sub_resource type="Animation" id="Animation_awihb"]
+resource_name = "BaumStumpf_003Action_036"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_72aaq"]
@@ -5321,16 +5249,8 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_038"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_a6kg2"]
-resource_name = "SphereAction_024"
-length = 0.166667
-
 [sub_resource type="Animation" id="Animation_21hff"]
 resource_name = "BaumStumpf_003Action_039"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_10ays"]
-resource_name = "SphereAction_025"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_ij66k"]
@@ -5341,56 +5261,24 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_041"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_px4e4"]
-resource_name = "SphereAction_027"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ay0b8"]
-resource_name = "SphereAction_026"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_5lk2h"]
-resource_name = "SphereAction_037"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_hbelu"]
-resource_name = "BaumStumpf_003Action_051"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_qqoq7"]
-resource_name = "BaumStumpf_003Action_050"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_qfdm2"]
-resource_name = "SphereAction_036"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_algsj"]
-resource_name = "BaumStumpf_003Action_049"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_8xtp3"]
-resource_name = "SphereAction_035"
+[sub_resource type="Animation" id="Animation_kua7j"]
+resource_name = "BaumStumpf_003Action_047"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_ecx0h"]
 resource_name = "BaumStumpf_003Action_048"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_kua7j"]
-resource_name = "BaumStumpf_003Action_047"
+[sub_resource type="Animation" id="Animation_algsj"]
+resource_name = "BaumStumpf_003Action_049"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_irjbf"]
-resource_name = "SphereAction_033"
+[sub_resource type="Animation" id="Animation_qqoq7"]
+resource_name = "BaumStumpf_003Action_050"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_4lac0"]
-resource_name = "SphereAction_034"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_4csj3"]
-resource_name = "SphereAction_043"
+[sub_resource type="Animation" id="Animation_hbelu"]
+resource_name = "BaumStumpf_003Action_051"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_xxsxt"]
@@ -5401,16 +5289,8 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_058"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_clwki"]
-resource_name = "SphereAction_044"
-length = 0.166667
-
 [sub_resource type="Animation" id="Animation_ajyld"]
 resource_name = "BaumStumpf_003Action_059"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_jcxg5"]
-resource_name = "SphereAction_045"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_lkqo5"]
@@ -5421,56 +5301,24 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_061"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_ggyjv"]
-resource_name = "SphereAction_047"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_18610"]
-resource_name = "SphereAction_046"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_yle8s"]
-resource_name = "SphereAction_052"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ufq5m"]
-resource_name = "BaumStumpf_003Action_066"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_my2kd"]
-resource_name = "BaumStumpf_003Action_065"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_klc7k"]
-resource_name = "SphereAction_051"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_rpeld"]
-resource_name = "BaumStumpf_003Action_064"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ad2ih"]
-resource_name = "SphereAction_050"
+[sub_resource type="Animation" id="Animation_frie7"]
+resource_name = "BaumStumpf_003Action_062"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_t7135"]
 resource_name = "BaumStumpf_003Action_063"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_frie7"]
-resource_name = "BaumStumpf_003Action_062"
+[sub_resource type="Animation" id="Animation_rpeld"]
+resource_name = "BaumStumpf_003Action_064"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_3lfeo"]
-resource_name = "SphereAction_048"
+[sub_resource type="Animation" id="Animation_my2kd"]
+resource_name = "BaumStumpf_003Action_065"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_jm1gw"]
-resource_name = "SphereAction_049"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_vtw2i"]
-resource_name = "SphereAction_063"
+[sub_resource type="Animation" id="Animation_ufq5m"]
+resource_name = "BaumStumpf_003Action_066"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_8m5aa"]
@@ -5481,16 +5329,8 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_078"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_x57cj"]
-resource_name = "SphereAction_064"
-length = 0.166667
-
 [sub_resource type="Animation" id="Animation_jmowm"]
 resource_name = "BaumStumpf_003Action_079"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_0wtwf"]
-resource_name = "SphereAction_065"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_ktkdh"]
@@ -5501,68 +5341,32 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_081"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_217b4"]
-resource_name = "SphereAction_067"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_wo7bj"]
-resource_name = "SphereAction_066"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_n8uxy"]
-resource_name = "SphereAction_072"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_6oved"]
-resource_name = "BaumStumpf_003Action_086"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_csuym"]
-resource_name = "BaumStumpf_003Action_085"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_yh4s1"]
-resource_name = "SphereAction_071"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_mqgwf"]
-resource_name = "BaumStumpf_003Action_084"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_kafve"]
-resource_name = "SphereAction_070"
+[sub_resource type="Animation" id="Animation_uilkj"]
+resource_name = "BaumStumpf_003Action_082"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_cmn0t"]
 resource_name = "BaumStumpf_003Action_083"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_uilkj"]
-resource_name = "BaumStumpf_003Action_082"
+[sub_resource type="Animation" id="Animation_mqgwf"]
+resource_name = "BaumStumpf_003Action_084"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_uqa4d"]
-resource_name = "SphereAction_068"
+[sub_resource type="Animation" id="Animation_csuym"]
+resource_name = "BaumStumpf_003Action_085"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_g7swg"]
-resource_name = "SphereAction_069"
+[sub_resource type="Animation" id="Animation_6oved"]
+resource_name = "BaumStumpf_003Action_086"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_nd3fw"]
 resource_name = "BaumStumpf_003Action_088"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_ltvbh"]
-resource_name = "SphereAction_074"
-length = 0.166667
-
 [sub_resource type="Animation" id="Animation_03dmp"]
 resource_name = "BaumStumpf_003Action_089"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_g5evr"]
-resource_name = "SphereAction_075"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_iegnr"]
@@ -5573,48 +5377,48 @@ length = 0.166667
 resource_name = "BaumStumpf_003Action_091"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_s2kd7"]
-resource_name = "SphereAction_077"
+[sub_resource type="Animation" id="Animation_lrn3v"]
+resource_name = "BaumStumpf_003Action_092"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_8ripj"]
-resource_name = "SphereAction_076"
+[sub_resource type="Animation" id="Animation_ijeoc"]
+resource_name = "BaumStumpf_003Action_093"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_lk8tg"]
-resource_name = "LeafLargeAction_035"
+[sub_resource type="Animation" id="Animation_rp4ki"]
+resource_name = "BaumStumpf_003Action_095"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_7bphj"]
+resource_name = "BaumStumpf_003Action_096"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_terj1"]
 resource_name = "Cube_005Action_001"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_bna36"]
-resource_name = "Cube_006Action_014"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_jfb37"]
-resource_name = "Cube_006Action_013"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_8dosr"]
-resource_name = "Cube_006Action_012"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_b647p"]
-resource_name = "Cube_006Action_011"
+[sub_resource type="Animation" id="Animation_dalf0"]
+resource_name = "Cube_005Action_002"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_22tta"]
 resource_name = "Cube_006Action_010"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_fjb52"]
-resource_name = "LeafLargeAction_036"
+[sub_resource type="Animation" id="Animation_b647p"]
+resource_name = "Cube_006Action_011"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_dalf0"]
-resource_name = "Cube_005Action_002"
+[sub_resource type="Animation" id="Animation_8dosr"]
+resource_name = "Cube_006Action_012"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_jfb37"]
+resource_name = "Cube_006Action_013"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_bna36"]
+resource_name = "Cube_006Action_014"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_yr0wq"]
@@ -5641,6 +5445,262 @@ length = 0.166667
 resource_name = "Cube_043Action"
 length = 0.166667
 
+[sub_resource type="Animation" id="Animation_cdmyy"]
+resource_name = "Cube_043Action_002"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_rimd4"]
+resource_name = "Cube_043Action_003"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_00cbh"]
+resource_name = "Cube_043Action_004"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_xg5yd"]
+resource_name = "Cube_043Action_005"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_1xit3"]
+resource_name = "Cube_043Action_009"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_b5yfe"]
+resource_name = "Cube_043Action_010"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_vo24n"]
+resource_name = "Cube_043Action_011"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_wdhjx"]
+resource_name = "LeafLargeAction_006"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_363r7"]
+resource_name = "LeafLargeAction_026"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_jmba3"]
+resource_name = "LeafLargeAction_027"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_lk8tg"]
+resource_name = "LeafLargeAction_035"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_fjb52"]
+resource_name = "LeafLargeAction_036"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ata85"]
+resource_name = "LeafLargeAction_038"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_k0vbd"]
+resource_name = "LeafLargeAction_039"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_lbwpf"]
+resource_name = "LeafLargeAction_040"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_m6tb8"]
+resource_name = "SphereAction_003"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_s18tn"]
+resource_name = "SphereAction_004"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_8mrjb"]
+resource_name = "SphereAction_007"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_4v6to"]
+resource_name = "SphereAction_009"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_761pa"]
+resource_name = "SphereAction_010"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_pqclu"]
+resource_name = "SphereAction_011"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_u4y7b"]
+resource_name = "SphereAction_012"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_jj4yi"]
+resource_name = "SphereAction_015"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_2yx3j"]
+resource_name = "SphereAction_020"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ddgb2"]
+resource_name = "SphereAction_021"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ljfe6"]
+resource_name = "SphereAction_022"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_2oij6"]
+resource_name = "SphereAction_023"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_a6kg2"]
+resource_name = "SphereAction_024"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_10ays"]
+resource_name = "SphereAction_025"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ay0b8"]
+resource_name = "SphereAction_026"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_px4e4"]
+resource_name = "SphereAction_027"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_irjbf"]
+resource_name = "SphereAction_033"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_4lac0"]
+resource_name = "SphereAction_034"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_8xtp3"]
+resource_name = "SphereAction_035"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_qfdm2"]
+resource_name = "SphereAction_036"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_5lk2h"]
+resource_name = "SphereAction_037"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_4csj3"]
+resource_name = "SphereAction_043"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_clwki"]
+resource_name = "SphereAction_044"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_jcxg5"]
+resource_name = "SphereAction_045"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_18610"]
+resource_name = "SphereAction_046"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ggyjv"]
+resource_name = "SphereAction_047"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_3lfeo"]
+resource_name = "SphereAction_048"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_jm1gw"]
+resource_name = "SphereAction_049"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ad2ih"]
+resource_name = "SphereAction_050"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_klc7k"]
+resource_name = "SphereAction_051"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_yle8s"]
+resource_name = "SphereAction_052"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_vtw2i"]
+resource_name = "SphereAction_063"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_x57cj"]
+resource_name = "SphereAction_064"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_0wtwf"]
+resource_name = "SphereAction_065"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_wo7bj"]
+resource_name = "SphereAction_066"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_217b4"]
+resource_name = "SphereAction_067"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_uqa4d"]
+resource_name = "SphereAction_068"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_g7swg"]
+resource_name = "SphereAction_069"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_kafve"]
+resource_name = "SphereAction_070"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_yh4s1"]
+resource_name = "SphereAction_071"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_n8uxy"]
+resource_name = "SphereAction_072"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_ltvbh"]
+resource_name = "SphereAction_074"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_g5evr"]
+resource_name = "SphereAction_075"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_8ripj"]
+resource_name = "SphereAction_076"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_s2kd7"]
+resource_name = "SphereAction_077"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_mrel3"]
+resource_name = "SphereAction_078"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_uapkp"]
+resource_name = "SphereAction_079"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_7r3et"]
+resource_name = "SphereAction_081"
+length = 0.166667
+
+[sub_resource type="Animation" id="Animation_lg8a7"]
+resource_name = "SphereAction_082"
+length = 0.166667
+
 [sub_resource type="Animation" id="Animation_745uh"]
 resource_name = "Sphere_055Action_001"
 length = 0.166667
@@ -5649,36 +5709,16 @@ length = 0.166667
 resource_name = "Sphere_055Action_003"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_cdmyy"]
-resource_name = "Cube_043Action_002"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_xg5yd"]
-resource_name = "Cube_043Action_005"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_bm2h0"]
-resource_name = "Sphere_055Action_006"
+[sub_resource type="Animation" id="Animation_6mcya"]
+resource_name = "Sphere_055Action_004"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_yff8h"]
 resource_name = "Sphere_055Action_005"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_00cbh"]
-resource_name = "Cube_043Action_004"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_6mcya"]
-resource_name = "Sphere_055Action_004"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_rimd4"]
-resource_name = "Cube_043Action_003"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_1xit3"]
-resource_name = "Cube_043Action_009"
+[sub_resource type="Animation" id="Animation_bm2h0"]
+resource_name = "Sphere_055Action_006"
 length = 0.166667
 
 [sub_resource type="Animation" id="Animation_k1jw0"]
@@ -5689,48 +5729,8 @@ length = 0.166667
 resource_name = "Sphere_055Action_011"
 length = 0.166667
 
-[sub_resource type="Animation" id="Animation_b5yfe"]
-resource_name = "Cube_043Action_010"
-length = 0.166667
-
 [sub_resource type="Animation" id="Animation_it1rw"]
 resource_name = "Sphere_055Action_012"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_vo24n"]
-resource_name = "Cube_043Action_011"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_lg8a7"]
-resource_name = "SphereAction_082"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_7bphj"]
-resource_name = "BaumStumpf_003Action_096"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_rp4ki"]
-resource_name = "BaumStumpf_003Action_095"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_7r3et"]
-resource_name = "SphereAction_081"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_ijeoc"]
-resource_name = "BaumStumpf_003Action_093"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_lrn3v"]
-resource_name = "BaumStumpf_003Action_092"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_mrel3"]
-resource_name = "SphereAction_078"
-length = 0.166667
-
-[sub_resource type="Animation" id="Animation_uapkp"]
-resource_name = "SphereAction_079"
 length = 0.166667
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l81hb"]

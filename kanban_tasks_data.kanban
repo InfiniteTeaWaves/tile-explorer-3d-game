@@ -1,0 +1,99 @@
+{
+	"categories": [
+		{
+			"uuid": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "f31b8684-5634-45de-826e-cd2417f5bd18",
+			"title": "Todo",
+			"tasks": [
+				"88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
+				"00b6fe7c-2288-4117-b587-96d3bc1261e0",
+				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
+				"e71d907a-5770-4589-9934-f04de8f2f06d"
+			]
+		},
+		{
+			"uuid": "bdfafafd-28c4-4991-a058-0c93e9c517fc",
+			"title": "Bugs",
+			"tasks": [
+				"fbfd3df8-1e35-4c8f-aabf-878335f1867c",
+				"8007069f-5eee-47d7-b7e3-dd882a54c533"
+			]
+		},
+		{
+			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "8607c5b9-a31c-4e1c-a87e-98b64d651c11",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
+			"title": "Blender new birch tree down  + Ground Tile stuff",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "fbfd3df8-1e35-4c8f-aabf-878335f1867c",
+			"title": "Blender Bugs",
+			"description": " Birch Ground Color,\nCity Trees updaten, \nMountain color change, \nRitual side color",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "00b6fe7c-2288-4117-b587-96d3bc1261e0",
+			"title": "mouse input rework",
+			"description": "- when clicked and scrolled, other tiles are not hovered\n- click only couints when released and when mouse was NOT moved\n-mousewheel and click count as click\n- mouse stays at same position when rotations and disspears and appears at same position\n- rotation doesnt hover",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "8007069f-5eee-47d7-b7e3-dd882a54c533",
+			"title": "tile_locked global machen, sodass basic Tile nicht mehr clickbar ist",
+			"description": "lösen, das world ein signal emmites zu allen base tiles, das heißt Mode locked, da funktioniert kein click mehr, nur hover\n",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
+			"title": "hover und click logik nochmal durchdenken",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "e71d907a-5770-4589-9934-f04de8f2f06d",
+			"title": "ggf. Tiles wtile ausgew'hlt",
+			"description": "ggf. click und anheben erlauben, wenn eine tile ausgewählt ist, weil alle tiles \"verschoben\" werden (also also um +1 verschieben",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"f31b8684-5634-45de-826e-cd2417f5bd18"
+			],
+			[
+				"bdfafafd-28c4-4991-a058-0c93e9c517fc"
+			],
+			[
+				"a75eb38b-9ce6-4fb0-8059-051fd62988dc"
+			],
+			[
+				"8607c5b9-a31c-4e1c-a87e-98b64d651c11"
+			]
+		]
+	}
+}

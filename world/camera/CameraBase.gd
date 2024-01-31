@@ -1,19 +1,28 @@
 extends Node3D
 
+var tile_locked_mode: bool = false
+
 @export var planeMoveFactor = 0.5
 @export var planeMouseDragSpeed = 0.001
 
-@onready var cameraYaw = get_node("/root/World3D/CameraBase/CameraYaw")
-@onready var zoomBase = get_node("/root/World3D/CameraBase/CameraYaw/CameraTilt/ZoomBase")
+@onready var world = self.get_parent()
+@onready var cameraYaw = $CameraYaw
+@onready var zoomBase = $CameraYaw/CameraTilt/ZoomBase
+#get_node("/root/World3D/CameraBase/CameraYaw")
 
 func _ready():
+	world.connect("tile_locked", self._set_tile_locked)
 	pass
 
 func _process(delta):
-	_planeMovement(delta)
+	if tile_locked_mode:
+		return
+	self._planeMovement(delta)
 	
 func _input(event):
-	_mouseMovement(event)
+	if tile_locked_mode:
+		return
+	self._mouseMovement(event)
 			
 func _planeMovement(delta):
 	var input = {
@@ -62,3 +71,6 @@ func _mouseMovement(event):
 func set_position_to_clicked_tile(clicked_tile):
 	self.position.x = clicked_tile.position.x
 	self.position.z = clicked_tile.position.z
+
+func _set_tile_locked(locked: bool):
+	tile_locked_mode = locked

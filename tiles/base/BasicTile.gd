@@ -9,6 +9,8 @@ signal on_hover_exit(BasicTile)
 @export var biome_properties: BiomeProperties
 @export var tile_properties: TileProperties
 
+var tile_locked_mode: bool = false
+
 var entered_state = false
 var clicked_state = false
 var base_position_y = self.position.y
@@ -17,7 +19,6 @@ var base_position_y_clicked = self.position.y + 0.5
 
 @onready var MeshOutline = $MeshTile/MeshOutline
 @onready var AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
-#@onready var base_tile = self.get_parent()
 
 func _ready():
 	MeshOutline.hide()
@@ -36,19 +37,25 @@ func _process(delta):
 
 func _input(event):
 	#careful, input triggered for ALL, i need to check weith entereed state
-	var input = {"mouse_left": Input.is_action_just_pressed("mouseclick_left")}	
+	var input = {"mouse_left": Input.is_action_just_released("mouseclick_left", true)}	
 	if entered_state: #this way, the specific tile is selected since input triggeres for all
 		if input["mouse_left"]:
 			self._click_on_tile()	
 		if event is InputEventMouseButton:
 			if event.is_double_click() and event.get_button_index() == 1: #left
-				emit_signal("on_double_click", self)
-	
+				self._double_click_on_tile()
+
 func _click_on_tile():
 	emit_signal("on_click", self)
+	if tile_locked_mode:
+		return
 	self.position.y = base_position_y_clicked
 	clicked_state = true		
-			
+	
+func _double_click_on_tile():
+	if tile_locked_mode:
+		return
+	emit_signal("on_double_click", self)
 		
 func _on_hover_area_basic_tile_mouse_entered():
 	if !clicked_state:
@@ -67,3 +74,9 @@ func _on_hover_area_basic_tile_mouse_exited():
 func reset_tile():
 	self.position.y = base_position_y
 	clicked_state = false
+
+func add_world_signal(world: Node3D):
+	world.connect("tile_locked", self._tile_locked)	
+
+func _tile_locked(locked: bool):
+	tile_locked_mode = locked
