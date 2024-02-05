@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Requirement" load_steps=2 format=3 uid="uid://cxcnkdr8q4u73"]
+
+[ext_resource type="Script" path="res://tiles/requirement/requirement_cres.gd" id="1_dh1jg"]
+
+[resource]
+script = ExtResource("1_dh1jg")
+requirement_name = "category_wood_0"
+item_category = "wood"
+item_subcategory = "birch"
+lore = ""
+guild = ""
+rarity = "common"
+lock_1 = 70
+game_name = "Wood"
+game_description = ""

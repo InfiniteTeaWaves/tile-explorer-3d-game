@@ -4,13 +4,12 @@ class_name TileItem
 @export var name: String
 #@export var item_name: String
 @export var texture: Texture
+@export_enum("item","base","artefact") var type: String = "item"
 
 @export_category("Properties")
-@export var item_type: String #ENUM oder über Resource
-@export var sub_type: String
-#@export var lore: String
-#@export var actions: Array[Resource]
-#@export var biome: BiomeProperties
+@export var item_category: String 
+@export var sub_category: String
+
 @export_enum("common","uncommon","rare","epic","legendary") var rarity: String = "common"
 
 @export_category("Ingame")

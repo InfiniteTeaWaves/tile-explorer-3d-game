@@ -1,7 +1,9 @@
 extends Control
 
 signal change_global_time(toggled_on: bool)
-signal on_start_pressed()
+signal show_interaction_start()
+signal show_interaction_main()
+
 
 @onready var interaction_panel: Panel = $TileInteraction/InteractionPanel
 @onready var tile_info_panel: Panel = $TileInfoText/TileInfoPanel
@@ -23,9 +25,9 @@ func _hide_tile_text():
 	if input["esc"]:
 		if tile_info_panel.visible:
 			tile_info_panel.hide()
-		else:
-			pass 
-			#Exit Game	ggf. signal weiter geben (exit game transmitten)
+		if interaction_panel.visible:
+			self._show_show_interaction_start()
+		#Exit Game	ggf. signal weiter geben (exit game transmitten)
 
 func set_clicked_tile_info_text(tile_properties: TileProperties):
 	var info_label = $TileInfoText/TileInfoPanel/TileInfoLabel
@@ -49,9 +51,6 @@ func set_tile_hovered_location_exit(hovered_tile):
 	var panel = $TileLocation/TileLocationPanel
 	panel.hide()
 	
-func _on_button_pressed():
-	tile_info_panel.hide()
-	
 func _on_check_button_global_time_toggled(toggled_on):
 	var time_label = $PanelFPS/TimeLabel
 	emit_signal("change_global_time", toggled_on)
@@ -65,8 +64,8 @@ func show_start_panel(tile):
 	tile_name.set_text(tile.tile_properties.tile_name)
 	
 func _on_start_button_pressed():
-	emit_signal("on_start_pressed")
-	
+	emit_signal("show_interaction_main")
+
 func show_interaction_panel(i_biome_properties, i_tile_properties): #hier eigentlich die interaction data entgegenenhmen
 	var biome_properties = i_biome_properties
 	var tile_properties = i_tile_properties
@@ -76,4 +75,13 @@ func show_interaction_panel(i_biome_properties, i_tile_properties): #hier eigent
 	#interaction ermitteln
 	print(tile_properties.action_1)
 
+func _on_tile_info_close_button_pressed():
+	tile_info_panel.hide()
 
+func _on_tile_interaction_close_button_pressed():
+	self._show_show_interaction_start()
+	
+func _show_show_interaction_start():
+	interaction_panel.hide()
+	start_panel.show()
+	emit_signal("show_interaction_start")

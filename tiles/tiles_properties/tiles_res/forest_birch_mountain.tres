@@ -2,13 +2,16 @@
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_7ovcc"]
 [ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties.gd" id="2_4x4tb"]
-[ext_resource type="PackedScene" uid="uid://qu7ku5g74wen" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_mountain.glb" id="3_5uj3s"]
+[ext_resource type="PackedScene" uid="uid://b4e05dkxc67s1" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_mountain.glb" id="3_5uj3s"]
 
 [resource]
 script = ExtResource("2_4x4tb")
 name = "forest_birch_0_mountain"
 tile_name = "Defensed mountain bastion"
 biome_properties = ExtResource("1_7ovcc")
-Socket = "full"
+type = "base"
 socket_scene = ExtResource("3_5uj3s")
-Gem = "none"
+socket_type = "full"
+require_1 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([])
+receive_1 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([])
+action_type_1 = 0

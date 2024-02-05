@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=538 format=3 uid="uid://bwbae6r61dsd5"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=539 format=3 uid="uid://bwbae6r61dsd5"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_3m4jd"]
 [ext_resource type="Resource" uid="uid://dhklsjy1b5c2x" path="res://tiles/tile_actions/tile_actions_res/harvest_lumber.tres" id="1_n46s3"]
 [ext_resource type="Resource" uid="uid://beyfldtc57gc4" path="res://tiles/tile_items/tile_items_res/wood_birch_0.tres" id="3_aiilk"]
 [ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties.gd" id="3_nehc7"]
+[ext_resource type="Resource" uid="uid://cxcnkdr8q4u73" path="res://tiles/requirement/requirement_res/requirement_item_wood_0.tres" id="4_c4xen"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a7ri8"]
 resource_name = "Material.087"
@@ -5891,8 +5892,24 @@ script = ExtResource("3_nehc7")
 name = "forest_birch_0_forest"
 tile_name = "Dense birch forest"
 biome_properties = ExtResource("1_3m4jd")
-Socket = "full"
+type = "normal"
 socket_scene = SubResource("PackedScene_2gf8d")
-Gem = "none"
+socket_type = "full"
 action_1 = ExtResource("1_n46s3")
-resource_1 = ExtResource("3_aiilk")
+state_1 = "unlocked"
+require_1 = Array[Resource("res://tiles/requirement/requirement_cres.gd")]([ExtResource("4_c4xen")])
+receive_1 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([ExtResource("3_aiilk"), ExtResource("3_aiilk")])
+lock_1 = 0
+state_2 = "unlocked"
+require_2 = Array[Resource("res://tiles/requirement/requirement_cres.gd")]([])
+receive_2 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([])
+lock_2 = 0
+state_3 = "unlocked"
+require_3 = Array[Resource("res://tiles/requirement/requirement_cres.gd")]([])
+receive_3 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([])
+lock_3 = 0
+state_4 = "unlocked"
+require_4 = Array[Resource("res://tiles/requirement/requirement_cres.gd")]([])
+receive_4 = Array[Resource("res://tiles/tile_items/tile_items_cres.gd")]([])
+lock_4 = 0
+locked_lore = ""

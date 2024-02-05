@@ -13,27 +13,38 @@
 			"tasks": [
 				"88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
 				"00b6fe7c-2288-4117-b587-96d3bc1261e0",
-				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
-				"e71d907a-5770-4589-9934-f04de8f2f06d"
+				"e71d907a-5770-4589-9934-f04de8f2f06d",
+				"9ff60321-1ba5-4e16-9f77-6cb8ff25fe27"
 			]
 		},
 		{
 			"uuid": "bdfafafd-28c4-4991-a058-0c93e9c517fc",
 			"title": "Bugs",
 			"tasks": [
-				"fbfd3df8-1e35-4c8f-aabf-878335f1867c",
-				"8007069f-5eee-47d7-b7e3-dd882a54c533"
+				"fbfd3df8-1e35-4c8f-aabf-878335f1867c"
 			]
 		},
 		{
 			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"aaa11d81-b88e-40d6-8a27-207e3f651756"
+			]
 		},
 		{
 			"uuid": "8607c5b9-a31c-4e1c-a87e-98b64d651c11",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"8007069f-5eee-47d7-b7e3-dd882a54c533"
+			]
+		},
+		{
+			"uuid": "ad688e96-dac9-4026-adc8-4d20fcb60098",
+			"title": "Ideas",
+			"tasks": [
+				"cc292f0d-b437-47d7-ae9a-68564556b950",
+				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8"
+			]
 		}
 	],
 	"tasks": [
@@ -59,13 +70,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "8007069f-5eee-47d7-b7e3-dd882a54c533",
-			"title": "tile_locked global machen, sodass basic Tile nicht mehr clickbar ist",
-			"description": "lösen, das world ein signal emmites zu allen base tiles, das heißt Mode locked, da funktioniert kein click mehr, nur hover\n",
-			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
-			"steps": []
-		},
-		{
 			"uuid": "9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
 			"title": "hover und click logik nochmal durchdenken",
 			"description": "",
@@ -76,6 +80,34 @@
 			"uuid": "e71d907a-5770-4589-9934-f04de8f2f06d",
 			"title": "ggf. Tiles wtile ausgew'hlt",
 			"description": "ggf. click und anheben erlauben, wenn eine tile ausgewählt ist, weil alle tiles \"verschoben\" werden (also also um +1 verschieben",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "cc292f0d-b437-47d7-ae9a-68564556b950",
+			"title": "Interaction Panel",
+			"description": "maybe a base interactio/action object (interaction class) that describes a tile wirth a loot table? or where do i put the loot table? do i have a loot table depending on the action? how do i modify it with my biome, a guild, a lore, or action cards or artefacts?",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "9ff60321-1ba5-4e16-9f77-6cb8ff25fe27",
+			"title": "blender problem when copied ",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "aaa11d81-b88e-40d6-8a27-207e3f651756",
+			"title": "Get one interaction done for normal items",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "8007069f-5eee-47d7-b7e3-dd882a54c533",
+			"title": "tile_locked global machen, sodass basic Tile nicht mehr clickbar ist",
+			"description": "lösen, das world ein signal emmites zu allen base tiles, das heißt Mode locked, da funktioniert kein click mehr, nur hover\n",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}
@@ -93,6 +125,9 @@
 			],
 			[
 				"8607c5b9-a31c-4e1c-a87e-98b64d651c11"
+			],
+			[
+				"ad688e96-dac9-4026-adc8-4d20fcb60098"
 			]
 		]
 	}

@@ -1,50 +1,58 @@
 extends Resource
 class_name TileProperties
 
+#Idee, bei allen Infos wie Lore Guild Action ein State dazugeben
+
 @export var name: String
 @export var tile_name: String
 @export var biome_properties: BiomeProperties
 
-#erstmal Gem und Socket verwerfen?
-
 @export_category("Tile Properties")
-@export_enum("small","large","full") var Socket: String = "full"
+@export_enum("normal","locked") var type: String = "normal"
 @export var socket_scene: PackedScene
-@export_enum("none","small","large") var Gem: String = "none"
-@export var gem_scene: PackedScene
+@export_enum("full","frame","water") var socket_type: String = "full"
 
-#Lock scene und after lock hier pflegen (kuppel freischalten)
-#ggf angeben generell locked, oder welche Action die locked condition is, und welche dann
-#unlocked
-
-@export_group("Items and Actions")
+@export_category("Interaction")
+@export_group("Action 1")
 @export var action_1: TileAction
-@export var resource_1: TileItem
+@export_enum("unlocked","locked") var state_1: String = "unlocked"
+@export var require_1: Array[Requirement]
+@export var receive_1: Array[TileItem]
+
+@export_flags("scene:4", "action:8", "lore:16") var lock_1 = 0
+@export_group("Action 2")
 @export var action_2: TileAction
-@export var resource_2: TileItem
+@export_enum("unlocked","locked") var state_2: String = "unlocked"
+@export var require_2: Array[Requirement]
+@export var receive_2: Array[TileItem]
+@export_flags("scene:4", "action:8", "lore:16") var lock_2 = 0
+
+@export_group("Action 3")
 @export var action_3: TileAction
-@export var resource_3: TileItem
+@export_enum("unlocked","locked") var state_3: String = "unlocked"
+@export var require_3: Array[Requirement]
+@export var receive_3: Array[TileItem]
+@export_flags("scene:4", "action:8", "lore:16") var lock_3 = 0
+
+@export_group("Action 4")
 @export var action_4: TileAction
-@export var resource_4: TileItem
+@export_enum("unlocked","locked") var state_4: String = "unlocked"
+@export var require_4: Array[Requirement]
+@export var receive_4: Array[TileItem]
+@export_flags("scene:4", "action:8", "lore:16") var lock_4 = 0
 
-#func get_ground_color() -> Color:
-	#return biome.ground_color if biome else Color(0, 0, 0)
-#
-#func create_tile(tile_data: TileData):
-	#var new_tile = Node.new() # Or use a more specific type if needed
-#
-	## Set the ground color (assuming you have a method or node to apply this)
-	#new_tile.set_ground_color(tile_data.get_ground_color())
-#
-	## Instantiate and add the socket scene if it exists
-	#if tile_data.socket_scene:
-		#var socket_instance = tile_data.socket_scene.instance()
-		#new_tile.add_child(socket_instance)
-#
-	## Instantiate and add the gem scene if it exists
-	#if tile_data.gem_scene:
-		#var gem_instance = tile_data.gem_scene.instance()
-		#new_tile.add_child(gem_instance)
-#
-	#return new_tile
+@export_group("Further Locks")
+#story hint chance ?draw story?
+@export var locked_scene: PackedScene
+@export var locked_lore: String
+#@export var locked_guild: String
 
+#ggf Lore und Guild Übergeben, lore hints ? guild hints?
+#@export_category("Lore & guild")
+#@export_group("Lore")
+#@export_enum("unlocked","locked") var lore_state_1: String = "unlocked"
+#@export var lore_1: String
+#
+#@export_group("Guild")
+#@export_enum("unlocked","locked") var guild_state_1: String = "unlocked"
+#@export var guild_1: String

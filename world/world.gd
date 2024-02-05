@@ -17,7 +17,8 @@ var tile_offset_y = 0.5
 
 func _ready():
 	hud.connect("change_global_time", self._change_global_time)
-	hud.connect("on_start_pressed", self._on_tile_start_pressed)
+	hud.connect("show_interaction_main", self._on_show_interaction_main)
+	hud.connect("show_interaction_start", self._on_show_interaction_start)
 	self._create_world();
 
 func _process(delta):
@@ -76,7 +77,7 @@ func _change_global_time(toggled):
 		main_light.light_energy = 0.4	
 		environment.set_bg_color(color.html("#57afc7"))
 
-func _on_tile_start_pressed():
+func _on_show_interaction_main():
 	self.set_tile_locked(true)
 	cameraBase.set_position_to_clicked_tile(current_tile)
 	
@@ -86,6 +87,9 @@ func _on_tile_start_pressed():
 	var tile_properties = current_tile.tile_properties
 	hud.show_interaction_panel(biome_properties, tile_properties )
 	#self.current_tile 
+	
+func _on_show_interaction_start():
+	self.set_tile_locked(false)
 	
 func set_tile_locked(locked: bool):
 	emit_signal("tile_locked", locked)

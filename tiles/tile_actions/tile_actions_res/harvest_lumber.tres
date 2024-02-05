@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource("1_d2gux")
 name = "harvest_lumber"
-category = "harvest"
-item_type = "wood"
-is_subaction = false
-game_name = "lumber"
+action = "harvest"
+sub_action = "lumber"
+type = "sub_category"
+game_name = "Lumber"
+game_description = "Harvest - Lumber"

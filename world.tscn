@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://iipet6x5y07a"]
+[gd_scene load_steps=27 format=3 uid="uid://iipet6x5y07a"]
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_h1vqe"]
 [ext_resource type="PackedScene" uid="uid://cq70shh7c8yl0" path="res://world/camera/CameraBase.tscn" id="2_icfy6"]
@@ -6,17 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://bpgabupewtxl1" path="res://tiles/base/groundTile.tscn" id="8_c82qg"]
 [ext_resource type="PackedScene" uid="uid://jnsrjs3gf0l8" path="res://assets/flag.glb" id="8_q6yvh"]
 [ext_resource type="Script" path="res://player/Player.gd" id="9_8wgje"]
+[ext_resource type="Resource" uid="uid://c21sptw6iqmit" path="res://tiles/tiles_properties/tiles_res/forest_birch_beaver.tres" id="9_lqogg"]
 [ext_resource type="Resource" uid="uid://8gnmpkivw170" path="res://tiles/tiles_properties/tiles_res/forest_birch_dig.tres" id="9_rofbj"]
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="10_aeis7"]
 [ext_resource type="PackedScene" uid="uid://bep2ry8kpkusw" path="res://UI/hud.tscn" id="10_i16hi"]
-[ext_resource type="PackedScene" uid="uid://dukubb7qu46x0" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dig.glb" id="11_2e75p"]
+[ext_resource type="PackedScene" uid="uid://ohmip8tgo8sq" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dig.glb" id="11_2e75p"]
 [ext_resource type="PackedScene" uid="uid://cx5h7b504hdwq" path="res://world/2d_tile_map/2d_tilemap_for_world.tscn" id="11_mpyui"]
 [ext_resource type="Resource" uid="uid://chsna54yj5f0l" path="res://tiles/tiles_properties/tiles_res/forest_birch_dome.tres" id="12_13ab8"]
+[ext_resource type="PackedScene" uid="uid://c376jedbey0pt" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_beaver.glb" id="12_nmwxc"]
 [ext_resource type="Resource" uid="uid://bwbae6r61dsd5" path="res://tiles/tiles_properties/tiles_res/forest_birch_forest.tres" id="13_4g7h1"]
 [ext_resource type="PackedScene" uid="uid://iw0mlmo54ni3" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_forest.glb" id="14_a0nro"]
 [ext_resource type="PackedScene" uid="uid://4tv1wjumuhxp" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dome.glb" id="14_s6oen"]
 [ext_resource type="Resource" uid="uid://c4ewvp7o8dkjl" path="res://tiles/tiles_properties/tiles_res/forest_birch_mountain.tres" id="15_kh2p1"]
-[ext_resource type="PackedScene" uid="uid://qu7ku5g74wen" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_mountain.glb" id="16_ge65f"]
+[ext_resource type="PackedScene" uid="uid://b4e05dkxc67s1" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_mountain.glb" id="16_ge65f"]
 [ext_resource type="Resource" uid="uid://dh3h1udtkiwwe" path="res://tiles/tiles_properties/tiles_res/forest_birch_ritual.tres" id="17_70by2"]
 [ext_resource type="PackedScene" uid="uid://b0jyk0oglpaag" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_ritual.glb" id="18_b6y8j"]
 [ext_resource type="Resource" uid="uid://dxkp4fynfx3f4" path="res://tiles/tiles_properties/tiles_res/forest_birch_tower.tres" id="19_biugo"]
@@ -77,11 +79,6 @@ visible = false
 
 [node name="WorldEditor" type="Node3D" parent="."]
 
-[node name="BasicTile" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
-visible = false
-biome_properties = ExtResource("10_aeis7")
-tile_properties = ExtResource("9_rofbj")
-
 [node name="BasicTile2" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
 visible = false
 biome_properties = ExtResource("10_aeis7")
@@ -91,6 +88,19 @@ tile_properties = ExtResource("9_rofbj")
 visible = false
 biome_properties = ExtResource("10_aeis7")
 tile_properties = ExtResource("9_rofbj")
+
+[node name="forest_birch_0_beaver" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.8726, 0, 0)
+visible = false
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("9_lqogg")
+
+[node name="GroundTile" parent="WorldEditor/forest_birch_0_beaver" instance=ExtResource("8_c82qg")]
+visible = false
+biome_properties = ExtResource("10_aeis7")
+tile_properties = ExtResource("9_lqogg")
+
+[node name="forest_birch_beaver" parent="WorldEditor/forest_birch_0_beaver" instance=ExtResource("12_nmwxc")]
 
 [node name="forest_birch_0_dome" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
