@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BiomeProperties" load_steps=3 format=3 uid="uid://b1spy3qqi0k00"]
 
-[ext_resource type="Script" path="res://biomes/biome_properties.gd" id="1_qaxqr"]
+[ext_resource type="Script" path="res://biomes/biome_properties_cres.gd" id="1_qaxqr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ubjnh"]
 albedo_color = Color(0.00784314, 0.313726, 0, 1)

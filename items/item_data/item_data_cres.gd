@@ -1,9 +1,10 @@
 extends Resource
-class_name TileItem
+class_name ItemData
 
 @export var name: String
 #@export var item_name: String
-@export var texture: Texture
+@export var stackable: bool = false
+@export var texture: AtlasTexture
 @export_enum("item","base","artefact") var type: String = "item"
 
 @export_category("Properties")

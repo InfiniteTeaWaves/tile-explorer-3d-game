@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BiomeData" load_steps=3 format=3 uid="uid://cihlyn0y3auvd"]
 
-[ext_resource type="Script" path="res://biomes/biome_data.gd" id="1_qf55j"]
+[ext_resource type="Script" path="res://biomes/biome_data_cres.gd" id="1_qf55j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfneu"]
 albedo_color = Color(0.968627, 0.392157, 0.215686, 1)

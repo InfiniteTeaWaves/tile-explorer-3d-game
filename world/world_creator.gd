@@ -36,7 +36,7 @@ func create_dynamic_world(i_world_dynamic, i_2d_tile_map):
 			var biome_name = item["biome"]
 			var biome_properties = BiomeResourceLoader.get_biome_properties(biome_name)
 			var biome_data = BiomeResourceLoader.get_biome_data(biome_name)
-			if biome_properties:
+			if biome_properties and biome_data:
 				var basic_tile = TileCreator.new(biome_properties, biome_data).create_tile_from_biome()
 				self._add_tile_to_world(item.x * 10 , item.z * 10 , basic_tile)
 

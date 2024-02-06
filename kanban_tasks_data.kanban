@@ -21,14 +21,17 @@
 			"uuid": "bdfafafd-28c4-4991-a058-0c93e9c517fc",
 			"title": "Bugs",
 			"tasks": [
-				"fbfd3df8-1e35-4c8f-aabf-878335f1867c"
+				"fbfd3df8-1e35-4c8f-aabf-878335f1867c",
+				"9447cb4f-b0ec-4bd4-beae-4a5d3045d5b2",
+				"cd92569c-b291-47bc-9f8f-8985b2bbd4ff"
 			]
 		},
 		{
 			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
 			"title": "Doing",
 			"tasks": [
-				"aaa11d81-b88e-40d6-8a27-207e3f651756"
+				"aaa11d81-b88e-40d6-8a27-207e3f651756",
+				"6a45ebfa-1d48-4357-9277-4718783d9d7c"
 			]
 		},
 		{
@@ -43,7 +46,8 @@
 			"title": "Ideas",
 			"tasks": [
 				"cc292f0d-b437-47d7-ae9a-68564556b950",
-				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8"
+				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
+				"2bb6f087-36d8-40fd-90c7-022c8e8c61af"
 			]
 		}
 	],
@@ -108,6 +112,34 @@
 			"uuid": "8007069f-5eee-47d7-b7e3-dd882a54c533",
 			"title": "tile_locked global machen, sodass basic Tile nicht mehr clickbar ist",
 			"description": "lösen, das world ein signal emmites zu allen base tiles, das heißt Mode locked, da funktioniert kein click mehr, nur hover\n",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "2bb6f087-36d8-40fd-90c7-022c8e8c61af",
+			"title": "cartoon water",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "9447cb4f-b0ec-4bd4-beae-4a5d3045d5b2",
+			"title": "biome data wird nicht geladen ovm resource loader obwohl pfad wohl stimmt",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "6a45ebfa-1d48-4357-9277-4718783d9d7c",
+			"title": "Inventory for player",
+			"description": "https://www.youtube.com/watch?v=V79YabQZC1s&t=1316s",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "cd92569c-b291-47bc-9f8f-8985b2bbd4ff",
+			"title": "Interaction NUR wenn Tile vorhanden",
+			"description": "",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}

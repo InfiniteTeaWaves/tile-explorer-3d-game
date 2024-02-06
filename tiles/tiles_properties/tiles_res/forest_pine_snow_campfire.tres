@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="TileProperties" load_steps=3 format=3 uid="uid://blsi3saycajjf"]
 
-[ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties.gd" id="1_pnix1"]
+[ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties_cres.gd" id="1_pnix1"]
 [ext_resource type="PackedScene" uid="uid://b1kuvi4lfb0gm" path="res://tiles/tiles_properties/tiles_art/tile_full/BasicTileFromGodot.glb" id="2_j7s4r"]
 
 [resource]

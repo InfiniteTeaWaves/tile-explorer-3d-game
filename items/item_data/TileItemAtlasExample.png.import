@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce8ox7s1quxyr"
-path="res://.godot/imported/wood_birch.png-4d8531fdde82041f8e2ceb0aa5cbb1ae.ctex"
+uid="uid://c3w7cadbb1h7l"
+path="res://.godot/imported/TileItemAtlasExample.png-9233f9718436ba4a05c7b3ac966a76e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tiles/tile_items/tile_items_art/wood_birch.png"
-dest_files=["res://.godot/imported/wood_birch.png-4d8531fdde82041f8e2ceb0aa5cbb1ae.ctex"]
+source_file="res://items/item_data/TileItemAtlasExample.png"
+dest_files=["res://.godot/imported/TileItemAtlasExample.png-9233f9718436ba4a05c7b3ac966a76e1.ctex"]
 
 [params]
 

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b0olk4tfyl5em"]
+
+[ext_resource type="Script" path="res://items/item_data/item_data_cres.gd" id="1_m47qd"]
+[ext_resource type="Texture2D" uid="uid://bjmm0mi4dh8au" path="res://items/item_data/test_atlas.tres" id="2_403sr"]
+
+[resource]
+script = ExtResource("1_m47qd")
+name = "wood_fire_0"
+stackable = true
+texture = ExtResource("2_403sr")
+type = "item"
+item_category = ""
+sub_category = ""
+rarity = "common"
+game_name = "birch wood"
+game_description = ""

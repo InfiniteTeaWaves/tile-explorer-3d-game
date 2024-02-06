@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BiomeData" load_steps=4 format=3 uid="uid://4w44idivnra5"]
+
+[ext_resource type="Script" path="res://biomes/biome_data_cres.gd" id="1_whcq7"]
+[ext_resource type="Resource" uid="uid://u0q3aonwfv6r" path="res://tiles/tiles_properties/tiles_res/forest_birch_dome_city.tres" id="2_ys34l"]
+[ext_resource type="Resource" uid="uid://dh3h1udtkiwwe" path="res://tiles/tiles_properties/tiles_res/forest_birch_ritual.tres" id="3_tqy2r"]
+
+[resource]
+script = ExtResource("1_whcq7")
+biome_name = "birch_forest_0"
+tile_properties = Array[Resource("res://tiles/tiles_properties/tile_properties_cres.gd")]([ExtResource("2_ys34l"), ExtResource("3_tqy2r")])
