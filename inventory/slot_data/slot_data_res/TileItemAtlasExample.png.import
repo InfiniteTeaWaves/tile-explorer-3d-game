@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bfc7wobsbcf25"
-path="res://.godot/imported/TileItemAtlasExample.png-a93aadfe20e5d449743c06232c4966f9.ctex"
+path="res://.godot/imported/TileItemAtlasExample.png-5b061f91bd5a9a0703aea60a4b6e6460.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/inventory/slot_data/slot_data_res/TileItemAtlasExample.png"
-dest_files=["res://.godot/imported/TileItemAtlasExample.png-a93aadfe20e5d449743c06232c4966f9.ctex"]
+source_file="res://inventory/slot_data/slot_data_res/TileItemAtlasExample.png"
+dest_files=["res://.godot/imported/TileItemAtlasExample.png-5b061f91bd5a9a0703aea60a4b6e6460.ctex"]
 
 [params]
 

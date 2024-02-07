@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bep2ry8kpkusw"]
+[gd_scene load_steps=3 format=3 uid="uid://bep2ry8kpkusw"]
 
 [ext_resource type="Script" path="res://UI/hud.gd" id="1_tckqe"]
+[ext_resource type="PackedScene" uid="uid://cvbawf6e8kp1u" path="res://inventory/inventory.tscn" id="2_m1167"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -127,6 +128,7 @@ text = "Day"
 [node name="TileStart" type="Node" parent="."]
 
 [node name="StartPanel" type="Panel" parent="TileStart"]
+visible = false
 offset_left = 592.0
 offset_top = 987.0
 offset_right = 994.0
@@ -237,19 +239,36 @@ offset_bottom = 79.2406
 text = "Requires X 0/1"
 
 [node name="SelectInventoryPanel" type="Panel" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 707.0
-offset_top = 844.0
-offset_right = 842.0
-offset_bottom = 956.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -56.0
+offset_right = 67.5
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Inventory" type="Panel" parent="."]
+[node name="InventoryUI" type="CanvasLayer" parent="."]
+
+[node name="InventoryInterface" type="Control" parent="InventoryUI"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -211.0
+offset_right = 12.0
+offset_bottom = -211.0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="PlayerIventory" parent="InventoryUI/InventoryInterface" instance=ExtResource("2_m1167")]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 1117.0
-offset_right = 390.0
-offset_bottom = 1183.0
 
 [connection signal="pressed" from="TileInfoText/TileInfoPanel/CloseButton" to="." method="_on_tile_info_close_button_pressed"]
 [connection signal="toggled" from="PanelFPS/CheckButtonGlobalTime" to="." method="_on_check_button_global_time_toggled"]

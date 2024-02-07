@@ -31,7 +31,9 @@
 			"title": "Doing",
 			"tasks": [
 				"aaa11d81-b88e-40d6-8a27-207e3f651756",
-				"6a45ebfa-1d48-4357-9277-4718783d9d7c"
+				"6a45ebfa-1d48-4357-9277-4718783d9d7c",
+				"c4d47ad3-6f88-46f5-87f7-2d15cb731926",
+				"cee03fb9-877f-4547-8c99-4e052c235c1b"
 			]
 		},
 		{
@@ -47,7 +49,8 @@
 			"tasks": [
 				"cc292f0d-b437-47d7-ae9a-68564556b950",
 				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
-				"2bb6f087-36d8-40fd-90c7-022c8e8c61af"
+				"2bb6f087-36d8-40fd-90c7-022c8e8c61af",
+				"ca4865f7-46db-45cc-aac5-82dc3452523e"
 			]
 		}
 	],
@@ -140,6 +143,27 @@
 			"uuid": "cd92569c-b291-47bc-9f8f-8985b2bbd4ff",
 			"title": "Interaction NUR wenn Tile vorhanden",
 			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "c4d47ad3-6f88-46f5-87f7-2d15cb731926",
+			"title": "Stehen gebleiben das man noch das item nicht sieht obwohl",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "cee03fb9-877f-4547-8c99-4e052c235c1b",
+			"title": "",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "ca4865f7-46db-45cc-aac5-82dc3452523e",
+			"title": "geniale Idee object array",
+			"description": "man kann einfach eine resource anlegen und dann kriegt man ja die export properrties (nicht ovrher sondern bei der auswahl) da kriegt man dann die drop chance, was genau in welcher reihenfolge droppt usw. (also interaction Resrouce) dann die loot sachen, usw. statt wie jetzt",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}

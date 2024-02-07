@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8oqstpngf1h6"]
+
+[ext_resource type="Script" path="res://inventory/slot.gd" id="1_5vx2a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbfl6"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laq72"]
+
+[node name="Slot" type="PanelContainer"]
+custom_minimum_size = Vector2(64, 64)
+scale = Vector2(0.991694, 0.989621)
+script = ExtResource("1_5vx2a")
+
+[node name="MarginContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tbfl6")
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_laq72")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="QuantityLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "x99
+"

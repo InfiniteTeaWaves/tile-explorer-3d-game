@@ -60,6 +60,7 @@ func _on_check_button_global_time_toggled(toggled_on):
 		time_label.text = "Day"
 
 func show_start_panel(tile):
+	start_panel.show()
 	var tile_name = start_panel.get_node("TileName")
 	tile_name.set_text(tile.tile_properties.tile_name)
 	

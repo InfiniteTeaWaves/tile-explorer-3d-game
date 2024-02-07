@@ -1,16 +1,22 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://cosecsr8byyah"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cosecsr8byyah"]
 
 [ext_resource type="Script" path="res://items/item_data/item_data_cres.gd" id="1_jum3l"]
-[ext_resource type="Texture2D" uid="uid://bjmm0mi4dh8au" path="res://items/item_data/test_atlas.tres" id="2_u30kd"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u57fk"]
+load_path = "res://.godot/imported/TileItemAtlasExample.png-9233f9718436ba4a05c7b3ac966a76e1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2vam"]
+atlas = SubResource("CompressedTexture2D_u57fk")
+region = Rect2(250, 256, 250, 256)
 
 [resource]
 script = ExtResource("1_jum3l")
 name = "wood_birch_0"
 stackable = true
-texture = ExtResource("2_u30kd")
+texture = SubResource("AtlasTexture_o2vam")
 type = "item"
 item_category = ""
 sub_category = ""
 rarity = "common"
 game_name = "birch wood"
-game_description = ""
+game_description = "Birch wood description."
