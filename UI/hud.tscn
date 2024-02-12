@@ -128,7 +128,6 @@ text = "Day"
 [node name="TileStart" type="Node" parent="."]
 
 [node name="StartPanel" type="Panel" parent="TileStart"]
-visible = false
 offset_left = 592.0
 offset_top = 987.0
 offset_right = 994.0

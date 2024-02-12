@@ -21,7 +21,7 @@ func _ready():
 	hud.connect("show_interaction_start", self._on_show_interaction_start)
 	self._create_world();
 
-func _process(delta):
+func _process(delta): 
 	pass
 	
 func _input(event):
@@ -35,7 +35,6 @@ func _on_BasicTile_clicked(clicked_tile):
 	_reset_tile_position_y(clicked_tile)
 	hud.set_clicked_tile_info_text(clicked_tile.tile_properties)
 	hud.show_start_panel(clicked_tile)
-	
 	print("click")
 
 func _on_BasicTile_double_clicked(clicked_tile):

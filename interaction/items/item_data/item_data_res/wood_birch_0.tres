@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cosecsr8byyah"]
 
-[ext_resource type="Script" path="res://items/item_data/item_data_cres.gd" id="1_jum3l"]
+[ext_resource type="Script" path="res://interaction/items/item_data/item_data_cres.gd" id="1_jum3l"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u57fk"]
 load_path = "res://.godot/imported/TileItemAtlasExample.png-9233f9718436ba4a05c7b3ac966a76e1.ctex"

@@ -14,7 +14,9 @@
 				"88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
 				"00b6fe7c-2288-4117-b587-96d3bc1261e0",
 				"e71d907a-5770-4589-9934-f04de8f2f06d",
-				"9ff60321-1ba5-4e16-9f77-6cb8ff25fe27"
+				"9ff60321-1ba5-4e16-9f77-6cb8ff25fe27",
+				"6e877e8c-1642-4537-830a-4bd5a3f29098",
+				"9571e8d5-7178-4c6e-9883-b57cb9bb5e72"
 			]
 		},
 		{
@@ -33,7 +35,8 @@
 				"aaa11d81-b88e-40d6-8a27-207e3f651756",
 				"6a45ebfa-1d48-4357-9277-4718783d9d7c",
 				"c4d47ad3-6f88-46f5-87f7-2d15cb731926",
-				"cee03fb9-877f-4547-8c99-4e052c235c1b"
+				"cee03fb9-877f-4547-8c99-4e052c235c1b",
+				"c054e700-0bdf-4743-9fb7-0789be291e00"
 			]
 		},
 		{
@@ -164,6 +167,27 @@
 			"uuid": "ca4865f7-46db-45cc-aac5-82dc3452523e",
 			"title": "geniale Idee object array",
 			"description": "man kann einfach eine resource anlegen und dann kriegt man ja die export properrties (nicht ovrher sondern bei der auswahl) da kriegt man dann die drop chance, was genau in welcher reihenfolge droppt usw. (also interaction Resrouce) dann die loot sachen, usw. statt wie jetzt",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "6e877e8c-1642-4537-830a-4bd5a3f29098",
+			"title": "small rotation effect when  clicked",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "c054e700-0bdf-4743-9fb7-0789be291e00",
+			"title": "button above tile when moving",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "9571e8d5-7178-4c6e-9883-b57cb9bb5e72",
+			"title": "tile nicht mitting sondern weiter unten und alles darüber",
+			"description": "",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Requirement" load_steps=2 format=3 uid="uid://cxcnkdr8q4u73"]
 
-[ext_resource type="Script" path="res://tiles/requirement_data/requirement_cres.gd" id="1_dh1jg"]
+[ext_resource type="Script" path="res://interaction/requirement_data/requirement_cres.gd" id="1_dh1jg"]
 
 [resource]
 script = ExtResource("1_dh1jg")

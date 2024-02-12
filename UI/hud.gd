@@ -68,14 +68,35 @@ func _on_start_button_pressed():
 	emit_signal("show_interaction_main")
 
 func show_interaction_panel(i_biome_properties, i_tile_properties): #hier eigentlich die interaction data entgegenenhmen
+	#langfristig hier ein dynamisches Panel mit eigener Scene bauen!!!
 	var biome_properties = i_biome_properties
 	var tile_properties = i_tile_properties
 	
+	self._add_button_func_to_interaction(tile_properties)
 	start_panel.hide()
 	interaction_panel.show()
 	#interaction ermitteln
-	print(tile_properties.action_1)
-
+	
+func _add_button_func_to_interaction(tile_properties):
+	#loopen über array
+	if tile_properties.interaction_1:
+		var interaction_data = tile_properties.interaction_1
+		var button_1 = $TileInteraction/InteractionPanel/ActionButton1
+		button_1.text = interaction_data.name
+		button_1.pressed.connect(self._interaction_button_pressed.bind(interaction_data, button_1))
+		
+	#über loop interactions laden, dann button hinzufügen und an anchor hinzfuegne	
+   	#for interaction in interactions:
+		#var button = Button.new()
+		#button.text = interaction.name  # Set button text to the interaction name
+		#button.connect("pressed", self, "_handle_interaction", [interaction.type])
+		#$InteractionPanel.add_child(button)  # Add the button to your panel	
+		
+func _interaction_button_pressed(interaction_data, button):
+	var interaction = Interaction.new(interaction_data)
+	var items = interaction.get_standard_items()
+	print(items)
+		
 func _on_tile_info_close_button_pressed():
 	tile_info_panel.hide()
 

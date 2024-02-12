@@ -13,13 +13,9 @@ class_name TileProperties
 @export_enum("full","frame","water") var socket_type: String = "full"
 
 @export_category("Interaction")
-@export_group("Action 1")
-@export var action_1: ActionData
-@export_enum("unlocked","locked") var state_1: String = "unlocked"
-@export var require_1: Array[RequirementData]
-@export var receive_1: Array[ItemData]
+@export_group("Interaction 1")
+@export var interaction_1: InteractionData
 
-@export_flags("scene:4", "action:8", "lore:16") var lock_1 = 0
 @export_group("Action 2")
 @export var action_2: ActionData
 @export_enum("unlocked","locked") var state_2: String = "unlocked"
