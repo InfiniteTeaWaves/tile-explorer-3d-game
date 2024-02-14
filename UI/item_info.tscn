@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4x6bb15mmpqn"]
+
+[ext_resource type="Script" path="res://UI/item_info.gd" id="1_wwufx"]
+[ext_resource type="PackedScene" uid="uid://b8oqstpngf1h6" path="res://inventory/slot.tscn" id="1_y5oky"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pjflb"]
+font_size = 32
+outline_size = 5
+outline_color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="TileInfoControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 780.0
+offset_top = 580.0
+offset_right = 820.0
+offset_bottom = 620.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_wwufx")
+
+[node name="IconPanel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -122.0
+offset_top = -33.0
+offset_right = -49.0
+offset_bottom = 42.0
+
+[node name="Slot" parent="IconPanel" instance=ExtResource("1_y5oky")]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 69.0
+offset_bottom = 70.0
+
+[node name="TextPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.112
+anchor_right = 1.0
+anchor_bottom = 0.112
+offset_left = -83.0
+offset_top = -37.48
+offset_right = 127.0
+offset_bottom = 37.52
+
+[node name="NameLabel" type="Label" parent="TextPanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 54.0
+offset_bottom = 30.0
+text = "Name
+"
+
+[node name="DescriptionLabel" type="Label" parent="TextPanel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 94.0
+offset_bottom = 61.0
+text = "Description"
+
+[node name="AmountLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = -164.0
+offset_top = -21.0
+offset_right = -128.0
+offset_bottom = 24.0
+text = "1x"
+label_settings = SubResource("LabelSettings_pjflb")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_left = -121.0
+offset_top = -33.0
+offset_right = 167.0
+offset_bottom = 40.0
+
+[connection signal="mouse_entered" from="Container" to="." method="_on_info_mouse_entered"]
+[connection signal="mouse_exited" from="Container" to="." method="_on_info_mouse_exited"]

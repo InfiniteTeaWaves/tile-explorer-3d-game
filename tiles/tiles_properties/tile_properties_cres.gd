@@ -13,29 +13,17 @@ class_name TileProperties
 @export_enum("full","frame","water") var socket_type: String = "full"
 
 @export_category("Interaction")
-@export_group("Interaction 1")
+@export_group("Interaction 1 old")
 @export var interaction_1: InteractionData
 
-@export_group("Action 2")
-@export var action_2: ActionData
-@export_enum("unlocked","locked") var state_2: String = "unlocked"
-@export var require_2: Array[RequirementData]
-@export var receive_2: Array[ItemData]
-@export_flags("scene:4", "action:8", "lore:16") var lock_2 = 0
+@export var interactions: Array[InteractionData]
 
-@export_group("Action 3")
-@export var action_3: ActionData
-@export_enum("unlocked","locked") var state_3: String = "unlocked"
-@export var require_3: Array[RequirementData]
-@export var receive_3: Array[ItemData]
-@export_flags("scene:4", "action:8", "lore:16") var lock_3 = 0
-
-@export_group("Action 4")
-@export var action_4: ActionData
-@export_enum("unlocked","locked") var state_4: String = "unlocked"
-@export var require_4: Array[RequirementData]
-@export var receive_4: Array[ItemData]
-@export_flags("scene:4", "action:8", "lore:16") var lock_4 = 0
+#@export_group("Action 4")
+#@export var action_4: ActionData
+#@export_enum("unlocked","locked") var state_4: String = "unlocked"
+#@export var require_4: Array[RequirementData]
+#@export var receive_4: Array[ItemData]
+#@export_flags("scene:4", "action:8", "lore:16") var lock_4 = 0
 
 @export_group("Further Locks")
 #story hint chance ?draw story?

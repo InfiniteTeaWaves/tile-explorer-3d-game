@@ -16,7 +16,10 @@
 				"e71d907a-5770-4589-9934-f04de8f2f06d",
 				"9ff60321-1ba5-4e16-9f77-6cb8ff25fe27",
 				"6e877e8c-1642-4537-830a-4bd5a3f29098",
-				"9571e8d5-7178-4c6e-9883-b57cb9bb5e72"
+				"9571e8d5-7178-4c6e-9883-b57cb9bb5e72",
+				"6f95cfbc-331f-4d53-857d-34baa4b242f0",
+				"c69be58e-dc78-44c7-ae8d-5a08781edd34",
+				"33d48910-0eb9-41a3-b6f4-739b3da0d605"
 			]
 		},
 		{
@@ -53,7 +56,8 @@
 				"cc292f0d-b437-47d7-ae9a-68564556b950",
 				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
 				"2bb6f087-36d8-40fd-90c7-022c8e8c61af",
-				"ca4865f7-46db-45cc-aac5-82dc3452523e"
+				"ca4865f7-46db-45cc-aac5-82dc3452523e",
+				"6c1650dc-5a93-4232-919f-cd5bcd027f3b"
 			]
 		}
 	],
@@ -188,6 +192,34 @@
 			"uuid": "9571e8d5-7178-4c6e-9883-b57cb9bb5e72",
 			"title": "tile nicht mitting sondern weiter unten und alles darüber",
 			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "6f95cfbc-331f-4d53-857d-34baa4b242f0",
+			"title": "interaction has intern propertz ENABLED",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "c69be58e-dc78-44c7-ae8d-5a08781edd34",
+			"title": "HUD Weg",
+			"description": "Statt über HUD tile_interaction eigene Scene in world und dann sendet dann an player?\nwie mit interaction umgehen im Gesamtkonstrukt",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "33d48910-0eb9-41a3-b6f4-739b3da0d605",
+			"title": "tile doubleclick or interaction camera",
+			"description": "when clicked on tile, the camera moves down (tile is more down) after clicking the camera is resetted",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "6c1650dc-5a93-4232-919f-cd5bcd027f3b",
+			"title": "rolls",
+			"description": "statt 3 items, kriegt man ein array mit normal roll, bonus roll usw.\n(damit es sich besonders anfühlt!",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}

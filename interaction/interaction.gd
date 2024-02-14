@@ -7,7 +7,7 @@ var receive: Array[ItemData]
 
 var used: bool = false
 var received_items: Array[ItemData] #später vllt nicht nur items,
-#ggf object mit verschiedenen types of items
+var result: Dictionary = {"items": Array(), "finished": false}
 
 #ggf bei interaction pflegen wieviele resourcen von welchem dropen können
 
@@ -18,10 +18,10 @@ func _init(interaction_data_i):
 	self.require = interaction_data_i.require
 	self.receive = interaction_data_i.receive
 	
-func get_standard_items() -> Array[ItemData]:
+func get_standard_items() -> Dictionary:
 	if require:
 		print("require logic not implemented for require")
-		return Array()
+		return result
 	else:
 		#get amount of random items
 		var amount: int = 1
@@ -39,9 +39,13 @@ func _has_dropped(drop_chance: float ) -> bool:
 		return false
 		print("wrong dropchance for ", interaction_data.name, ". Drop chance must be 0<x<100")
 	
-func _get_items(number_items: int) -> Array[ItemData]:
+func _get_items(number_items: int) -> Dictionary:
 	var result_items: Array[ItemData]
 	for i in number_items:
 		var item_index: int = randi_range(0, receive.size() - 1)
 		result_items.append(receive[item_index])
-	return result_items
+		
+	#result
+	result = {"items": result_items, "finished": true}
+	interaction_data.used = true
+	return result

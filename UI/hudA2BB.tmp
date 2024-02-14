@@ -173,7 +173,6 @@ grow_horizontal = 0
 text = "X"
 
 [node name="ActionButton1" type="Button" parent="TileInteraction/InteractionPanel"]
-visible = false
 layout_mode = 0
 offset_left = 126.489
 offset_top = 91.5545
@@ -183,7 +182,6 @@ scale = Vector2(1.00212, 1)
 text = "Action 1"
 
 [node name="LabelRequire" type="Label" parent="TileInteraction/InteractionPanel/ActionButton1"]
-visible = false
 layout_mode = 0
 offset_left = 0.819621
 offset_top = 56.2406
@@ -192,7 +190,6 @@ offset_bottom = 79.2406
 text = "Requires X 0/1"
 
 [node name="ActionButton2" type="Button" parent="TileInteraction/InteractionPanel"]
-visible = false
 layout_mode = 0
 offset_left = 402.464
 offset_top = 95.4783
@@ -202,7 +199,6 @@ scale = Vector2(1, 0.934935)
 text = "Action 2"
 
 [node name="LabelRequire" type="Label" parent="TileInteraction/InteractionPanel/ActionButton2"]
-visible = false
 layout_mode = 0
 offset_left = 2.45886
 offset_top = 56.2406
@@ -211,7 +207,6 @@ offset_bottom = 79.2406
 text = "Requires X 0/1"
 
 [node name="ActionButton3" type="Button" parent="TileInteraction/InteractionPanel"]
-visible = false
 layout_mode = 0
 offset_left = 127.31
 offset_top = 207.959
@@ -220,7 +215,6 @@ offset_bottom = 257.959
 text = "Action 3"
 
 [node name="LabelRequire" type="Label" parent="TileInteraction/InteractionPanel/ActionButton3"]
-visible = false
 layout_mode = 0
 offset_left = 2.45886
 offset_top = 56.2406
@@ -229,7 +223,6 @@ offset_bottom = 79.2406
 text = "Requires X 0/1 "
 
 [node name="ActionButton4" type="Button" parent="TileInteraction/InteractionPanel"]
-visible = false
 layout_mode = 0
 offset_left = 400.0
 offset_top = 214.499
@@ -238,39 +231,12 @@ offset_bottom = 264.499
 text = "Action 4"
 
 [node name="LabelRequire" type="Label" parent="TileInteraction/InteractionPanel/ActionButton4"]
-visible = false
 layout_mode = 0
 offset_left = 2.45886
 offset_top = 56.2406
 offset_right = 42.4589
 offset_bottom = 79.2406
 text = "Requires X 0/1"
-
-[node name="Anchor1" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
-layout_mode = 0
-offset_left = 160.986
-offset_top = 98.0941
-offset_right = 200.986
-offset_bottom = 138.094
-
-[node name="Anchor2" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
-offset_left = 438.604
-offset_top = 102.018
-offset_right = 478.604
-offset_bottom = 142.018
-
-[node name="Anchor3" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
-layout_mode = 2
-offset_left = 161.807
-offset_top = 214.499
-offset_right = 201.807
-offset_bottom = 254.499
-
-[node name="Anchor4" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
-offset_left = 436.961
-offset_top = 218.423
-offset_right = 476.961
-offset_bottom = 258.423
 
 [node name="SelectInventoryPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -301,7 +267,7 @@ grow_vertical = 0
 size_flags_horizontal = 0
 size_flags_vertical = 8
 
-[node name="PlayerInventory" parent="InventoryUI/InventoryInterface" instance=ExtResource("2_m1167")]
+[node name="PlayerIventory" parent="InventoryUI/InventoryInterface" instance=ExtResource("2_m1167")]
 layout_mode = 0
 
 [connection signal="pressed" from="TileInfoText/TileInfoPanel/CloseButton" to="." method="_on_tile_info_close_button_pressed"]

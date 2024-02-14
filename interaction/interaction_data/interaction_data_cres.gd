@@ -10,4 +10,6 @@ class_name InteractionData
 @export var receive: Array[ItemData]
 
 @export_category("Optional")
-@export_enum("unlocked","locked") var state_1: String = "unlocked"
+@export_enum("unlocked","locked") var state: String = "unlocked"
+
+var used: bool = false
