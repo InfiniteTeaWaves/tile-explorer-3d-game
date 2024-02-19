@@ -11,13 +11,15 @@ signal show_interaction_main()
 func _ready():
 	pass 
 
-func _process(delta):
+func _process(_delta):
 	var label_fps = $PanelFPS/FPSLabel
 	label_fps.text =  str(Engine.get_frames_per_second()) + " FPS"
 	pass
 
-func _input(event):
+func _input(_event):
 	_hide_tile_text()
+	if Input.is_action_just_pressed("space") and tile_info_panel.visible:
+		emit_signal("show_interaction_main")
 
 func _hide_tile_text():
 	var input = {"esc": Input.is_action_just_pressed("Exit")}
@@ -46,7 +48,7 @@ func set_tile_hovered_location_entry(hovered_tile):
 	label.text = "Position (" + str( hovered_tile.position.x/10 ) + ", " + str( hovered_tile.position.z/10 ) + ")"
 	panel.show()	
 
-func set_tile_hovered_location_exit(hovered_tile):
+func set_tile_hovered_location_exit(_hovered_tile):
 	var panel = $TileLocation/TileLocationPanel
 	panel.hide()
 	
@@ -86,7 +88,7 @@ func _add_button_func_to_interaction(tile_properties):
 	
 	for interaction in tile_properties.interactions:
 		var button = Button.new()
-		button.text = interaction.name  
+		button.text = interaction.game_name  
 		button.connect("pressed", self._interaction_button_pressed.bind(interaction, button))
 		
 		#get node
@@ -96,10 +98,15 @@ func _add_button_func_to_interaction(tile_properties):
 		counter += 1
 		
 		#set button style
-		if interaction.state == "locked" || interaction.used:
+		if interaction.state == "locked":
+			#hier
+			button.disabled = true	
+		if interaction.used:
+			button.disabled = true		
+			button.text = interaction.game_name  + " (used)"
 			#Add Lock symbol next to it (interaction button als eigene Scene machen und 
 			#hinzufügen mit allen Properties)
-			button.disabled = true			
+				
 			
 	#if tile_properties.interaction_1:
 		#var interaction_data = tile_properties.interaction_1

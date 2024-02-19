@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ActionData" load_steps=2 format=3 uid="uid://dynkkpcgi6qec"]
+
+[ext_resource type="Script" path="res://interaction/action_data/action_data_cres.gd" id="1_xjkii"]
+
+[resource]
+script = ExtResource("1_xjkii")
+name = "water_refill"
+action = "harvest"
+sub_action = "water"
+type = "sub_category"
+game_name = "Refill water"
+game_description = ""

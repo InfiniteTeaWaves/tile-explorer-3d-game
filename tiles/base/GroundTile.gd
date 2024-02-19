@@ -8,11 +8,8 @@ func _ready():
 	#otherwise, the default material is used
 	self._set_top_layer_color()
 
-func _process(delta):
-	pass
-
-func set_data(i_tile_properties):
-	tile_properties = i_tile_properties
+func set_data(_i_tile_properties):
+	tile_properties = _i_tile_properties
 
 func create_ground_tile():
 	self._set_top_layer_color()

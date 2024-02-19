@@ -16,10 +16,12 @@ var base_position_y = self.position.y
 var base_position_y_up = self.position.y + 0.3
 var base_position_y_clicked = self.position.y + 0.5
 
-@onready var MeshOutline = $MeshTile/MeshOutline
-@onready var AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
+var MeshOutline	#Wegen GroundFile hier
+var AnimationOutline #AnimationOutline
 
 func _ready():
+	MeshOutline = $MeshTile/MeshOutline
+	AnimationOutline = $MeshTile/MeshOutline/AnimationPlayer
 	MeshOutline.hide()
 	self._duplicate_objects()
 	pass
@@ -35,12 +37,12 @@ func _duplicate_objects():
 			for i in range(len(tile_properties.interactions)):
 				tile_properties.interactions[i] = tile_properties.interactions[i].duplicate()
 
-func _process(delta):
-	pass
-	if entered_state:
-		AnimationOutline.play("HoverFade")
-	else:
-		AnimationOutline.stop()
+func _process(_delta):
+	if AnimationOutline: #Keien AHnung, wieso anmiationOutline nicht immer da ist
+		if entered_state:
+			AnimationOutline.play("HoverFade")
+		else:
+			AnimationOutline.stop()
 
 func _input(event):
 	#careful, input triggered for ALL, i need to check weith entereed state

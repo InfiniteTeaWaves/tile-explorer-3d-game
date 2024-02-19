@@ -5,14 +5,14 @@ extends Node3D
 func _ready():
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var input = {
-		"up": Input.is_action_pressed("move_up"),
-		"down": Input.is_action_pressed("move_down"),
-		"left": Input.is_action_pressed("move_left"),
-		"right": Input.is_action_pressed("move_right"),	
-	}
+func _process(_delta):
+	pass
+	#var input = {
+		#"up": Input.is_action_pressed("move_up"),
+		#"down": Input.is_action_pressed("move_down"),
+		#"left": Input.is_action_pressed("move_left"),
+		#"right": Input.is_action_pressed("move_right"),	
+	#}
 	
 	

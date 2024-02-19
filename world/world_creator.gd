@@ -42,11 +42,9 @@ func create_dynamic_world(i_world_dynamic, i_2d_tile_map):
 
 func create_map_from_2d_tilemap(tile_map):
 	var world_array = []
-	var tile_set = tile_map.tile_set
 	
 	for cell in tile_map.get_used_cells(0):	
 		var atlas_coords = Vector2i(cell.x,cell.y)
-		var tile_data = tile_map.get_cell_tile_data(0,atlas_coords)
 		var source_id = tile_map.get_cell_source_id(0,atlas_coords)
 		
 		var biome_name = tile_biome_mapping[source_id]

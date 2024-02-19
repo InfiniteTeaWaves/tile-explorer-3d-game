@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://qn47y0px4bp8"]
+
+[ext_resource type="Script" path="res://interaction/items/item_data/item_data_cres.gd" id="1_1ohnn"]
+[ext_resource type="Texture2D" uid="uid://ve3jobkln178" path="res://interaction/items/item_data/birch_forest_sheet.png" id="2_toqyt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2vam"]
+atlas = ExtResource("2_toqyt")
+region = Rect2(768, 0, 256, 256)
+
+[resource]
+script = ExtResource("1_1ohnn")
+name = "meat_forest_0"
+stackable = true
+texture = SubResource("AtlasTexture_o2vam")
+item_category = "Food"
+sub_category = "Meat"
+rarity = "common"
+game_name = "Uncooked dear meat"
+game_description = "Forest dear meat"

@@ -18,11 +18,7 @@ func _ready():
 	camera.size = zoomParameter["start_size"]
 	zoomParameter["current_size"] = camera.size
 
-func _process(delta):
-	
-	pass
-
-func _unhandled_input(event):
+func _unhandled_input(_event):
 	self._zoom()
 	pass
 	

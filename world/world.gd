@@ -21,12 +21,6 @@ func _ready():
 	hud.connect("show_interaction_start", self._on_show_interaction_start)
 	self._create_world();
 
-func _process(delta): 
-	pass
-	
-func _input(event):
-	pass
-
 func _on_BasicTile_clicked(clicked_tile):
 	if tile_locked_mode:
 		hud.set_clicked_tile_info_text(clicked_tile.tile_properties)
@@ -67,14 +61,13 @@ func _create_world():
 func _change_global_time(toggled):
 	var main_light = $CameraBase/MainLight
 	var environment = $WorldEnvironment.get_environment()
-	var color: Color
 	if toggled: #night
 		main_light.light_energy = 0.2		#Schatten von anderen Seite (Mond!)
 		#Ambient light von environment setzen da kein Schatten
-		environment.set_bg_color(color.html("#1f515e"))
+		environment.set_bg_color(Color.html("#1f515e"))
 	else: #day
 		main_light.light_energy = 0.4	
-		environment.set_bg_color(color.html("#57afc7"))
+		environment.set_bg_color(Color.html("#57afc7"))
 
 func _on_show_interaction_main():
 	self.set_tile_locked(true)

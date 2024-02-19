@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cmyuntdqbc10o"]
+
+[ext_resource type="Script" path="res://interaction/items/item_data/item_data_cres.gd" id="1_vejo2"]
+[ext_resource type="Texture2D" uid="uid://ve3jobkln178" path="res://interaction/items/item_data/birch_forest_sheet.png" id="2_2hw47"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4yf6"]
+atlas = ExtResource("2_2hw47")
+region = Rect2(1280, 512, 256, 256)
+
+[resource]
+script = ExtResource("1_vejo2")
+name = "wood_birch_1"
+stackable = true
+texture = SubResource("AtlasTexture_v4yf6")
+item_category = "Wood"
+sub_category = "Birch"
+rarity = "common"
+game_name = "Stripped birch wood"
+game_description = "Clean birch wood ready for use"

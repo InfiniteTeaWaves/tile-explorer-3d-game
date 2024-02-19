@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="InteractionData" load_steps=6 format=3 uid="uid://tvts3jqpu6rh"]
+
+[ext_resource type="Resource" uid="uid://1loj07ahah3v" path="res://interaction/action_data/action_data_res/gather_food.tres" id="1_6qyjm"]
+[ext_resource type="Resource" uid="uid://bgjkgmyiyqtko" path="res://interaction/items/item_data/item_data_res/food_berries_forest_0.tres" id="2_maxqy"]
+[ext_resource type="Resource" uid="uid://hfii6b56lhve" path="res://interaction/items/item_data/item_data_res/food_mushroom_forest_0.tres" id="3_6cbgi"]
+[ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="3_bpgur"]
+[ext_resource type="Resource" uid="uid://s4dwo57jw5gy" path="res://interaction/items/item_data/item_data_res/food_vegetables_forest_0.tres" id="4_sjb16"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("3_bpgur")
+name = "forest_birch_gather_food_0"
+game_name = "gather food"
+action = ExtResource("1_6qyjm")
+require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_maxqy"), ExtResource("3_6cbgi"), ExtResource("4_sjb16")])
+state = "unlocked"

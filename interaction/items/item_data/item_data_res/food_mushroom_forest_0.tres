@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://hfii6b56lhve"]
+
+[ext_resource type="Script" path="res://interaction/items/item_data/item_data_cres.gd" id="1_6lvjg"]
+[ext_resource type="Texture2D" uid="uid://ve3jobkln178" path="res://interaction/items/item_data/birch_forest_sheet.png" id="2_6nprp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2vam"]
+atlas = ExtResource("2_6nprp")
+region = Rect2(256, 512, 256, 256)
+
+[resource]
+script = ExtResource("1_6lvjg")
+name = "food_mushroom_forest_0"
+stackable = true
+texture = SubResource("AtlasTexture_o2vam")
+item_category = "Food"
+sub_category = "Meat"
+rarity = "common"
+game_name = "Forest mushroom"
+game_description = "Suspicious looking mushroom"

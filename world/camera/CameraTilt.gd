@@ -8,9 +8,6 @@ func _ready():
 	self.rotation.x = deg_to_rad(-35) #Starting Angle
 	pass 
 
-func _process(delta):
-	pass
-
 func _input(event):
 	_tiltBase(event)
 

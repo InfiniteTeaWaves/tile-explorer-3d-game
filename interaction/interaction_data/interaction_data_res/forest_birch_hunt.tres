@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InteractionData" load_steps=5 format=3 uid="uid://cj54dbo1hrjsj"]
+
+[ext_resource type="Resource" uid="uid://bmslyb4xh5wly" path="res://interaction/action_data/action_data_res/hunt_animals.tres" id="1_siuf3"]
+[ext_resource type="Resource" uid="uid://qn47y0px4bp8" path="res://interaction/items/item_data/item_data_res/food_meat_forest_0.tres" id="2_bj3bg"]
+[ext_resource type="Resource" uid="uid://5t5binx0h53p" path="res://interaction/items/item_data/item_data_res/food_meat_forest_1.tres" id="3_3tqvh"]
+[ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="5_ryw4j"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("5_ryw4j")
+name = "forest_birch_hunt_animals_0"
+game_name = "hunt animals"
+action = ExtResource("1_siuf3")
+require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_bj3bg"), ExtResource("2_bj3bg"), ExtResource("3_3tqvh")])
+state = "unlocked"

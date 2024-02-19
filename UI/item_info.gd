@@ -8,7 +8,7 @@ var entered: bool = false
 @onready var name_label = $TextPanel/NameLabel
 @onready var description_label = $TextPanel/DescriptionLabel
 
-func _input(event):
+func _input(_event):
 	var input = {"right": Input.is_action_just_pressed("mouseclick_right")}
 	if entered and input["right"]:
 		self._remove_item_data()

@@ -3,9 +3,9 @@ class_name ItemData
 
 @export var name: String
 #@export var item_name: String
-@export var stackable: bool = false
+@export var stackable: bool = true
 @export var texture: AtlasTexture
-@export_enum("item","base","artefact") var type: String = "item"
+#@export_enum("item","base","artefact") var type: String = "item"
 
 @export_category("Properties")
 @export var item_category: String 

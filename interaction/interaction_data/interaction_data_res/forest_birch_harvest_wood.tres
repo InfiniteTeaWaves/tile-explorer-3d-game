@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="InteractionData" load_steps=5 format=3 uid="uid://hotq6wt7xd7g"]
+
+[ext_resource type="Resource" uid="uid://dhklsjy1b5c2x" path="res://interaction/action_data/action_data_res/harvest_lumber.tres" id="1_pyacn"]
+[ext_resource type="Resource" uid="uid://cosecsr8byyah" path="res://interaction/items/item_data/item_data_res/wood_forest_birch_0.tres" id="2_u0pny"]
+[ext_resource type="Resource" uid="uid://cmyuntdqbc10o" path="res://interaction/items/item_data/item_data_res/wood_forest_birch_1.tres" id="3_qogvi"]
+[ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="4_x87u6"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("4_x87u6")
+name = "lumber"
+game_name = "lumber"
+action = ExtResource("1_pyacn")
+require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_u0pny"), ExtResource("2_u0pny"), ExtResource("3_qogvi")])
+state = "unlocked"

@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=5 format=3 uid="uid://dh3h1udtkiwwe"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=7 format=3 uid="uid://dh3h1udtkiwwe"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_tiam5"]
-[ext_resource type="Resource" uid="uid://culempcf5n8yf" path="res://interaction/interaction_data/interaction_data_res/lumber_birch_wood.tres" id="2_62sa2"]
 [ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties_cres.gd" id="2_s3tcu"]
+[ext_resource type="Resource" uid="uid://kdkahgelluki" path="res://interaction/interaction_data/interaction_data_res/forest_birch_perform_ritual.tres" id="2_up2i1"]
+[ext_resource type="Resource" uid="uid://tvts3jqpu6rh" path="res://interaction/interaction_data/interaction_data_res/forest_birch_gather_food.tres" id="3_0pcfd"]
 [ext_resource type="PackedScene" uid="uid://b0jyk0oglpaag" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_ritual.glb" id="3_8ajdk"]
+[ext_resource type="Resource" uid="uid://b4ltrhgbpjywt" path="res://interaction/interaction_data/interaction_data_res/forest_birch_water.tres" id="4_3o3i4"]
 
 [resource]
 resource_local_to_scene = true
@@ -14,5 +16,5 @@ biome_properties = ExtResource("1_tiam5")
 type = "normal"
 socket_scene = ExtResource("3_8ajdk")
 socket_type = "full"
-interactions = Array[Resource("res://interaction/interaction_data/interaction_data_cres.gd")]([ExtResource("2_62sa2")])
+interactions = Array[Resource("res://interaction/interaction_data/interaction_data_cres.gd")]([ExtResource("2_up2i1"), ExtResource("3_0pcfd"), ExtResource("4_3o3i4")])
 locked_lore = ""

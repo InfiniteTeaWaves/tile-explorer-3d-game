@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InteractionData" load_steps=5 format=3 uid="uid://culempcf5n8yf"]
 
 [ext_resource type="Resource" uid="uid://dhklsjy1b5c2x" path="res://interaction/action_data/action_data_res/harvest_lumber.tres" id="1_phpfm"]
-[ext_resource type="Resource" uid="uid://cosecsr8byyah" path="res://interaction/items/item_data/item_data_res/wood_birch_0.tres" id="2_pvagr"]
+[ext_resource type="Resource" uid="uid://cosecsr8byyah" path="res://interaction/items/item_data/item_data_res/wood_forest_birch_0.tres" id="2_q5otc"]
 [ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="3_achb0"]
-[ext_resource type="Resource" uid="uid://b0olk4tfyl5em" path="res://interaction/items/item_data/item_data_res/wood_fire.tres" id="3_irblh"]
+[ext_resource type="Resource" uid="uid://cmyuntdqbc10o" path="res://interaction/items/item_data/item_data_res/wood_forest_birch_1.tres" id="3_dk11e"]
 
 [resource]
 resource_local_to_scene = true
@@ -12,5 +12,5 @@ name = "lumber"
 game_name = "lumber"
 action = ExtResource("1_phpfm")
 require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
-receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_pvagr"), ExtResource("2_pvagr"), ExtResource("3_irblh")])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_q5otc"), ExtResource("2_q5otc"), ExtResource("2_q5otc"), ExtResource("3_dk11e")])
 state = "unlocked"

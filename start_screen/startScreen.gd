@@ -2,11 +2,8 @@ extends Node3D
 
 func _ready():
 	pass 
-
-func _process(delta):
-	pass
 	
-func _input(event):
+func _input(_event):
 	var input = {
 		"enter": Input.is_action_just_pressed("enter"),
 		"space": Input.is_action_just_pressed("space")

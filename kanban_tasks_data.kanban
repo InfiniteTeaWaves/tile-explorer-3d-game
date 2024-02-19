@@ -13,7 +13,6 @@
 			"tasks": [
 				"dcc182bb-5f7a-4049-a09d-5f1e734e6b36",
 				"86928c73-f1ee-470c-9228-057ebda454de",
-				"bfcc4eb6-1180-45d2-aa80-76273dbec4ef",
 				"1302dffb-8dd9-46af-94e5-0117a1dc3b4e",
 				"88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
 				"00b6fe7c-2288-4117-b587-96d3bc1261e0",
@@ -25,8 +24,7 @@
 				"c69be58e-dc78-44c7-ae8d-5a08781edd34",
 				"33d48910-0eb9-41a3-b6f4-739b3da0d605",
 				"7af7c9d7-221b-450a-9366-f71291e6ac96",
-				"fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc",
-				"1dd2b381-b7ae-47fc-b5f9-4af924b0696b"
+				"fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc"
 			]
 		},
 		{
@@ -35,13 +33,17 @@
 			"tasks": [
 				"fbfd3df8-1e35-4c8f-aabf-878335f1867c",
 				"9447cb4f-b0ec-4bd4-beae-4a5d3045d5b2",
-				"cd92569c-b291-47bc-9f8f-8985b2bbd4ff"
+				"cd92569c-b291-47bc-9f8f-8985b2bbd4ff",
+				"4e546228-c9be-4cd4-ac96-40259e5d1922"
 			]
 		},
 		{
 			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
 			"title": "Doing",
-			"tasks": []
+			"tasks": [
+				"bfcc4eb6-1180-45d2-aa80-76273dbec4ef",
+				"4ab395a7-f1f5-4a89-aeb5-5500b6a1b0a9"
+			]
 		},
 		{
 			"uuid": "8607c5b9-a31c-4e1c-a87e-98b64d651c11",
@@ -52,7 +54,8 @@
 				"4bb328cd-c90e-43cf-a2d1-df8e86b2427c",
 				"50e9a8b4-5170-4517-9ea2-a270bd24b78d",
 				"8007069f-5eee-47d7-b7e3-dd882a54c533",
-				"6a45ebfa-1d48-4357-9277-4718783d9d7c"
+				"6a45ebfa-1d48-4357-9277-4718783d9d7c",
+				"1dd2b381-b7ae-47fc-b5f9-4af924b0696b"
 			]
 		},
 		{
@@ -274,6 +277,20 @@
 		{
 			"uuid": "1dd2b381-b7ae-47fc-b5f9-4af924b0696b",
 			"title": "create more Actions and Resources",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "4e546228-c9be-4cd4-ac96-40259e5d1922",
+			"title": "groundTile hat kein Mesh outline",
+			"description": "Da groundTile BaseTile Extended, hat GroundTile nicht die MeshOutline und animation player. Langfristig überlegen, ob groundTile überhautp von base tile erben sollte?",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "4ab395a7-f1f5-4a89-aeb5-5500b6a1b0a9",
+			"title": "tile interaction und move über tile schweben",
 			"description": "",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []

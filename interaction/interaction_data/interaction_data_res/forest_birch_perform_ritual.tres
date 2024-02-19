@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InteractionData" load_steps=4 format=3 uid="uid://kdkahgelluki"]
+
+[ext_resource type="Resource" uid="uid://dynkkpcgi6qec" path="res://interaction/action_data/action_data_res/ritual_blood.tres" id="1_sjy1p"]
+[ext_resource type="Resource" uid="uid://b08eh3cuvw11e" path="res://interaction/items/item_data/item_data_res/ritual_skull_forest_0.tres" id="2_qiikx"]
+[ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="3_1tcil"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("3_1tcil")
+name = "forest_birch_ritual_0"
+game_name = "perform blood ritual"
+action = ExtResource("1_sjy1p")
+require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_qiikx")])
+state = "unlocked"

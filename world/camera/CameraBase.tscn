@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq70shh7c8yl0"]
+[gd_scene load_steps=5 format=3 uid="uid://cq70shh7c8yl0"]
 
 [ext_resource type="Script" path="res://world/camera/CameraBase.gd" id="1_ihj6j"]
 [ext_resource type="Script" path="res://world/camera/CameraYaw.gd" id="2_8chq8"]
 [ext_resource type="Script" path="res://world/camera/CameraTilt.gd" id="3_od011"]
 [ext_resource type="Script" path="res://world/camera/ZoomBase.gd" id="4_mf4f5"]
-[ext_resource type="Script" path="res://world/camera/Camera3D.gd" id="5_lndim"]
 
 [node name="CameraBase" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26363, 0, 3.92567)
@@ -27,7 +26,6 @@ current = true
 fov = 90.0
 size = 11.394
 near = 0.037
-script = ExtResource("5_lndim")
 
 [node name="sphereTestPointer" type="CSGSphere3D" parent="CameraYaw/CameraTilt"]
 visible = false

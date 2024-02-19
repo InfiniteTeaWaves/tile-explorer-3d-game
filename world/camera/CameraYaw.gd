@@ -8,7 +8,7 @@ func _ready():
 	cameraPlaneAngleY = self.rotation.y 
 	pass 
 
-func _process(delta):
+func _process(_delta):
 	#self.rotation.z = deg_to_rad(-45)
 	pass
 

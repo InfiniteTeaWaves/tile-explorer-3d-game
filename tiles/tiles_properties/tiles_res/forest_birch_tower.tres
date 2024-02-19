@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="TileProperties" load_steps=5 format=3 uid="uid://dxkp4fynfx3f4"]
+[gd_resource type="Resource" script_class="TileProperties" load_steps=7 format=3 uid="uid://dxkp4fynfx3f4"]
 
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="1_fb4ps"]
 [ext_resource type="Resource" uid="uid://culempcf5n8yf" path="res://interaction/interaction_data/interaction_data_res/lumber_birch_wood.tres" id="2_gqmm4"]
 [ext_resource type="Script" path="res://tiles/tiles_properties/tile_properties_cres.gd" id="2_m0x2g"]
 [ext_resource type="PackedScene" uid="uid://cqeb7pdwsi0vu" path="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_tower.glb" id="3_ktnea"]
+[ext_resource type="Resource" uid="uid://b4ltrhgbpjywt" path="res://interaction/interaction_data/interaction_data_res/forest_birch_water.tres" id="3_w0hmp"]
+[ext_resource type="Resource" uid="uid://tvts3jqpu6rh" path="res://interaction/interaction_data/interaction_data_res/forest_birch_gather_food.tres" id="4_wi6kn"]
 
 [resource]
 script = ExtResource("2_m0x2g")
@@ -13,6 +15,5 @@ biome_properties = ExtResource("1_fb4ps")
 type = "normal"
 socket_scene = ExtResource("3_ktnea")
 socket_type = "full"
-interaction_1 = ExtResource("2_gqmm4")
-interactions = Array[Resource("res://interaction/interaction_data/interaction_data_cres.gd")]([ExtResource("2_gqmm4"), ExtResource("2_gqmm4"), ExtResource("2_gqmm4")])
+interactions = Array[Resource("res://interaction/interaction_data/interaction_data_cres.gd")]([ExtResource("2_gqmm4"), ExtResource("3_w0hmp"), ExtResource("4_wi6kn")])
 locked_lore = ""

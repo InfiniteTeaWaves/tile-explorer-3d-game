@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://ct6kj2srkwguj"]
+
+[ext_resource type="Texture2D" uid="uid://ve3jobkln178" path="res://interaction/items/item_data/birch_forest_sheet.png" id="1_frlea"]
+
+[resource]
+atlas = ExtResource("1_frlea")
+region = Rect2(1280, 512, 256, 256)

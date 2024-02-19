@@ -17,7 +17,6 @@ config/icon="res://assets/icon.svg"
 
 [autoload]
 
-GameSettings="*res://global_data/GameSettings.gd"
 BiomeResourceLoader="*res://biomes/biome_resource_loader.gd"
 TileResourceLoader="*res://tiles/tile_resource_loader.gd"
 

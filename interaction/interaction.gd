@@ -36,11 +36,11 @@ func _has_dropped(drop_chance: float ) -> bool:
 	if 0 < drop_chance and drop_chance <= 100:
 		return randf() <= drop_chance / 100
 	else:
-		return false
 		print("wrong dropchance for ", interaction_data.name, ". Drop chance must be 0<x<100")
+		return false
 	
 func _get_items(number_items: int) -> Dictionary:
-	var result_items: Array[ItemData]
+	var result_items: Array[ItemData] = []
 	for i in number_items:
 		var item_index: int = randi_range(0, receive.size() - 1)
 		result_items.append(receive[item_index])

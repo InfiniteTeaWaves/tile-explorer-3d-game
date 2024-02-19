@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="InteractionData" load_steps=4 format=3 uid="uid://b4ltrhgbpjywt"]
+
+[ext_resource type="Resource" uid="uid://bvllcfkyj7hqk" path="res://interaction/action_data/action_data_res/harvest_water.tres" id="1_2tyqs"]
+[ext_resource type="Resource" uid="uid://cqp6gax4it7so" path="res://interaction/items/item_data/item_data_res/water_forest_0.tres" id="2_w0vam"]
+[ext_resource type="Script" path="res://interaction/interaction_data/interaction_data_cres.gd" id="3_f3bb1"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("3_f3bb1")
+name = "forest_birch_water_0"
+game_name = "refill water"
+action = ExtResource("1_2tyqs")
+require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd")]([])
+receive = Array[Resource("res://interaction/items/item_data/item_data_cres.gd")]([ExtResource("2_w0vam")])
+state = "unlocked"
