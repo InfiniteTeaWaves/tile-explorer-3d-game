@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://b0olk4tfyl5em" path="res://interaction/items/item_data/item_data_res/wood_fire.tres" id="3_irblh"]
 
 [resource]
+resource_local_to_scene = true
 script = ExtResource("3_achb0")
 name = "lumber"
 game_name = "lumber"

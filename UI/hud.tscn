@@ -254,6 +254,7 @@ offset_right = 200.986
 offset_bottom = 138.094
 
 [node name="Anchor2" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
+layout_mode = 0
 offset_left = 438.604
 offset_top = 102.018
 offset_right = 478.604
@@ -267,6 +268,7 @@ offset_right = 201.807
 offset_bottom = 254.499
 
 [node name="Anchor4" type="MarginContainer" parent="TileInteraction/InteractionPanel"]
+layout_mode = 0
 offset_left = 436.961
 offset_top = 218.423
 offset_right = 476.961

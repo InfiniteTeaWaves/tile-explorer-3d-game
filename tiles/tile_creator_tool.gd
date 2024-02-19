@@ -9,7 +9,6 @@ var ground_tile_scene: PackedScene
 var socket_scene: PackedScene
 var gem_scene: PackedScene
 
-var biome_properties: BiomeProperties
 var tile_properties: TileProperties
 
 func _run():
@@ -43,17 +42,15 @@ func _get_nodes():
 	
 func _set_properties():
 	#basic_tile
-	biome_properties = basic_tile.biome_properties
 	tile_properties = basic_tile.tile_properties	
 	basic_tile.name = tile_properties.name
 			
 	#ground_tile
-	ground_tile.biome_properties = biome_properties
 	ground_tile.tile_properties = tile_properties	
 
 func _create_ground_tile():
 	var TopLayer = ground_tile.get_node("TopLayer")
-	var material_top = biome_properties.ground_material_top
+	var material_top = tile_properties.biome_properties.ground_material_top
 	TopLayer.set_surface_override_material(0, material_top)
 	
 func _create_socket():

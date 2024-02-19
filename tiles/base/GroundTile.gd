@@ -11,8 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 
-func set_data(i_biome_properties, i_tile_properties):
-	biome_properties = i_biome_properties
+func set_data(i_tile_properties):
 	tile_properties = i_tile_properties
 
 func create_ground_tile():
@@ -20,5 +19,5 @@ func create_ground_tile():
 	 
 func _set_top_layer_color():  #ggf hier in tile creator ziehen
 	var TopLayer = $TopLayer
-	var material_top = biome_properties.ground_material_top
+	var material_top = tile_properties.biome_properties.ground_material_top
 	TopLayer.set_surface_override_material(0, material_top)

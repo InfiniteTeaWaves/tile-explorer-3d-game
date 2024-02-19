@@ -6,7 +6,6 @@ signal on_double_click(BasicTile)
 signal on_hover_entry(BasicTile)
 signal on_hover_exit(BasicTile)
 
-@export var biome_properties: BiomeProperties
 @export var tile_properties: TileProperties
 
 var tile_locked_mode: bool = false
@@ -22,11 +21,19 @@ var base_position_y_clicked = self.position.y + 0.5
 
 func _ready():
 	MeshOutline.hide()
+	self._duplicate_objects()
 	pass
 
-func set_data(i_biome_properties, i_tile_properties):
-	biome_properties = i_biome_properties
+func set_data( i_tile_properties):
 	tile_properties = i_tile_properties
+	self._duplicate_objects()
+
+func _duplicate_objects():
+	if tile_properties:
+		tile_properties = tile_properties.duplicate()
+		if tile_properties.interactions:
+			for i in range(len(tile_properties.interactions)):
+				tile_properties.interactions[i] = tile_properties.interactions[i].duplicate()
 
 func _process(delta):
 	pass

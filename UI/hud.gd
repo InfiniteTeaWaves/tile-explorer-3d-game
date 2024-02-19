@@ -66,10 +66,9 @@ func show_start_panel(tile):
 func _on_start_button_pressed():
 	emit_signal("show_interaction_main")
 
-func show_interaction_panel(i_biome_properties, i_tile_properties): 
+func show_interaction_panel(i_tile_properties): 
 	#hier eigentlich die interaction data entgegenenhmen
 	#langfristig hier ein dynamisches Panel mit eigener Scene bauen!!!
-	var biome_properties = i_biome_properties
 	var tile_properties = i_tile_properties	
 	self._add_button_func_to_interaction(tile_properties)
 	start_panel.hide()
@@ -80,7 +79,11 @@ func show_interaction_panel(i_biome_properties, i_tile_properties):
 func _add_button_func_to_interaction(tile_properties):
 	#entscheiden wo buttons basierend auf Anzahl, 
 	#und die Buttons noch eine Scene dafür anlegen
+	
+	#Lesen, ob die bereits USED gesetzt ist beim erstellen	
 	var counter = 1
+	self._clear_interaction_panel_anchor()	
+	
 	for interaction in tile_properties.interactions:
 		var button = Button.new()
 		button.text = interaction.name  
@@ -89,8 +92,7 @@ func _add_button_func_to_interaction(tile_properties):
 		#get node
 		var node_name = "Anchor" + str(counter)
 		var anchor_node = get_node("TileInteraction/InteractionPanel/" + node_name)
-		anchor_node.add_child(button)  
-		
+		anchor_node.add_child(button)  	
 		counter += 1
 		
 		#set button style
@@ -110,7 +112,18 @@ func _add_button_func_to_interaction(tile_properties):
 			##hinzufügen mit allen Properties)
 			#button_1.disabled = true				
 		
+func _clear_interaction_panel_anchor():
+	for n in range(1,4):
+		var node_name = "Anchor" + str(n)
+		var anchor_node = get_node("TileInteraction/InteractionPanel/" + node_name)			
+		if anchor_node:
+			for child in anchor_node.get_children():
+				child.queue_free()	
+				
 func _interaction_button_pressed(interaction_data, button):
+	#reinschreiben in tile_properties bzw. in die action dazu, dass die benutzt wurde
+	#
+	
 	var interaction = Interaction.new(interaction_data)
 	var interaction_result = interaction.get_standard_items()
 

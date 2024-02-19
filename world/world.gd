@@ -82,9 +82,8 @@ func _on_show_interaction_main():
 	
 	#hier ggf. interaction data zeigen statt tile
 	#Interaction.new(current_tile) (biome data und tile properties nehmen)
-	var biome_properties = current_tile.biome_properties
 	var tile_properties = current_tile.tile_properties
-	hud.show_interaction_panel(biome_properties, tile_properties )
+	hud.show_interaction_panel(tile_properties)
 	#self.current_tile 
 	
 func _on_show_interaction_start():

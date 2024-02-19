@@ -106,9 +106,9 @@ scale = Vector2(0.996706, 0.994125)
 visible = false
 
 [node name="WorldDynamic" type="Node3D" parent="."]
+visible = false
 
 [node name="WorldEditor" type="Node3D" parent="."]
-visible = false
 
 [node name="BasicTile2" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
 visible = false

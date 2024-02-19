@@ -11,6 +11,10 @@
 			"uuid": "f31b8684-5634-45de-826e-cd2417f5bd18",
 			"title": "Todo",
 			"tasks": [
+				"dcc182bb-5f7a-4049-a09d-5f1e734e6b36",
+				"86928c73-f1ee-470c-9228-057ebda454de",
+				"bfcc4eb6-1180-45d2-aa80-76273dbec4ef",
+				"1302dffb-8dd9-46af-94e5-0117a1dc3b4e",
 				"88dfaa53-4bfa-4887-98c7-6d6c79a113ea",
 				"00b6fe7c-2288-4117-b587-96d3bc1261e0",
 				"e71d907a-5770-4589-9934-f04de8f2f06d",
@@ -19,7 +23,10 @@
 				"9571e8d5-7178-4c6e-9883-b57cb9bb5e72",
 				"6f95cfbc-331f-4d53-857d-34baa4b242f0",
 				"c69be58e-dc78-44c7-ae8d-5a08781edd34",
-				"33d48910-0eb9-41a3-b6f4-739b3da0d605"
+				"33d48910-0eb9-41a3-b6f4-739b3da0d605",
+				"7af7c9d7-221b-450a-9366-f71291e6ac96",
+				"fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc",
+				"1dd2b381-b7ae-47fc-b5f9-4af924b0696b"
 			]
 		},
 		{
@@ -34,19 +41,18 @@
 		{
 			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
 			"title": "Doing",
-			"tasks": [
-				"aaa11d81-b88e-40d6-8a27-207e3f651756",
-				"6a45ebfa-1d48-4357-9277-4718783d9d7c",
-				"c4d47ad3-6f88-46f5-87f7-2d15cb731926",
-				"cee03fb9-877f-4547-8c99-4e052c235c1b",
-				"c054e700-0bdf-4743-9fb7-0789be291e00"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "8607c5b9-a31c-4e1c-a87e-98b64d651c11",
 			"title": "Done",
 			"tasks": [
-				"8007069f-5eee-47d7-b7e3-dd882a54c533"
+				"417f06b1-7993-4ead-ad50-53c28e9a8754",
+				"ac0739e3-f935-4f69-b2f7-430b2791fb8a",
+				"4bb328cd-c90e-43cf-a2d1-df8e86b2427c",
+				"50e9a8b4-5170-4517-9ea2-a270bd24b78d",
+				"8007069f-5eee-47d7-b7e3-dd882a54c533",
+				"6a45ebfa-1d48-4357-9277-4718783d9d7c"
 			]
 		},
 		{
@@ -112,13 +118,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "aaa11d81-b88e-40d6-8a27-207e3f651756",
-			"title": "Get one interaction done for normal items",
-			"description": "",
-			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
-			"steps": []
-		},
-		{
 			"uuid": "8007069f-5eee-47d7-b7e3-dd882a54c533",
 			"title": "tile_locked global machen, sodass basic Tile nicht mehr clickbar ist",
 			"description": "lösen, das world ein signal emmites zu allen base tiles, das heißt Mode locked, da funktioniert kein click mehr, nur hover\n",
@@ -154,20 +153,6 @@
 			"steps": []
 		},
 		{
-			"uuid": "c4d47ad3-6f88-46f5-87f7-2d15cb731926",
-			"title": "Stehen gebleiben das man noch das item nicht sieht obwohl",
-			"description": "",
-			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
-			"steps": []
-		},
-		{
-			"uuid": "cee03fb9-877f-4547-8c99-4e052c235c1b",
-			"title": "",
-			"description": "",
-			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
-			"steps": []
-		},
-		{
 			"uuid": "ca4865f7-46db-45cc-aac5-82dc3452523e",
 			"title": "geniale Idee object array",
 			"description": "man kann einfach eine resource anlegen und dann kriegt man ja die export properrties (nicht ovrher sondern bei der auswahl) da kriegt man dann die drop chance, was genau in welcher reihenfolge droppt usw. (also interaction Resrouce) dann die loot sachen, usw. statt wie jetzt",
@@ -177,13 +162,6 @@
 		{
 			"uuid": "6e877e8c-1642-4537-830a-4bd5a3f29098",
 			"title": "small rotation effect when  clicked",
-			"description": "",
-			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
-			"steps": []
-		},
-		{
-			"uuid": "c054e700-0bdf-4743-9fb7-0789be291e00",
-			"title": "button above tile when moving",
 			"description": "",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
@@ -220,6 +198,83 @@
 			"uuid": "6c1650dc-5a93-4232-919f-cd5bcd027f3b",
 			"title": "rolls",
 			"description": "statt 3 items, kriegt man ein array mit normal roll, bonus roll usw.\n(damit es sich besonders anfühlt!",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "1302dffb-8dd9-46af-94e5-0117a1dc3b4e",
+			"title": "Tile HUD zu Tiles bzw. in eigenes UI verschieben",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "50e9a8b4-5170-4517-9ea2-a270bd24b78d",
+			"title": "Godot tile interactions for every tile new fix",
+			"description": "all anchors and buttons are cleared when openning a new one ",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "417f06b1-7993-4ead-ad50-53c28e9a8754",
+			"title": "godot, world dynamic fix",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "bfcc4eb6-1180-45d2-aa80-76273dbec4ef",
+			"title": "blender scenes einzeln reinholen",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "86928c73-f1ee-470c-9228-057ebda454de",
+			"title": "blender Assets library erstellen",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "dcc182bb-5f7a-4049-a09d-5f1e734e6b36",
+			"title": "hexagonal Tiles überblick",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "4bb328cd-c90e-43cf-a2d1-df8e86b2427c",
+			"title": "tile propertiesproblem USED for all interactions \"lumber\"",
+			"description": "Problem with unique objects (lumber)\n\nProblem: custom resources are unique, once i set in on disabled, it disabled for all lumber. find out, how to make tiles not unique , (could do when adding it), but maybe there is a dynamic component when starting the game or clicking on the tile ofr the first time, like a once script for each tile property? /\n\n\nin general, shjould reflect how to use objects but be careful because there are not unique (same would be with mulitple forest tiles).\n\nhow is this normally done with godot?",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "7af7c9d7-221b-450a-9366-f71291e6ac96",
+			"title": "New task",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc",
+			"title": "add clear of buttons after close or finish of tile ",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "ac0739e3-f935-4f69-b2f7-430b2791fb8a",
+			"title": "remove biome properties from tiles",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "1dd2b381-b7ae-47fc-b5f9-4af924b0696b",
+			"title": "create more Actions and Resources",
+			"description": "",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}
