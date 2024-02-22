@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1isvlhyy8dh3"
-path="res://.godot/imported/forest_birch_dig0.glb-51c118a7223e95f986d8aeb51bbd9e04.scn"
+uid="uid://nyre0kj2ljfn"
+path="res://.godot/imported/forest_birch_dig.glb-b86dc3333cef47039579f05641f2fc8a.scn"
 
 [deps]
 
-source_file="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dig0.glb"
-dest_files=["res://.godot/imported/forest_birch_dig0.glb-51c118a7223e95f986d8aeb51bbd9e04.scn"]
+source_file="res://tiles/tiles_properties/tiles_art/tile_full/forest_birch_dig.glb"
+dest_files=["res://.godot/imported/forest_birch_dig.glb-b86dc3333cef47039579f05641f2fc8a.scn"]
 
 [params]
 

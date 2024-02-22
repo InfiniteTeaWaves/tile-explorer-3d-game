@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dns3vac38qrqg"]
+
+[node name="InteractionStart" type="Node2D"]

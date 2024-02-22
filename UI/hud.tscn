@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bep2ry8kpkusw"]
+[gd_scene load_steps=4 format=3 uid="uid://bep2ry8kpkusw"]
 
 [ext_resource type="Script" path="res://UI/hud.gd" id="1_tckqe"]
 [ext_resource type="PackedScene" uid="uid://cvbawf6e8kp1u" path="res://inventory/inventory.tscn" id="2_m1167"]
+[ext_resource type="PackedScene" uid="uid://6onqxsgfcqhc" path="res://UI/header.tscn" id="3_vt1u8"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -69,20 +70,6 @@ offset_bottom = 33.0
 text = "Info"
 
 [node name="HudTop" type="Node" parent="."]
-
-[node name="Panel" type="Panel" parent="HudTop"]
-offset_left = 61.0
-offset_top = 14.0
-offset_right = 1565.0
-offset_bottom = 39.0
-
-[node name="Label" type="Label" parent="HudTop/Panel"]
-layout_mode = 0
-offset_left = 683.0
-offset_top = -1.0
-offset_right = 751.0
-offset_bottom = 25.0
-text = "Tiles"
 
 [node name="PanelFPS" type="Panel" parent="."]
 layout_mode = 0
@@ -274,20 +261,6 @@ offset_top = 218.423
 offset_right = 476.961
 offset_bottom = 258.423
 
-[node name="SelectInventoryPanel" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -67.5
-offset_top = -56.0
-offset_right = 67.5
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="InventoryUI" type="CanvasLayer" parent="."]
 
 [node name="InventoryInterface" type="Control" parent="InventoryUI"]
@@ -305,6 +278,8 @@ size_flags_vertical = 8
 
 [node name="PlayerInventory" parent="InventoryUI/InventoryInterface" instance=ExtResource("2_m1167")]
 layout_mode = 0
+
+[node name="Header" parent="." instance=ExtResource("3_vt1u8")]
 
 [connection signal="pressed" from="TileInfoText/TileInfoPanel/CloseButton" to="." method="_on_tile_info_close_button_pressed"]
 [connection signal="toggled" from="PanelFPS/CheckButtonGlobalTime" to="." method="_on_check_button_global_time_toggled"]

@@ -22,10 +22,8 @@ TileResourceLoader="*res://tiles/tile_resource_loader.gd"
 
 [display]
 
-window/size/viewport_width=1600
-window/size/viewport_height=1200
-window/size/resizable=false
-window/stretch/aspect="expand"
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [editor_plugins]
 

@@ -4,6 +4,8 @@ var item_data: ItemData
 var slot_data: SlotData
 var entered: bool = false
 
+#Timer function hierhin verschieben?
+
 @onready var slot = $IconPanel/Slot
 @onready var name_label = $TextPanel/NameLabel
 @onready var description_label = $TextPanel/DescriptionLabel

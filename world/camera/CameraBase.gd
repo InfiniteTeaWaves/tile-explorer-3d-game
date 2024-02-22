@@ -8,6 +8,7 @@ var tile_locked_mode: bool = false
 @onready var world = self.get_parent()
 @onready var cameraYaw = $CameraYaw
 @onready var zoomBase = $CameraYaw/CameraTilt/ZoomBase
+@onready var camera_3d = $CameraYaw/CameraTilt/ZoomBase/Camera3D
 #get_node("/root/World3D/CameraBase/CameraYaw")
 
 func _ready():

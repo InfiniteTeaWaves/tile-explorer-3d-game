@@ -7,8 +7,10 @@ signal show_interaction_main()
 @onready var interaction_panel: Panel = $TileInteraction/InteractionPanel
 @onready var tile_info_panel: Panel = $TileInfoText/TileInfoPanel
 @onready var start_panel: Panel = $TileStart/StartPanel
+@onready var world = self.get_parent()
 
 func _ready():
+	self._init_ui_elements()
 	pass 
 
 func _process(_delta):
@@ -180,3 +182,8 @@ func _show_show_interaction_start():
 	interaction_panel.hide()
 	start_panel.show()
 	emit_signal("show_interaction_start")
+
+func _init_ui_elements():
+	var player = world.get_node("Player")
+	var header = $Header
+	header.set_player(player)

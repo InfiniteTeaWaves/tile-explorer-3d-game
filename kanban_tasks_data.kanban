@@ -24,7 +24,8 @@
 				"c69be58e-dc78-44c7-ae8d-5a08781edd34",
 				"33d48910-0eb9-41a3-b6f4-739b3da0d605",
 				"7af7c9d7-221b-450a-9366-f71291e6ac96",
-				"fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc"
+				"fbfdb3ea-2501-495e-8ca1-c2bc9569d1cc",
+				"2c536747-82df-405f-8458-a62c07ee7ffb"
 			]
 		},
 		{
@@ -41,8 +42,23 @@
 			"uuid": "a75eb38b-9ce6-4fb0-8059-051fd62988dc",
 			"title": "Doing",
 			"tasks": [
-				"bfcc4eb6-1180-45d2-aa80-76273dbec4ef",
-				"4ab395a7-f1f5-4a89-aeb5-5500b6a1b0a9"
+				"b21b465c-1218-4a86-bcbb-33698ff7c7ed",
+				"dc349ed5-0548-4ca1-9441-9d4798dd072f",
+				"924ed9e3-320e-403e-abc9-77c906d8c9f1",
+				"0c5079bb-5bfc-464e-9e5b-20bf804b194f",
+				"4ab395a7-f1f5-4a89-aeb5-5500b6a1b0a9",
+				"222fc16c-5c9e-4651-994e-0faf3251e4b4",
+				"e8aab68b-5f28-4c3a-a214-3df33e4975cd",
+				"8655b7b7-80e0-4ed7-bc9d-438d1cccfe3e",
+				"6daf9036-b323-4449-ba0b-6d6899dc7b0d",
+				"3674d6b9-3d8a-434c-8a07-5efe2364b19f",
+				"b1b1e4f1-b018-4c49-8518-5d32c7eb0c7b",
+				"a63d456c-7d89-480f-a9ec-156edf5c1119",
+				"c459a38d-ef64-443c-85af-b26bd503880f",
+				"70637c4b-98b2-4216-a063-f1cd6f83a23b",
+				"7b8d7f45-7b96-4e99-bc8a-05b6e0c89c35",
+				"f8d584c8-08b8-487e-a240-42a080d01db0",
+				"bfcc4eb6-1180-45d2-aa80-76273dbec4ef"
 			]
 		},
 		{
@@ -66,7 +82,8 @@
 				"9dcbb1b1-bcb9-4de2-bbb1-a8b3c178a7b8",
 				"2bb6f087-36d8-40fd-90c7-022c8e8c61af",
 				"ca4865f7-46db-45cc-aac5-82dc3452523e",
-				"6c1650dc-5a93-4232-919f-cd5bcd027f3b"
+				"6c1650dc-5a93-4232-919f-cd5bcd027f3b",
+				"a9995139-538b-45d6-9129-6322cc40aad3"
 			]
 		}
 	],
@@ -290,8 +307,127 @@
 		},
 		{
 			"uuid": "4ab395a7-f1f5-4a89-aeb5-5500b6a1b0a9",
-			"title": "tile interaction und move über tile schweben",
+			"title": " move über tile schweben",
 			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "2c536747-82df-405f-8458-a62c07ee7ffb",
+			"title": "New task",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "924ed9e3-320e-403e-abc9-77c906d8c9f1",
+			"title": "interaction über Tile",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "222fc16c-5c9e-4651-994e-0faf3251e4b4",
+			"title": "iNTeraction panel in interaction overview ändern",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "e8aab68b-5f28-4c3a-a214-3df33e4975cd",
+			"title": "interaction overview mit grund UI erstellen",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "3674d6b9-3d8a-434c-8a07-5efe2364b19f",
+			"title": "Action Card basic layout erstellen",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "a63d456c-7d89-480f-a9ec-156edf5c1119",
+			"title": "action card placeHolder (erstmal 4 Stück)",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "8655b7b7-80e0-4ed7-bc9d-438d1cccfe3e",
+			"title": "movement nur in naheliegenden tiles",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "6daf9036-b323-4449-ba0b-6d6899dc7b0d",
+			"title": "Wie UI Elemente anknüpfen an Ränder und skalieren?",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "70637c4b-98b2-4216-a063-f1cd6f83a23b",
+			"title": "blender odot tutorial",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "c459a38d-ef64-443c-85af-b26bd503880f",
+			"title": "blender low poly tutorial",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "7b8d7f45-7b96-4e99-bc8a-05b6e0c89c35",
+			"title": "inventory durchskillen tutorial",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "f8d584c8-08b8-487e-a240-42a080d01db0",
+			"title": "hexagonal infrastruktur aufbauen!",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "b1b1e4f1-b018-4c49-8518-5d32c7eb0c7b",
+			"title": "weitere Tiles erstmal reinholen als placeholder dmait man mehr sieht",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "0c5079bb-5bfc-464e-9e5b-20bf804b194f",
+			"title": "ui an viewport hängen",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "a9995139-538b-45d6-9129-6322cc40aad3",
+			"title": "soudn effects und musik mit ai with outer wilds",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "dc349ed5-0548-4ca1-9441-9d4798dd072f",
+			"title": "alle ui elemente anchoren wie das inventory",
+			"description": "",
+			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
+			"steps": []
+		},
+		{
+			"uuid": "b21b465c-1218-4a86-bcbb-33698ff7c7ed",
+			"title": "playerr Player tile (lesen)",
+			"description": "EInmal aufschreiben, wie jetzt genau player tile gekennzeichnet wird (Position), Text drüber, Symbol drüber mit Pfeil?\nHover Effekt andere Tiles ein Move Symbol ? Wenn man klickt ein Travel Symbol?\n\nIdee, ein hover Icon erstmal mit einem Travel Symbol\n\nwie hover effekt ggf hinbekommen?\n\nHover Icons einfügen, ein Pfeil über current Tile, und ein Hover button (bei on hover, on hover exit wie bei dem anderen, der beschreibt, ob man da hin kann von distance. (Also distance_to dann berechnen)!!! Icon\n\n\nIdee für Grouppe, Over_Tile_UI, dort dann interaction panel, move, und symbol /Icon",
 			"category": "d3b1cdd4-adcf-4934-9782-7955a929c1ba",
 			"steps": []
 		}

@@ -63,7 +63,7 @@ require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd
 receive = Array[ExtResource("12_n835g")]([ExtResource("11_cx6s7"), ExtResource("11_cx6s7"), SubResource("Resource_sp3le")])
 state = "unlocked"
 
-[sub_resource type="Resource" id="Resource_xjvpx"]
+[sub_resource type="Resource" id="Resource_h7ik1"]
 resource_local_to_scene = true
 script = ExtResource("14_i6uie")
 name = "forest_birch_0_ritual"
@@ -75,7 +75,7 @@ socket_type = "full"
 interactions = Array[ExtResource("13_x2jmw")]([SubResource("Resource_buaue")])
 locked_lore = ""
 
-[sub_resource type="Resource" id="Resource_7t0tm"]
+[sub_resource type="Resource" id="Resource_82ha8"]
 resource_local_to_scene = true
 script = ExtResource("14_i6uie")
 name = "forest_birch_0_ritual"
@@ -125,10 +125,10 @@ tile_properties = ExtResource("9_rofbj")
 
 [node name="forest_birch_0_ritual" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
-tile_properties = SubResource("Resource_xjvpx")
+tile_properties = SubResource("Resource_h7ik1")
 
 [node name="GroundTile" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("8_c82qg")]
-tile_properties = SubResource("Resource_7t0tm")
+tile_properties = SubResource("Resource_82ha8")
 
 [node name="Socketfull" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("18_b6y8j")]
 

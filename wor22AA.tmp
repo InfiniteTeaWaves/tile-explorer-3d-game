@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://world/world.gd" id="1_h1vqe"]
 [ext_resource type="PackedScene" uid="uid://cq70shh7c8yl0" path="res://world/camera/CameraBase.tscn" id="2_icfy6"]
-[ext_resource type="PackedScene" uid="uid://d2ipruodlr5tx" path="res://player/player.tscn" id="3_xdeoj"]
 [ext_resource type="PackedScene" uid="uid://b6fwt1mqc8rxa" path="res://tiles/base/basicTile.tscn" id="7_ck8hb"]
 [ext_resource type="PackedScene" uid="uid://bpgabupewtxl1" path="res://tiles/base/groundTile.tscn" id="8_c82qg"]
+[ext_resource type="Script" path="res://player/Player.gd" id="9_8wgje"]
 [ext_resource type="Resource" uid="uid://u0q3aonwfv6r" path="res://tiles/tiles_properties/tiles_res/forest_birch_dome_city.tres" id="9_rofbj"]
 [ext_resource type="Resource" uid="uid://dhklsjy1b5c2x" path="res://interaction/action_data/action_data_res/harvest_lumber.tres" id="10_624ji"]
 [ext_resource type="Resource" uid="uid://b1spy3qqi0k00" path="res://biomes/biome_properties/forest_birch_0.tres" id="10_aeis7"]
@@ -63,7 +63,7 @@ require = Array[Resource("res://interaction/requirement_data/requirement_cres.gd
 receive = Array[ExtResource("12_n835g")]([ExtResource("11_cx6s7"), ExtResource("11_cx6s7"), SubResource("Resource_sp3le")])
 state = "unlocked"
 
-[sub_resource type="Resource" id="Resource_xjvpx"]
+[sub_resource type="Resource" id="Resource_pvpph"]
 resource_local_to_scene = true
 script = ExtResource("14_i6uie")
 name = "forest_birch_0_ritual"
@@ -75,7 +75,7 @@ socket_type = "full"
 interactions = Array[ExtResource("13_x2jmw")]([SubResource("Resource_buaue")])
 locked_lore = ""
 
-[sub_resource type="Resource" id="Resource_7t0tm"]
+[sub_resource type="Resource" id="Resource_0tddn"]
 resource_local_to_scene = true
 script = ExtResource("14_i6uie")
 name = "forest_birch_0_ritual"
@@ -101,7 +101,14 @@ light_color = Color(0.945098, 0.929412, 0, 1)
 light_energy = 0.4
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("3_xdeoj")]
+[node name="GameMapTest" type="Node3D" parent="."]
+visible = false
+
+[node name="basicTile" parent="GameMapTest" instance=ExtResource("7_ck8hb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5944, 0, 2.65965)
+
+[node name="Player" type="Node3D" parent="."]
+script = ExtResource("9_8wgje")
 
 [node name="HUD" parent="." instance=ExtResource("10_i16hi")]
 offset_left = -1.0
@@ -125,10 +132,10 @@ tile_properties = ExtResource("9_rofbj")
 
 [node name="forest_birch_0_ritual" parent="WorldEditor" instance=ExtResource("7_ck8hb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
-tile_properties = SubResource("Resource_xjvpx")
+tile_properties = SubResource("Resource_pvpph")
 
 [node name="GroundTile" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("8_c82qg")]
-tile_properties = SubResource("Resource_7t0tm")
+tile_properties = SubResource("Resource_0tddn")
 
 [node name="Socketfull" parent="WorldEditor/forest_birch_0_ritual" instance=ExtResource("18_b6y8j")]
 
@@ -140,3 +147,5 @@ tile_properties = ExtResource("19_biugo")
 tile_properties = ExtResource("19_biugo")
 
 [node name="Socketfull" parent="WorldEditor/forest_birch_0_tower" instance=ExtResource("20_a5pda")]
+
+[connection signal="on_click" from="GameMapTest/basicTile" to="." method="_on_basic_tile_on_click"]
